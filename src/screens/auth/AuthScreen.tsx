@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, TextStyle, View, ViewStyle } from 'react-native';
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { connect, ConnectedProps } from 'react-redux';
-import { showLoadingModal } from '../../navigation';
+// import { showLoadingModal } from '../../navigation'; de bagat inapoi
 import { StoreState } from '../../store/store.types';
 import { color, font, typography } from '../../theme';
 import LoginContent from './components/LoginContent';
@@ -33,42 +33,47 @@ const AuthScreen: React.FC<OwnProps & PropsFromRedux> = ({
   componentId,
   isLogging,
 }) => {
-  const [authType, setAuthType] = useState(AuthType.Login);
 
-  useEffect(() => {
-    if (isLogging) {
-      showLoadingModal();
-    }
-  }, [isLogging]);
 
-  const onChangeAuthTypePress = () => {
-    if (authType === AuthType.Login) {
-      setAuthType(AuthType.Signup);
-    } else {
-      setAuthType(AuthType.Login);
-    }
-  };
+  return (<View style={{ flex: 1,justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Auth Screen</Text></View>)
 
-  return (
-    <View style={styles.container}>
-      <KeyboardAwareScrollView
-        contentContainerStyle={styles.scrollContentContainer}
-      >
-        {authType === AuthType.Login && (
-          <LoginContent
-            componentId={componentId}
-            onChangeAuthType={onChangeAuthTypePress}
-          />
-        )}
-        {authType === AuthType.Signup && (
-          <SignInContent
-            componentId={componentId}
-            onChangeAuthType={onChangeAuthTypePress}
-          />
-        )}
-      </KeyboardAwareScrollView>
-    </View>
-  );
+  // const [authType, setAuthType] = useState(AuthType.Login);
+
+  // useEffect(() => {
+  //   if (isLogging) {
+  //     showLoadingModal();
+  //   }
+  // }, [isLogging]);
+
+  // const onChangeAuthTypePress = () => {
+  //   if (authType === AuthType.Login) {
+  //     setAuthType(AuthType.Signup);
+  //   } else {
+  //     setAuthType(AuthType.Login);
+  //   }
+  // };
+
+  // return (
+  //   <View style={styles.container}>
+  //     <KeyboardAwareScrollView
+  //       contentContainerStyle={styles.scrollContentContainer}
+  //     >
+  //       {authType === AuthType.Login && (
+  //         <LoginContent
+  //           componentId={componentId}
+  //           onChangeAuthType={onChangeAuthTypePress}
+  //         />
+  //       )}
+  //       {authType === AuthType.Signup && (
+  //         <SignInContent
+  //           componentId={componentId}
+  //           onChangeAuthType={onChangeAuthTypePress}
+  //         />
+  //       )}
+  //     </KeyboardAwareScrollView>
+  //   </View>
+  // );
 };
 
 interface Style {
