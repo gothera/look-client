@@ -1,3 +1,3 @@
-export const HOME_SCREEN = 'look-artist.HomeScreen';
-export const AUTH_SCREEN = 'look-artist.AuthScreen';
+export const HOME_SCREEN = 'look-client.HomeScreen';
+export const AUTH_SCREEN = 'look-client.AuthScreen';
 

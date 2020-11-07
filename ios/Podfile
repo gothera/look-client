@@ -3,13 +3,13 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'look-artist' do
+target 'look-client' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
 
-  target 'look-artistTests' do
+  target 'look-clientTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -24,10 +24,10 @@ target 'look-artist' do
   end
 end
 
-target 'look-artist-tvOS' do
-  # Pods for look-artist-tvOS
+target 'look-client-tvOS' do
+  # Pods for look-client-tvOS
 
-  target 'look-artist-tvOSTests' do
+  target 'look-client-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

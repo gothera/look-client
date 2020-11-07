@@ -74,22 +74,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-look-artist-look-artistTests.xcscheme</key>
+		<key>Pods-look-client-look-clientTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-look-artist-tvOS.xcscheme</key>
+		<key>Pods-look-client-tvOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-look-artist-tvOSTests.xcscheme</key>
+		<key>Pods-look-client-tvOSTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-look-artist.xcscheme</key>
+		<key>Pods-look-client.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

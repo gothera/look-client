@@ -1,6 +1,0 @@
-module Pods_look_artist_look_artistTests {
-  umbrella header "Pods-look-artist-look-artistTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

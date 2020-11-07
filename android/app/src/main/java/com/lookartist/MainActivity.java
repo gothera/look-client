@@ -1,4 +1,4 @@
-package com.lookartist;
+package com.lookclient;
 
 import com.reactnativenavigation.NavigationActivity;
 

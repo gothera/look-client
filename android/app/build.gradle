@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.lookartist"
+        applicationId "com.lookclient"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
