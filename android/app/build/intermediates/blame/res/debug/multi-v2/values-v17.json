@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sabinhantu/RNProject/look-artist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "outputFile": "/Users/sabinhantu/RNProject/look-client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
                     "source": "/Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f6ed8a61e0684717a1204e72bc46125d/appcompat-1.1.0/res/values-v17/values-v17.xml",

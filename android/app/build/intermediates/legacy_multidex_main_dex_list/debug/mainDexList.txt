@@ -307,9 +307,9 @@ com/horcrux/svg/TextProperties$AlignmentBaseline.class
 com/horcrux/svg/TextProperties$FontWeight.class
 com/horcrux/svg/TextProperties$TextDecoration.class
 com/horcrux/svg/VirtualView.class
-com/lookartist/BuildConfig.class
-com/lookartist/MainApplication$1.class
-com/lookartist/MainApplication.class
+com/lookclient/BuildConfig.class
+com/lookclient/MainApplication$1.class
+com/lookclient/MainApplication.class
 com/oblador/keychain/KeychainModule$KnownCiphers.class
 com/reactnativenavigation/NavigationApplication.class
 com/reactnativenavigation/options/params/Colour.class

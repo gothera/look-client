@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sabinhantu/RNProject/look-artist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "/Users/sabinhantu/RNProject/look-client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
                     "source": "/Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/4bad5320887447a385c35da400a0be28/material-1.2.0-alpha03/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",
