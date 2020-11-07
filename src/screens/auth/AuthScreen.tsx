@@ -98,12 +98,12 @@ const styles = StyleSheet.create<Style>({
     alignItems: 'center',
   },
   header: {
-    ...typography.descriptiveHeader,
+    ...typography.title2Bold,
     marginTop: 25,
     color: color.textPrimary,
   },
   headerDescription: {
-    ...typography.headerDescription,
+    ...typography.subheadlineSemiBold,
     color: color.muted,
     marginTop: 10,
   },
@@ -111,10 +111,10 @@ const styles = StyleSheet.create<Style>({
     marginTop: 30,
   },
   alreadyDescriptionText: {
-    ...typography.paragraphQuestion,
+    ...typography.body,
   },
   alreadyOptionText: {
-    ...typography.touchableWord,
+    ...typography.bodySemiBold,
     marginTop: 8,
   },
 });

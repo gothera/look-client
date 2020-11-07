@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { ViewState } from '../../store/store.types';
 
 interface OwnProps {
   onPress: () => void;

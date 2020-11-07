@@ -11,38 +11,7 @@ const initialState: StoreState = {
     scheduledDates: [],
     rating: 5,
   },
-  view: {
-    aux: '',
-  },
-  offeredService: {
-    offeredServicesById: [],
-    local: {},
-  },
-  notification: {
-    notificationsById: [],
-    local: {},
-    fetching: false,
-    nextPage: 0,
-  },
-  appointment: {
-    appointmentIDs: {},
-    local: {},
-    fetching: true,
-  },
-  post: {
-    postsById: [],
-    local: {},
-    nextPage: 0,
-    isFetching: false,
-    hasNext: true,
-  },
-  review: {
-    reviewById: [],
-    local: {},
-    nextPage: 0,
-    isFetching: false,
-    hasNext: true,
-  },
+ 
 };
 
 export default initialState;

@@ -64,17 +64,17 @@ const styles = StyleSheet.create<Style>({
     width: '100%',
   },
   label: {
-    ...typography.textInputLabel,
+    ...typography.caption2SemiBold,
     color: color.muted,
   },
   input: {
-    ...typography.textInput,
+    ...typography.body,
     color: color.textSecondary,
     paddingVertical: 8,
     marginTop: spacing.smallest,
   },
   labelDescription: {
-    ...typography.textInputLabelDescription,
+    ...typography.caption2Regular,
     color: color.muted,
     marginTop: 2,
   },

@@ -1,13 +1,8 @@
 import { Navigation } from 'react-native-navigation';
 import { color } from '../theme';
 import {
-  ADD_POST_SCREEN,
   AUTH_SCREEN,
   HOME_SCREEN,
-  NOTIFICATIONS_SCREEN,
-  PROFILE_SCREEN,
-  SETUP_SCREEN,
-  ADD_POST_DESCRIPTION_SCREEN,
 } from './screen-constants';
 import { Config, getConfig } from './utils-navigation';
 import strings from '../res/strings/strings';
@@ -80,7 +75,7 @@ export const setLoggedInRoot = () => {
               children: [
                 {
                   component: {
-                    name: NOTIFICATIONS_SCREEN,
+                    name: HOME_SCREEN,
                   },
                 },
               ],
@@ -103,7 +98,7 @@ export const setLoggedInRoot = () => {
               children: [
                 {
                   component: {
-                    name: PROFILE_SCREEN,
+                    name: HOME_SCREEN,
                   },
                 },
               ],
@@ -154,75 +149,6 @@ export const pushAuthScreen = (pushConfig?: Config) => {
           },
           animations: {
             ...config.animations,
-          },
-        },
-      },
-    },
-  });
-};
-
-export const pushSetupScreen = (pushConfig?: Config) => {
-  const config = getConfig(pushConfig);
-
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              id: SETUP_SCREEN,
-              name: SETUP_SCREEN,
-              passProps: { ...config.props },
-            },
-          },
-        ],
-        options: {
-          topBar: {
-            visible: false,
-            drawBehind: true,
-          },
-          statusBar: {
-            style: 'light',
-            backgroundColor: 'white',
-            drawBehind: true,
-          },
-          animations: {
-            ...config.animations,
-          },
-        },
-      },
-    },
-  });
-};
-
-/**
- * Pushed on Add Post
- * @param componentId
- * @param pushConfig
- */
-export const pushAddPostDescriptionScreen = (
-  componentId: string,
-  pushConfig?: Config,
-) => {
-  const config = getConfig(pushConfig);
-
-  Navigation.push(componentId, {
-    component: {
-      name: ADD_POST_DESCRIPTION_SCREEN,
-      passProps: { ...config.props },
-      options: {
-        layout: {
-          componentBackgroundColor: color.background,
-        },
-        topBar: {
-          title: {
-            text: strings.modal.addPost.title,
-            fontFamily: 'Gilroy-SemiBold',
-          },
-          backButton: {
-            showTitle: false,
-            icon: require('../res/images/icons/chevron-left-icon.png'),
-            color: color.textPrimary,
           },
         },
       },

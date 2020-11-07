@@ -92,15 +92,15 @@ const pickerStyle: PickerStyle = {
     paddingRight: 8,
   },
   placeholder: {
-    ...typography.textInput,
+    ...typography.body,
     color: color.muted,
   },
   inputIOS: {
-    ...typography.textInput,
+    ...typography.body,
     color: color.textSecondary,
   },
   inputAndroid: {
-    ...typography.textInput,
+    ...typography.body,
     color: color.textSecondary,
   },
 };

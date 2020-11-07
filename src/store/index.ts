@@ -22,10 +22,6 @@ const migrations: any = {
   [VERSION]: (state: PersistedState & StoreState) => {
     return {
       ...initialState,
-      view: {
-        ...initialState.view,
-        aux: 'sal',
-      },
     };
   },
 };
@@ -35,17 +31,13 @@ const profileBlacklist = createBlacklistFilter('profile', [
   'isUploadingProfilePicture',
 ]);
 
-const viewBlacklist = createBlacklistFilter('view', [
-  'updateDefaultProgramRequestStatus',
-  'updateSpecificProgramRequestStatus',
-]);
 
 const persistConfig: PersistConfig<StoreState> = {
   key: 'starter',
   version: VERSION,
   storage: FilesystemStorage,
   stateReconciler: autoMergeLevel2,
-  transforms: [profileBlacklist, viewBlacklist],
+  transforms: [profileBlacklist],
   // There is an issue with redux-persist code. This needs to be null not undefined
   timeout: null as any,
   migrate: createMigrate(migrations, { debug: false }),
