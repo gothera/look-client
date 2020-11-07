@@ -1,0 +1,13 @@
+export const LOADING_MODAL = 'look-artist.LoadingModal';
+export const EDIT_PROGRAM_MODAL = 'look-artist.EditProgramModal';
+export const ADD_APPOINTMENT_MODAL = 'look-artist.AddAppointmentModal';
+export const APPOINTMENT_DETAILS_MODAL = 'look-artist.AppointmentDetailsModal';
+export const DELETE_CONFIRMATION_MODAL = 'look-artist.DeleteConfirmationModal';
+export const EDIT_WEEKLY_PROGRAM_MODAL = 'look-artist.EditWeeklyProgramModal';
+export const SELECT_TIME_MODAL = 'look-artist.SelectTimeModal';
+export const EDIT_DAILY_PROGRAM_MODAL = 'look-artist.EditDailyProgramModal';
+export const ALERT_TEXT_MODAL = 'look-artist.AlertTextModal';
+export const ADD_POST_MODAL = 'look-artist.AddPostModal';
+export const EDIT_PROFILE_MODAL = 'look-artist.EditProfileModal';
+export const SELECT_DATE_MODAL = 'look-artist.SelectDateModal';
+export const ADD_SERVICE_MODAL = 'look-artist.AddServiceModal';

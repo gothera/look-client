@@ -1,0 +1,6 @@
+module Pods_look_artist {
+  umbrella header "Pods-look-artist-umbrella.h"
+
+  export *
+  module * { export * }
+}
