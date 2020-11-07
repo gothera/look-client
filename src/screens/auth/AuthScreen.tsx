@@ -36,7 +36,7 @@ const AuthScreen: React.FC<OwnProps & PropsFromRedux> = ({
 
 
   return (<View style={{ flex: 1,justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Auth Screen</Text></View>)
+    <Text style={styles.test}>Auth Screen</Text></View>)
 
   // const [authType, setAuthType] = useState(AuthType.Login);
 
@@ -85,6 +85,7 @@ interface Style {
   alreadyContainer: ViewStyle;
   alreadyDescriptionText: TextStyle;
   alreadyOptionText: TextStyle;
+  test: TextStyle;
 }
 
 const styles = StyleSheet.create<Style>({
@@ -122,6 +123,9 @@ const styles = StyleSheet.create<Style>({
     ...typography.bodySemiBold,
     marginTop: 8,
   },
+  test: {
+    ...typography.bodySemiBold,
+  }
 });
 
 export default connector(AuthScreen);

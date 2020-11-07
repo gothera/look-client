@@ -10,4 +10,10 @@ export const color = {
   success: '#00A26A',
   delete: '#D34848',
   highlight: '#F0F0F0',
+  makeup: '#D68FA7',
+  nails: '#DBC7EB',
+  hair: '#F4E7C3',
+  eyebrows: '#C5F2D5',
+  bodyCare: '#FAE1D2',
+  lashes: '#D3E8F5'
 };
