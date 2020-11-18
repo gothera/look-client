@@ -9,7 +9,7 @@ import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
 import { AUTH_SCREEN, HOME_SCREEN } from './screen-constants';
 
-import { pushAuthScreen, setLoggedInRoot } from './screen-navigation';
+import { pushAuthScreen, setHomeRoot } from './screen-navigation';
 
 const WrappedComponent = (Component: React.ComponentType<any>) => {
   return gestureHandlerRootHOC(
@@ -32,9 +32,7 @@ const registerScreens = () => {
   registerModals();
 };
 
-const registerModals = () => {
-  
-};
+const registerModals = () => {};
 
 export async function initNavigationAsync() {
   registerScreens();
@@ -44,18 +42,18 @@ export async function initNavigationAsync() {
 
       const loggedIn = genericPassword && genericPassword.username === 'token';
 
-      // setLoggedInRoot();
+      setHomeRoot();
       // pushAuthScreen();
 
-      if (loggedIn) {
-        store.dispatch(loginKeychain((genericPassword as any).password));
-        /**
-         * Screens with bottom navigation
-         */
-        setLoggedInRoot();
-      } else {
-        pushAuthScreen();
-      }
+      // if (loggedIn) {
+      //   store.dispatch(loginKeychain((genericPassword as any).password));
+      //   /**
+      //    * Screens with bottom navigation
+      //    */
+      //   setLoggedInRoot();
+      // } else {
+      //   pushAuthScreen();
+      // }
     } catch (error) {
       console.log('Error initNavAsync', error);
       pushAuthScreen();
