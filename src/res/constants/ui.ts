@@ -17,3 +17,5 @@ export const FOOTER_OPTIONS_HEIGHT = 70 + AUX_BOTTOM_SPACE;
 export const DIALOG_MODAL_HEIGHT = 180;
 
 export const BOTTOM_SPACE = AUX_BOTTOM_SPACE;
+
+export const SEARCH_BAR_HEIGHT = 54;

@@ -15,11 +15,11 @@ MERGED from [:react-native-fast-image] /Users/sabinhantu/RNProject/look-client/n
 MERGED from [:react-native-gesture-handler] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-28:12
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-47:12
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3d4d3b13a176b6519d2917dc3d6c93bd/jetified-react-native-0.63.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/07f12c5d0bf69a257f51ce6eb85938a0/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/fd2cd427c1b18958832af63f586dd268/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -141,12 +141,12 @@ MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-c
 MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-26:19
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-21:19
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-21:19
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:11:5-15:19
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:11:5-15:19
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3d4d3b13a176b6519d2917dc3d6c93bd/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3d4d3b13a176b6519d2917dc3d6c93bd/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/16cf47707c06a07a08800959212e5e68/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/16cf47707c06a07a08800959212e5e68/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.github.wix-playground:ahbottomnavigation:3.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3b4d085db764b422b38064e6b4d021f5/ahbottomnavigation-3.2.0/AndroidManifest.xml:11:5-20
@@ -221,10 +221,10 @@ ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidM
 		ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:23:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:26:7-84
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:12:9-14:40
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:12:9-14:40
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:12:9-14:40
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:12:9-14:40
 	android:exported
-		ADDED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:14:13-37
+		ADDED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:14:13-37
 	android:name
 		ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:26:17-81
 uses-sdk
@@ -251,16 +251,16 @@ MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-c
 MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3d4d3b13a176b6519d2917dc3d6c93bd/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3d4d3b13a176b6519d2917dc3d6c93bd/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/07f12c5d0bf69a257f51ce6eb85938a0/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44

@@ -4,12 +4,12 @@ import { getGenericPassword } from 'react-native-keychain';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { AuthScreen, HomeScreen } from '../screens';
+import { AuthScreen, ExploreScreen, HomeScreen } from '../screens';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
-import { AUTH_SCREEN, HOME_SCREEN } from './screen-constants';
+import { AUTH_SCREEN, EXPLORE_SCREEN, HOME_SCREEN } from './screen-constants';
 
-import { pushAuthScreen, setLoggedInRoot } from './screen-navigation';
+import { pushAuthScreen, setHomeRoot } from './screen-navigation';
 
 const WrappedComponent = (Component: React.ComponentType<any>) => {
   return gestureHandlerRootHOC(
@@ -28,13 +28,14 @@ const WrappedComponent = (Component: React.ComponentType<any>) => {
 const registerScreens = () => {
   Navigation.registerComponent(HOME_SCREEN, () => WrappedComponent(HomeScreen));
   Navigation.registerComponent(AUTH_SCREEN, () => WrappedComponent(AuthScreen));
+  Navigation.registerComponent(EXPLORE_SCREEN, () =>
+    WrappedComponent(ExploreScreen),
+  );
 
   registerModals();
 };
 
-const registerModals = () => {
-  
-};
+const registerModals = () => {};
 
 export async function initNavigationAsync() {
   registerScreens();
@@ -44,18 +45,18 @@ export async function initNavigationAsync() {
 
       const loggedIn = genericPassword && genericPassword.username === 'token';
 
-      // setLoggedInRoot();
+      setHomeRoot();
       // pushAuthScreen();
 
-      if (loggedIn) {
-        store.dispatch(loginKeychain((genericPassword as any).password));
-        /**
-         * Screens with bottom navigation
-         */
-        setLoggedInRoot();
-      } else {
-        pushAuthScreen();
-      }
+      // if (loggedIn) {
+      //   store.dispatch(loginKeychain((genericPassword as any).password));
+      //   /**
+      //    * Screens with bottom navigation
+      //    */
+      //   setLoggedInRoot();
+      // } else {
+      //   pushAuthScreen();
+      // }
     } catch (error) {
       console.log('Error initNavAsync', error);
       pushAuthScreen();

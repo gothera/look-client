@@ -2,12 +2,12 @@ import { Navigation } from 'react-native-navigation';
 import { color } from '../theme';
 import {
   AUTH_SCREEN,
+  EXPLORE_SCREEN,
   HOME_SCREEN,
 } from './screen-constants';
 import { Config, getConfig } from './utils-navigation';
-import strings from '../res/strings/strings';
 
-export const setLoggedInRoot = () => {
+export const setHomeRoot = () => {
   Navigation.setRoot({
     root: {
       bottomTabs: {
@@ -27,41 +27,21 @@ export const setLoggedInRoot = () => {
               children: [
                 {
                   component: {
-                    name: HOME_SCREEN,
+                    name: EXPLORE_SCREEN,
                   },
                 },
               ],
               options: {
                 bottomTab: {
-                  icon: require('../res/images/bottom-tabs/calendar.png'),
-                  selectedIcon: require('../res/images/bottom-tabs/calendar-selected.png'),
+                  icon: require('../res/images/bottom-tabs/explore.png'),
                   iconColor: color.muted,
-                  selectedIconColor: color.textPrimary,
-                  // text: 'Program',
-                  // textColor: color.muted,
-                  // selectedTextColor: color.textPrimary,
-                  // fontFamily: 'Gilroy-SemiBold',
-                  // fontSize: 12,
-                },
-                topBar: {
-                  visible: false,
-                  drawBehind: true,
-                },
-              },
-            },
-          },
-          {
-            /**
-             * Stack for add post, use registerBottomTabPressedListener instead
-             */
-            stack: {
-              options: {
-                bottomTab: {
-                  icon: require('../res/images/bottom-tabs/add-post.png'),
-                  selectedIcon: require('../res/images/bottom-tabs/add-post-selected.png'),
-                  iconColor: color.muted,
-                  selectedIconColor: color.textPrimary,
-                  selectTabOnPress: false,
+                  selectedIconColor: color.brand,
+                  text: 'Explore',
+                  textColor: color.muted,
+                  selectedTextColor: color.textPrimary,
+                  fontFamily: 'Gilroy-Medium',
+                  fontSize: 10,
+                  iconInsets: { bottom: 3 },
                 },
                 topBar: {
                   visible: false,
@@ -81,10 +61,70 @@ export const setLoggedInRoot = () => {
               ],
               options: {
                 bottomTab: {
-                  icon: require('../res/images/bottom-tabs/bell.png'),
-                  selectedIcon: require('../res/images/bottom-tabs/bell-selected.png'),
+                  icon: require('../res/images/bottom-tabs/heart.png'),
                   iconColor: color.muted,
-                  selectedIconColor: color.textPrimary,
+                  selectedIconColor: color.brand,
+                  text: 'Saves',
+                  textColor: color.muted,
+                  selectedTextColor: color.textPrimary,
+                  fontFamily: 'Gilroy-Medium',
+                  fontSize: 10,
+                  iconInsets: { bottom: 3 },
+                },
+                topBar: {
+                  visible: false,
+                  drawBehind: true,
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: HOME_SCREEN,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  icon: require('../res/images/bottom-tabs/lips.png'),
+                  iconColor: color.muted,
+                  selectedIconColor: color.brand,
+                  // text: 'Appointments',
+                  // textColor: color.background,
+                  // selectedTextColor: color.textPrimary,
+                  // fontFamily: 'Gilroy-Medium',
+                  // fontSize: 10,
+                  // iconInsets: { bottom: 3 },
+                },
+                topBar: {
+                  visible: false,
+                  drawBehind: true,
+                },
+              },
+            },
+          },{
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: HOME_SCREEN,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  icon: require('../res/images/bottom-tabs/calendar.png'),
+                  iconColor: color.muted,
+                  selectedIconColor: color.brand,
+                  text: 'Appointments',
+                  textColor: color.muted,
+                  selectedTextColor: color.textPrimary,
+                  fontFamily: 'Gilroy-Medium',
+                  fontSize: 10,
+                  iconInsets: { bottom: 3 },
                 },
                 topBar: {
                   visible: false,
@@ -105,9 +145,14 @@ export const setLoggedInRoot = () => {
               options: {
                 bottomTab: {
                   icon: require('../res/images/bottom-tabs/person.png'),
-                  selectedIcon: require('../res/images/bottom-tabs/person-selected.png'),
                   iconColor: color.muted,
-                  selectedIconColor: color.textPrimary,
+                  selectedIconColor: color.brand,
+                  text: 'Profile',
+                  textColor: color.muted,
+                  selectedTextColor: color.textPrimary,
+                  fontFamily: 'Gilroy-Medium',
+                  fontSize: 10,
+                  iconInsets: { bottom: 3 },
                 },
                 topBar: {
                   visible: false,

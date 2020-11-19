@@ -1,18 +1,18 @@
 {
   "name": "ReactNativeNavigation",
-  "version": "6.11.0",
+  "version": "7.4.0",
   "summary": "React Native Navigation - truly native navigation for iOS and Android",
   "authors": "Wix.com",
   "homepage": "https://github.com/wix/react-native-navigation",
   "license": "MIT",
   "platforms": {
-    "ios": "9.0"
+    "ios": "11.0"
   },
   "module_name": "ReactNativeNavigation",
   "default_subspecs": "Core",
   "source": {
     "git": "https://github.com/wix/react-native-navigation.git",
-    "tag": "6.11.0"
+    "tag": "7.4.0"
   },
   "source_files": "lib/ios/**/*.{h,m,mm}",
   "exclude_files": [
@@ -20,7 +20,7 @@
     "lib/ios/OCMock/**/*.*"
   ],
   "dependencies": {
-    "React": [
+    "React-Core": [
 
     ],
     "React-RCTImage": [

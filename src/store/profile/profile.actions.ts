@@ -3,7 +3,7 @@ import {
   resetGenericPassword,
 } from 'react-native-keychain';
 import {
-  setLoggedInRoot,
+  setHomeRoot,
   pushAuthScreen,
 } from '../../navigation';
 import {
@@ -60,7 +60,7 @@ export const login = (
       .then(() => {
         if (!isRegister) {
           // pushHomeScreen();
-          setLoggedInRoot();
+          setHomeRoot();
         }
       })
       .catch((error) => {

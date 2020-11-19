@@ -762,6 +762,7 @@
     <item name="original_pivot_y" type="id"/>
     <item name="original_right" type="id"/>
     <item name="original_top" type="id"/>
+    <item name="original_z_index" type="id"/>
     <item name="parent_matrix" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
@@ -3857,6 +3858,12 @@
     <style name="ThemeOverlayColorAccentRed" ns2:ignore="NewApi">
     <item name="android:colorAccent">#FFFF0000</item>
   </style>
+    <style name="TitleBarSubtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="TitleBarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18dp</item>
+    </style>
     <style name="TopBar" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="elevation">0dp</item>
     </style>
