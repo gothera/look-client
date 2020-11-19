@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import ExploreSearchBar from './components/explore-search-bar/ExploreSearchBar';
+import { styles } from './styles';
 
 interface OwnProps {
   componentId: string;
@@ -7,8 +9,8 @@ interface OwnProps {
 
 const ExploreScreen: React.FC<OwnProps> = ({ componentId }) => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>explore</Text>
+    <View style={styles.container}>
+      <ExploreSearchBar componentId={componentId} />
     </View>
   );
 };

@@ -1,8 +1,8 @@
 const strings = {
   screen: {
-    home: {
-      editProgramBtn: 'Edit Program',
-    },
+    explore: {
+      searchPlaceholder: 'Try favorite  makeup artist name'
+    }
   },
   modal: {
   },

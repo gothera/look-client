@@ -5,3 +5,4 @@ export * from './BellIcon';
 export * from './AddProgramIcon';
 export * from './CalendarDaysIcon';
 export * from './TimeIcon';
+export * from './SearchIcon';
