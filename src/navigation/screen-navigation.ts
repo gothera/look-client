@@ -2,6 +2,7 @@ import { Navigation } from 'react-native-navigation';
 import { color } from '../theme';
 import {
   AUTH_SCREEN,
+  EXPLORE_SCREEN,
   HOME_SCREEN,
 } from './screen-constants';
 import { Config, getConfig } from './utils-navigation';
@@ -26,7 +27,7 @@ export const setHomeRoot = () => {
               children: [
                 {
                   component: {
-                    name: HOME_SCREEN,
+                    name: EXPLORE_SCREEN,
                   },
                 },
               ],

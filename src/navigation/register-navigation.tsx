@@ -4,10 +4,10 @@ import { getGenericPassword } from 'react-native-keychain';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { AuthScreen, HomeScreen } from '../screens';
+import { AuthScreen, ExploreScreen, HomeScreen } from '../screens';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
-import { AUTH_SCREEN, HOME_SCREEN } from './screen-constants';
+import { AUTH_SCREEN, EXPLORE_SCREEN, HOME_SCREEN } from './screen-constants';
 
 import { pushAuthScreen, setHomeRoot } from './screen-navigation';
 
@@ -28,6 +28,9 @@ const WrappedComponent = (Component: React.ComponentType<any>) => {
 const registerScreens = () => {
   Navigation.registerComponent(HOME_SCREEN, () => WrappedComponent(HomeScreen));
   Navigation.registerComponent(AUTH_SCREEN, () => WrappedComponent(AuthScreen));
+  Navigation.registerComponent(EXPLORE_SCREEN, () =>
+    WrappedComponent(ExploreScreen),
+  );
 
   registerModals();
 };

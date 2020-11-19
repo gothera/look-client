@@ -97,7 +97,7 @@
 54            android:name="com.facebook.react.devsupport.DevSettingsActivity"
 54-->/Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:26:17-81
 55            android:exported="false" />
-55-->[:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:14:13-37
+55-->[:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:14:13-37
 56
 57        <provider
 57-->[:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-21:20

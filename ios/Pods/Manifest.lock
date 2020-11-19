@@ -307,13 +307,13 @@ PODS:
     - React-Core (= 0.63.2)
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
-  - ReactNativeNavigation (6.11.0):
-    - React
+  - ReactNativeNavigation (7.4.0):
+    - React-Core
     - React-RCTImage
     - React-RCTText
-    - ReactNativeNavigation/Core (= 6.11.0)
-  - ReactNativeNavigation/Core (6.11.0):
-    - React
+    - ReactNativeNavigation/Core (= 7.4.0)
+  - ReactNativeNavigation/Core (7.4.0):
+    - React-Core
     - React-RCTImage
     - React-RCTText
   - rn-fetch-blob (0.12.0):
@@ -543,7 +543,7 @@ SPEC CHECKSUMS:
   React-RCTText: 1b6773e776e4b33f90468c20fe3b16ca3e224bb8
   React-RCTVibration: 4d2e726957f4087449739b595f107c0d4b6c2d2d
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
-  ReactNativeNavigation: b38eca44d4d85e04757a2681bfc6e1b178c6c2d1
+  ReactNativeNavigation: a4ca957f6656172b6a7632592c101a5f75a0c9a2
   rn-fetch-blob: f065bb7ab7fb48dd002629f8bdcb0336602d3cba
   RNCCheckbox: 357578d3b42652c78ee9a1bb9bcfc3195af6e161
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
@@ -558,6 +558,6 @@ SPEC CHECKSUMS:
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 758417a54a703dded4d356913554543ccfaf9c8d
+PODFILE CHECKSUM: 2233fd7aeab9e93dceab8e0ac6afcfc88b1f9c34
 
 COCOAPODS: 1.10.0

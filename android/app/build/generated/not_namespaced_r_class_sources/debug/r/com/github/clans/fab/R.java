@@ -106,9 +106,9 @@ public final class R {
         public static final int mini = 0x7f0900ca;
         public static final int none = 0x7f0900eb;
         public static final int normal = 0x7f0900ec;
-        public static final int right = 0x7f09010b;
-        public static final int start = 0x7f09013f;
-        public static final int up = 0x7f090178;
+        public static final int right = 0x7f09010c;
+        public static final int start = 0x7f090140;
+        public static final int up = 0x7f090179;
     }
     public static final class styleable {
         private styleable() {}
