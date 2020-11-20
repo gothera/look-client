@@ -4,6 +4,7 @@ import {
   AUTH_SCREEN,
   EXPLORE_SCREEN,
   HOME_SCREEN,
+  SAVES_SCREEN,
 } from './screen-constants';
 import { Config, getConfig } from './utils-navigation';
 
@@ -55,7 +56,7 @@ export const setHomeRoot = () => {
               children: [
                 {
                   component: {
-                    name: HOME_SCREEN,
+                    name: SAVES_SCREEN,
                   },
                 },
               ],
