@@ -20,5 +20,10 @@ export const BOTTOM_SPACE = AUX_BOTTOM_SPACE;
 
 export const SEARCH_BAR_HEIGHT = 54;
 
-export const POST_CARD_WIDTH = Dimensions.get('screen').width / 2 - 32;
+export const POST_CARD_WIDTH = (Dimensions.get('screen').width - 32) / 2;
+
 export const POST_CARD_HEIGHT = 260;
+
+export const POSTS_LIST_NUM_COLUMNS = 2;
+
+export const BORDER_RADIUS = 12;

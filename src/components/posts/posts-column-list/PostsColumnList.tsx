@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
-import { POST_CARD_HEIGHT } from '../../../res/constants';
+import { View, FlatList } from 'react-native';
+import { POST_CARD_WIDTH } from '../../../res/constants';
 import { Category } from '../../../types';
 import PostCard from '../../post/post-card/PostCard';
-
-const NUM_COLUMNS = 2;
+import { styles } from './styles';
 
 interface PostAux {
   photo: string;
@@ -45,17 +44,26 @@ interface OwnProps {
 }
 
 const PostsColumnList: React.FC<OwnProps> = ({ componentId }) => {
-  const renderPostCard = ({ item }: { item: PostAux; index: number }) => {
+  const renderPostCard = ({
+    item,
+    index,
+  }: {
+    item: PostAux;
+    index: number;
+  }) => {
     return (
-      <View
-        style={{
-          flex: 1 / NUM_COLUMNS,
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: POST_CARD_HEIGHT + 32,
-        }}
-      >
-        <PostCard />
+      <View style={styles.postContainer}>
+        <PostCard
+          photo={item.photo}
+          artistFullName={item.artistFullName}
+          artistPhoto={item.artistPhoto}
+          category={item.artistCategory}
+          style={
+            index % 2 === 0
+              ? styles.firstColumnPostContainer
+              : styles.secondColumnPostContainer
+          }
+        />
       </View>
     );
   };
