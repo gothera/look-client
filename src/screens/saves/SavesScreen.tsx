@@ -13,6 +13,9 @@ const SavesScreen: React.FC<OwnProps> = ({ componentId }) => {
   const [savedEntity, setSavedEntity] = useState(SavedEntity.Artists);
 
   const onChangeSavedEntity = (newSavedEntity: SavedEntity) => {
+    if (newSavedEntity === savedEntity) {
+      return;
+    }
     setSavedEntity(newSavedEntity);
   };
 

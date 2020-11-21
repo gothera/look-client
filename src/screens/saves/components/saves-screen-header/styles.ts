@@ -11,12 +11,13 @@ interface Style {
 
 export const styles = StyleSheet.create<Style>({
   container: {
-    paddingLeft: spacing.base,
     flexDirection: 'row',
     marginTop: spacing.base,
+    marginLeft: spacing.smaller,
   },
   text: {
     ...typography.title1Bold,
+    paddingHorizontal: spacing.smaller,
 
   },
   selectedText: {

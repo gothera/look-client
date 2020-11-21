@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import strings from '../../../../res/strings/strings';
 import { SavedEntity } from '../../../../types/enums';
 import { styles } from './styles';
 
@@ -12,29 +13,40 @@ const SavesScreenHeader: React.FC<OwnProps> = ({
   currentSavedEntity,
   onSavedEntityChange,
 }) => {
+  const onArtistsPress = () => {
+    onSavedEntityChange(SavedEntity.Artists);
+  };
+
+  const onPostsPress = () => {
+    onSavedEntityChange(SavedEntity.Posts);
+  };
+
   return (
     <View style={styles.container}>
-      <Text
-        style={[
-          styles.text,
-          currentSavedEntity === SavedEntity.Artists
-            ? styles.selectedText
-            : styles.unselectedText,
-        ]}
-      >
-        Test
-      </Text>
-      <Text
-        style={[
-          styles.text,
-          styles.postsLabel,
-          currentSavedEntity === SavedEntity.Posts
-            ? styles.selectedText
-            : styles.unselectedText,
-        ]}
-      >
-        Yahoo
-      </Text>
+      <TouchableOpacity onPress={onArtistsPress}>
+        <Text
+          style={[
+            styles.text,
+            currentSavedEntity === SavedEntity.Artists
+              ? styles.selectedText
+              : styles.unselectedText,
+          ]}
+        >
+          {strings.screen.saves.artists}
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onPostsPress}>
+        <Text
+          style={[
+            styles.text,
+            currentSavedEntity === SavedEntity.Posts
+              ? styles.selectedText
+              : styles.unselectedText,
+          ]}
+        >
+          {strings.screen.saves.posts}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
