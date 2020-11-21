@@ -32,11 +32,11 @@ const UserCategoryAvatar: React.FC<OwnProps> = ({ size, photo, category }) => {
     <View
       style={{
         borderWidth: 1.2,
-        width: size + 5,
-        height: size + 5,
+        width: size + 6,
+        height: size + 6,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: size + 5,
+        borderRadius: size + 6,
         borderColor: getBorderColor(),
       }}
     >
