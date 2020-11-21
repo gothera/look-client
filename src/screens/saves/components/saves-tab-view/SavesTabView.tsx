@@ -10,6 +10,7 @@ import { Category, SavedEntity, TabRoute } from '../../../../types';
 import SavedArtistsList from '../saved-artists-list/SavedArtistsList';
 import { styles } from './styles';
 import { Categories } from '../../../../res/strings/categories';
+import PostsColumnList from '../../../../components/posts/posts-column-list/PostsColumnList';
 
 type State = NavigationState<TabRoute>;
 
@@ -67,6 +68,11 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId, savedEntity }) => {
       savedEntity === SavedEntity.Artists
     ) {
       return <SavedArtistsList componentId={componentId} />;
+    } else if (
+      route.key === Categories.makeup.toLowerCase() &&
+      savedEntity === SavedEntity.Posts
+    ) {
+      return <PostsColumnList componentId={componentId} />;
     }
     return null;
   };

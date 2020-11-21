@@ -19,3 +19,6 @@ export const DIALOG_MODAL_HEIGHT = 180;
 export const BOTTOM_SPACE = AUX_BOTTOM_SPACE;
 
 export const SEARCH_BAR_HEIGHT = 54;
+
+export const POST_CARD_WIDTH = Dimensions.get('screen').width / 2 - 32;
+export const POST_CARD_HEIGHT = 260;
