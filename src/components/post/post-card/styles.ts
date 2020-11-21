@@ -10,6 +10,7 @@ interface Style {
   container: ViewStyle;
   imageStyle: ImageStyle;
   gradient: ViewStyle;
+  artistDataContainer: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -31,5 +32,11 @@ export const styles = StyleSheet.create<Style>({
     opacity: 0.8,
     zIndex: 2,
     borderRadius: BORDER_RADIUS,
+  },
+  artistDataContainer: {
+    position: 'absolute',
+    bottom: 10,
+    left: 10,
+    zIndex: 3,
   },
 });

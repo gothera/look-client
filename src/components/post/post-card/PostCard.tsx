@@ -32,7 +32,7 @@ const PostCard: React.FC<OwnProps> = ({
         />
         <FastImage source={{ uri: photo }} style={styles.imageStyle} />
         <PostCardArtistData
-          style={{ position: 'absolute', bottom: 10, left: 10, zIndex: 3 }}
+          style={styles.artistDataContainer}
           photo={artistPhoto}
           category={category}
           fullName={artistFullName}
