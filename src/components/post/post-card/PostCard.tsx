@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, StyleProp, ViewStyle } from 'react-native';
+import { View, StyleProp, ViewStyle } from 'react-native';
 import FastImage from 'react-native-fast-image';
-import { POST_CARD_HEIGHT, POST_CARD_WIDTH } from '../../../res/constants';
 import { Category } from '../../../types';
 import PressableCard from '../../pressable-card/PressableCard';
+import PostCardArtistData from '../post-card-artist-data/PostCardArtistData';
 import { styles } from './styles';
 
 interface OwnProps {
@@ -25,6 +25,12 @@ const PostCard: React.FC<OwnProps> = ({
     <PressableCard onPress={() => {}}>
       <View style={[styles.container, style]}>
         <FastImage source={{ uri: photo }} style={styles.imageStyle} />
+        <PostCardArtistData
+          style={{ position: 'absolute', bottom: 10, left: 10 }}
+          photo={artistPhoto}
+          category={category}
+          fullName={artistFullName}
+        />
       </View>
     </PressableCard>
   );

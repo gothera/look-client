@@ -7006,6 +7006,11 @@ react-native-keychain@6.1.1:
   resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-6.1.1.tgz#3c14e4df9e5599f8d5a708da75d27f9d2424d7c1"
   integrity sha512-WYvAg7FbYPyX8jJ1rY/IQGS+6zK5LtNMRa3E8x1n0M5Lmsm/9CHtakzbmqT+rLvFE7DpPBg7qFawMuUoDjjtYA==
 
+react-native-linear-gradient@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
+  integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
+
 react-native-modalize@2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/react-native-modalize/-/react-native-modalize-2.0.6.tgz#0a8662e77b1fb68d37baa6440cf64b0c0d718b71"
@@ -7078,10 +7083,10 @@ react-native-swiper@1.6.0:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-tab-view@^2.15.1:
-  version "2.15.2"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.15.2.tgz#4bc7832d33a119306614efee667509672a7ee64e"
-  integrity sha512-2hxLkBnZtEKFDyfvNO5EUywhy3f/EiLOBO8SWqKj4BMBTO0QwnybaPE5MVF00Fhz+VA4+h/iI40Dkrrtq70dGg==
+react-native-tab-view@2.15.1:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.15.1.tgz#cf4df4ffdec504263a2e06a6becd8831b9a19ad9"
+  integrity sha512-cDYl1pNWspbEHBjHrHVpIC40h4g8VhZe0CIG0CUKcouX98vHVfAojxhgWuRosq9qMhITHpLKM+7BmBLnhCJ0nw==
 
 react-native@0.63.2:
   version "0.63.2"
