@@ -44,9 +44,8 @@ const styles = StyleSheet.create<Style>({
     backgroundColor: color.unchosen,
   },
   orText: {
-    ...typography.orDivider,
+    ...typography.footnoteRegular,
     color: color.muted,
-    marginTop: 5,
   },
 });
 

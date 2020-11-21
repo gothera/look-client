@@ -4,20 +4,26 @@ import { getGenericPassword } from 'react-native-keychain';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import { StartAuthModal } from '../modals';
 import {
   AppointmentsScreen,
   AuthScreen,
   ExploreScreen,
   HomeScreen,
+  ProfileScreen,
   SavesScreen,
 } from '../screens';
+import FinishSignUpScreen from '../screens/finish-sign-up/FinishSignUpScreen';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
+import { START_AUTH_MODAL } from './modal-constants';
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
   EXPLORE_SCREEN,
+  FINISH_SIGN_UP_SCREEN,
   HOME_SCREEN,
+  PROFILE_SCREEN,
   SAVES_SCREEN,
 } from './screen-constants';
 
@@ -49,11 +55,21 @@ const registerScreens = () => {
   Navigation.registerComponent(APPOINTMENTS_SCREEN, () =>
     WrappedComponent(AppointmentsScreen),
   );
+  Navigation.registerComponent(PROFILE_SCREEN, () =>
+    WrappedComponent(ProfileScreen),
+  );
+  Navigation.registerComponent(FINISH_SIGN_UP_SCREEN, () =>
+    WrappedComponent(FinishSignUpScreen),
+  );
 
   registerModals();
 };
 
-const registerModals = () => {};
+const registerModals = () => {
+  Navigation.registerComponent(START_AUTH_MODAL, () =>
+    WrappedComponent(StartAuthModal),
+  );
+};
 
 export async function initNavigationAsync() {
   registerScreens();

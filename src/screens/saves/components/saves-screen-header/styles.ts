@@ -16,7 +16,7 @@ export const styles = StyleSheet.create<Style>({
     marginLeft: spacing.smaller,
   },
   text: {
-    ...typography.title1Bold,
+    ...typography.title2Bold,
     paddingHorizontal: spacing.smaller,
   },
   selectedText: {

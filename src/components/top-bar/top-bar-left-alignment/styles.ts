@@ -13,7 +13,7 @@ export const styles = StyleSheet.create<Style>({
     paddingBottom: spacing.small,
   },
   title: {
-    ...typography.title1Bold,
+    ...typography.title2Bold,
     color: color.textPrimary,
   },
 });

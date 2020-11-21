@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
+  Pressable,
   StyleProp,
   StyleSheet,
   Text,
   TextStyle,
-  TouchableOpacity,
   ViewStyle,
+  Animated,
 } from 'react-native';
 import { color, typography } from '../../theme';
 
@@ -24,14 +25,42 @@ const PrimaryButton: React.FC<OwnProps> = ({
   isDisabled,
   textStyles,
 }) => {
+  const scale = useRef(new Animated.Value(1)).current;
+
+  const onPressIn = () => {
+    Animated.timing(scale, {
+      toValue: 0.95,
+      duration: 200,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const onPressOut = () => {
+    Animated.timing(scale, {
+      toValue: 1,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+  };
+
   return (
-    <TouchableOpacity
-      style={[styles.container, containerStyle, isDisabled && styles.disabled]}
-      onPress={onPress}
-      disabled={isDisabled}
+    <Animated.View
+      style={[
+        styles.container,
+        containerStyle,
+        { transform: [{ scale: scale }] },
+        isDisabled && styles.disabled,
+      ]}
     >
-      <Text style={[styles.text, textStyles]}>{title}</Text>
-    </TouchableOpacity>
+      <Pressable
+        onPressIn={onPressIn}
+        onPressOut={onPressOut}
+        onPress={onPress}
+        disabled={isDisabled}
+      >
+        <Text style={[styles.text, textStyles]}>{title}</Text>
+      </Pressable>
+    </Animated.View>
   );
 };
 
@@ -50,10 +79,10 @@ const styles = StyleSheet.create<Style>({
     backgroundColor: color.brand,
   },
   text: {
-    ...typography.button,
+    ...typography.bodySemiBold,
     color: color.textInverted,
-    paddingBottom: 13,
-    paddingTop: 14,
+    paddingBottom: 16,
+    paddingTop: 16,
     textAlign: 'center',
   },
   disabled: {

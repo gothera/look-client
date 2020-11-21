@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { color, typography } from '../../theme';
-import { SVGProps } from '../../res/svg';
+import PressableCard from '../pressable-card/PressableCard';
 
 interface OwnProps {
   containerStyle?: StyleProp<ViewStyle>;
@@ -25,13 +25,14 @@ const ButtonWithIcon: React.FC<OwnProps> = ({
   icon,
 }) => {
   return (
-    <TouchableOpacity
-      style={[styles.container, containerStyle]}
-      onPress={onPress}
-    >
-      <View style={styles.iconContainer}>{icon}</View>
-      <Text style={styles.text}>{title}</Text>
-    </TouchableOpacity>
+    <View style={containerStyle}>
+      <PressableCard onPress={onPress}>
+        <View style={[styles.container]}>
+          <View style={styles.iconContainer}>{icon}</View>
+          <Text style={styles.text}>{title}</Text>
+        </View>
+      </PressableCard>
+    </View>
   );
 };
 
@@ -52,10 +53,10 @@ const styles = StyleSheet.create<Style>({
     borderColor: color.textPrimary,
   },
   text: {
-    ...typography.button,
+    ...typography.bodySemiBold,
     color: color.textPrimary,
-    paddingBottom: 13,
-    paddingTop: 14,
+    paddingBottom: 16,
+    paddingTop: 16,
     textAlign: 'center',
   },
   iconContainer: {

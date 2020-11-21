@@ -1,10 +1,13 @@
 import { Navigation } from 'react-native-navigation';
+import strings from '../res/strings/strings';
 import { color } from '../theme';
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
   EXPLORE_SCREEN,
+  FINISH_SIGN_UP_SCREEN,
   HOME_SCREEN,
+  PROFILE_SCREEN,
   SAVES_SCREEN,
 } from './screen-constants';
 import { Config, getConfig } from './utils-navigation';
@@ -141,7 +144,7 @@ export const setHomeRoot = () => {
               children: [
                 {
                   component: {
-                    name: HOME_SCREEN,
+                    name: PROFILE_SCREEN,
                   },
                 },
               ],
@@ -197,6 +200,45 @@ export const pushAuthScreen = (pushConfig?: Config) => {
           },
           animations: {
             ...config.animations,
+          },
+        },
+      },
+    },
+  });
+};
+
+/**
+ * Pushed on top of a pageSheet, will be showed as a modal
+ * @param componentId
+ * @param pushConfig
+ */
+export const pushFinishSignUpScreen = (
+  componentId: string,
+  pushConfig?: Config,
+) => {
+  const config = getConfig(pushConfig);
+
+  Navigation.push(componentId, {
+    component: {
+      name: FINISH_SIGN_UP_SCREEN,
+      passProps: { ...config.props },
+      options: {
+        overlay: {
+          interceptTouchOutside: true,
+          handleKeyboardEvents: true,
+        },
+        layout: {
+          componentBackgroundColor: color.background,
+        },
+        topBar: {
+          title: {
+            text: strings.screen.finishSignUp.title,
+            fontFamily: 'Gilroy-SemiBold',
+          },
+          backButton: {
+            showTitle: false,
+            icon: require('../res/images/icons/chevron-left-icon.png'),
+            color: color.textPrimary,
           },
         },
       },
