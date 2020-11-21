@@ -7,6 +7,9 @@ const strings = {
       artists: 'Artists',
       posts: 'Posts',
     },
+    appointments: {
+      title: 'Appointments',
+    },
   },
   modal: {},
   action: {

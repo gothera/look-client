@@ -3,11 +3,11 @@ import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { color } from '../../theme';
 
 interface OwnProps {
-  containerStyle?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 }
 
-const LineDivider: React.FC<OwnProps> = ({ containerStyle }) => {
-  return <View style={[styles.container, containerStyle]} />;
+const LineDivider: React.FC<OwnProps> = ({ style }) => {
+  return <View style={[styles.container, style]} />;
 };
 interface Style {
   container: ViewStyle;

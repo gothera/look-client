@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import ArtistEntryRow from '../../../../components/artist/artist-entry-row/ArtistEntryRow';
-import LineDivider from '../../../../components/ui/LineDivider';
 import { Category } from '../../../../types';
 
 /** DUMMY DATA */
@@ -51,7 +50,13 @@ interface OwnProps {
 }
 
 const SavedArtistsList: React.FC<OwnProps> = ({ componentId }) => {
-  const renderArtistRow = ({ item }: { item: ArtistAux; index: number }) => {
+  const renderArtistRow = ({
+    item,
+    index,
+  }: {
+    item: ArtistAux;
+    index: number;
+  }) => {
     return (
       <ArtistEntryRow
         photo={item.photo}
@@ -59,18 +64,13 @@ const SavedArtistsList: React.FC<OwnProps> = ({ componentId }) => {
         stars={item.stars}
         reviewsCount={item.reviewsCount}
         category={item.category}
+        onPress={() => {}}
+        showDivider={index !== DUMMY_ARTISTS.length - 1}
       />
     );
   };
 
-  return (
-    <FlatList
-      data={DUMMY_ARTISTS}
-      renderItem={renderArtistRow}
-      ItemSeparatorComponent={LineDivider}
-      contentContainerStyle={{ paddingHorizontal: 16 }}
-    />
-  );
+  return <FlatList data={DUMMY_ARTISTS} renderItem={renderArtistRow} />;
 };
 
 export default SavedArtistsList;

@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
+import { color } from '../../../theme';
 import { Category } from '../../../types';
 import UserCategoryAvatar from '../../avatar/user-category-avatar/UserCategoryAvatar';
+import LineDivider from '../../ui/LineDivider';
 import ArtistEntryStats from '../artist-entry-stats/ArtistEntryStats';
 import { styles } from './styles';
 
@@ -12,6 +14,7 @@ interface OwnProps {
   reviewsCount: number;
   onPress?: () => void;
   category: Category;
+  showDivider?: boolean;
 }
 
 const ArtistEntryRow: React.FC<OwnProps> = ({
@@ -21,15 +24,21 @@ const ArtistEntryRow: React.FC<OwnProps> = ({
   reviewsCount,
   onPress,
   category,
+  showDivider,
 }) => {
   return (
-    <View style={styles.container}>
-      <UserCategoryAvatar photo={photo} size={50} category={category} />
-      <View style={styles.textContainer}>
-        <Text style={styles.fullName}>{fullName}</Text>
-        <ArtistEntryStats stars={stars} reviewsCount={reviewsCount} />
-      </View>
-    </View>
+    <TouchableHighlight onPress={onPress} underlayColor={color.highlight}>
+      <>
+        <View style={styles.container}>
+          <UserCategoryAvatar photo={photo} size={50} category={category} />
+          <View style={styles.textContainer}>
+            <Text style={styles.fullName}>{fullName}</Text>
+            <ArtistEntryStats stars={stars} reviewsCount={reviewsCount} />
+          </View>
+        </View>
+        {showDivider && <LineDivider style={styles.divider} />}
+      </>
+    </TouchableHighlight>
   );
 };
 

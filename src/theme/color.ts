@@ -3,7 +3,7 @@ export const color = {
   textSecondary: '#34353E',
   textInverted: '#FFFFFF',
   muted: '#AFAFAF',
-  unchosen: '#C5C5C7',
+  unchosen: '#DBDBDB',
   brand: '#E0525C',
   modalBackground: 'rgba(0, 0, 0, 0.6)',
   background: '#FFFFFF',
@@ -15,5 +15,5 @@ export const color = {
   hair: '#F4E7C3',
   eyebrows: '#C5F2D5',
   bodyCare: '#FAE1D2',
-  lashes: '#D3E8F5'
+  lashes: '#D3E8F5',
 };

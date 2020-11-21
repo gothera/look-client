@@ -5,6 +5,7 @@ interface Style {
   container: ViewStyle;
   textContainer: ViewStyle;
   fullName: TextStyle;
+  divider: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -12,6 +13,7 @@ export const styles = StyleSheet.create<Style>({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: spacing.base,
+    paddingHorizontal: spacing.base,
   },
   textContainer: {
     marginLeft: spacing.smaller,
@@ -19,5 +21,8 @@ export const styles = StyleSheet.create<Style>({
   fullName: {
     ...typography.bodySemiBold,
     color: color.textPrimary,
+  },
+  divider: {
+    marginHorizontal: spacing.base,
   },
 });

@@ -1,6 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 import { color } from '../theme';
 import {
+  APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
   EXPLORE_SCREEN,
   HOME_SCREEN,
@@ -106,12 +107,13 @@ export const setHomeRoot = () => {
                 },
               },
             },
-          },{
+          },
+          {
             stack: {
               children: [
                 {
                   component: {
-                    name: HOME_SCREEN,
+                    name: APPOINTMENTS_SCREEN,
                   },
                 },
               ],
