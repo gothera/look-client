@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { SavedEntity } from '../../types/enums';
 import SavesScreenHeader from './components/saves-screen-header/SavesScreenHeader';
 import SavesTabView from './components/saves-tab-view/SavesTabView';
@@ -25,7 +25,7 @@ const SavesScreen: React.FC<OwnProps> = ({ componentId }) => {
         currentSavedEntity={savedEntity}
         onSavedEntityChange={onChangeSavedEntity}
       />
-      <SavesTabView componentId={componentId} />
+      <SavesTabView componentId={componentId} savedEntity={savedEntity} />
     </SafeAreaView>
   );
 };

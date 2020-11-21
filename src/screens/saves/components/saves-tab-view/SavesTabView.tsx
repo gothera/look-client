@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import {
   TabView,
   TabBar,
-  SceneMap,
   NavigationState,
   SceneRendererProps,
 } from 'react-native-tab-view';
 import { Text } from 'react-native';
-import { TabRoute } from '../../../../types';
+import { Category, SavedEntity, TabRoute } from '../../../../types';
 import SavedArtistsList from '../saved-artists-list/SavedArtistsList';
 import { styles } from './styles';
 import { Categories } from '../../../../res/strings/categories';
@@ -16,10 +15,11 @@ type State = NavigationState<TabRoute>;
 
 interface OwnProps {
   componentId: string;
+  savedEntity: SavedEntity;
 }
 
-const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
-  const [categoryIndex, setCategoryIndex] = useState(0);
+const SavesTabView: React.FC<OwnProps> = ({ componentId, savedEntity }) => {
+  const [categoryIndex, setCategoryIndex] = useState(Category.Makeup);
 
   const categoriesArr = Object.keys(Categories);
 
@@ -61,17 +61,11 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
     />
   );
 
-  // const renderScene = SceneMap({
-  //   makeup: SavedArtistsList,
-  //   lashes: SavedArtistsList,
-  //   eyebrows: SavedArtistsList,
-  //   nails: SavedArtistsList,
-  //   bodyCare: SavedArtistsList,
-  //   hair: SavedArtistsList,
-  // });
-
   const renderScene = ({ route }: { route: TabRoute }) => {
-    if (route.key === Categories.makeup.toLowerCase()) {
+    if (
+      route.key === Categories.makeup.toLowerCase() &&
+      savedEntity === SavedEntity.Artists
+    ) {
       return <SavedArtistsList componentId={componentId} />;
     }
     return null;
