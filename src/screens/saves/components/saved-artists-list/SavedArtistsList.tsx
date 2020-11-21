@@ -1,11 +1,26 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
+import LineDivider from '../../../../components/ui/LineDivider';
 
-const SavedArtistsList = () => {
+interface OwnProps {
+  componentId: string;
+}
+
+const SavedArtistsList: React.FC<OwnProps> = ({ componentId }) => {
+  const renderArtistRow = ({ item }: { item: number; index: number }) => {
+    return (
+      <View>
+        <Text>{item}</Text>
+      </View>
+    );
+  };
+
   return (
-    <View>
-      <Text>Saved Artists List</Text>
-    </View>
+    <FlatList
+      data={[0, 1, 2, 3, 4]}
+      renderItem={renderArtistRow}
+      ItemSeparatorComponent={LineDivider}
+    />
   );
 };
 

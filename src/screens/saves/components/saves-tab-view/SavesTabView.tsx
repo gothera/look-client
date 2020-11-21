@@ -23,8 +23,6 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
 
   const categoriesArr = Object.keys(Categories);
 
-  console.log('=== arrAux ===', categoriesArr);
-
   const routes: TabRoute[] = categoriesArr.map((categoryStr) => {
     return {
       key: categoryStr,
@@ -63,14 +61,21 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
     />
   );
 
-  const renderScene = SceneMap({
-    makeup: SavedArtistsList,
-    lashes: SavedArtistsList,
-    eyebrows: SavedArtistsList,
-    nails: SavedArtistsList,
-    bodyCare: SavedArtistsList,
-    hair: SavedArtistsList,
-  });
+  // const renderScene = SceneMap({
+  //   makeup: SavedArtistsList,
+  //   lashes: SavedArtistsList,
+  //   eyebrows: SavedArtistsList,
+  //   nails: SavedArtistsList,
+  //   bodyCare: SavedArtistsList,
+  //   hair: SavedArtistsList,
+  // });
+
+  const renderScene = ({ route }: { route: TabRoute }) => {
+    if (route.key === Categories.makeup.toLowerCase()) {
+      return <SavedArtistsList componentId={componentId} />;
+    }
+    return null;
+  };
 
   return (
     <TabView
