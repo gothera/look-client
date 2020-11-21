@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 import {
   TabView,
   TabBar,
@@ -7,12 +6,13 @@ import {
   NavigationState,
   SceneRendererProps,
 } from 'react-native-tab-view';
+import { Text } from 'react-native';
+import { TabRoute } from '../../../../types';
 import SavedArtistsList from '../saved-artists-list/SavedArtistsList';
+import { styles } from './styles';
+import { Categories } from '../../../../res/strings/categories';
 
-type State = NavigationState<{
-  key: string;
-  title: string;
-}>;
+type State = NavigationState<TabRoute>;
 
 interface OwnProps {
   componentId: string;
@@ -21,17 +21,33 @@ interface OwnProps {
 const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
   const [categoryIndex, setCategoryIndex] = useState(0);
 
-  const routes = [
-    { key: 'article', title: 'Article' },
-    { key: 'contacts', title: 'Contacts' },
-    { key: 'albums', title: 'Albums' },
-    { key: 'chat', title: 'Chat' },
-    { key: 'long', title: 'long long long title' },
-    { key: 'medium', title: 'medium title' },
-  ];
+  const categoriesArr = Object.keys(Categories);
+
+  console.log('=== arrAux ===', categoriesArr);
+
+  const routes: TabRoute[] = categoriesArr.map((categoryStr) => {
+    return {
+      key: categoryStr,
+      title: categoryStr,
+    };
+  });
 
   const onIndexChange = (newIndex: number) => {
     setCategoryIndex(newIndex);
+  };
+
+  const renderLabel = ({
+    route,
+    focused,
+  }: {
+    route: TabRoute;
+    focused: boolean;
+  }) => {
+    return (
+      <Text style={[styles.label, focused && styles.selectedLabel]}>
+        {route.title}
+      </Text>
+    );
   };
 
   const renderTabBar = (
@@ -41,19 +57,19 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
       {...props}
       scrollEnabled
       indicatorStyle={styles.indicator}
-      style={styles.tabbar}
-      labelStyle={styles.label}
+      style={styles.tabBar}
       tabStyle={styles.tabStyle}
+      renderLabel={renderLabel}
     />
   );
 
   const renderScene = SceneMap({
-    albums: SavedArtistsList,
-    contacts: SavedArtistsList,
-    article: SavedArtistsList,
-    chat: SavedArtistsList,
-    long: SavedArtistsList,
-    medium: SavedArtistsList,
+    makeup: SavedArtistsList,
+    lashes: SavedArtistsList,
+    eyebrows: SavedArtistsList,
+    nails: SavedArtistsList,
+    bodyCare: SavedArtistsList,
+    hair: SavedArtistsList,
   });
 
   return (
@@ -65,20 +81,5 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId }) => {
     />
   );
 };
-
-const styles = StyleSheet.create({
-  tabbar: {
-    // backgroundColor: '#3f51b5',
-  },
-  indicator: {
-    backgroundColor: '#ffeb3b',
-  },
-  label: {
-    fontWeight: '400',
-  },
-  tabStyle: {
-    width: 'auto',
-  },
-});
 
 export default SavesTabView;
