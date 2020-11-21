@@ -9,6 +9,7 @@ import {
 interface Style {
   container: ViewStyle;
   imageStyle: ImageStyle;
+  gradient: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -20,5 +21,15 @@ export const styles = StyleSheet.create<Style>({
   imageStyle: {
     borderRadius: BORDER_RADIUS,
     flex: 1,
+  },
+  gradient: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    opacity: 0.8,
+    zIndex: 2,
+    borderRadius: BORDER_RADIUS,
   },
 });

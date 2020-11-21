@@ -27,3 +27,12 @@ export const POST_CARD_HEIGHT = 260;
 export const POSTS_LIST_NUM_COLUMNS = 2;
 
 export const BORDER_RADIUS = 12;
+
+export const LINEAR_GRADIENT_TRANSPARENT_COLOR = [
+  'rgba(0,0,0,0)',
+  'rgba(0,0,0,0)',
+  'rgba(0,0,0,0.1)',
+  'rgba(0,0,0,0.2)',
+  'rgba(0,0,0,0.4)',
+  'rgba(0,0,0,0.8)',
+];

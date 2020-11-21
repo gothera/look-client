@@ -23,6 +23,8 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 // react-native-keychain
 import com.oblador.keychain.KeychainPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-navigation
 import com.reactnativenavigation.react.NavigationPackage;
 // react-native-reanimated
@@ -82,6 +84,7 @@ public class PackageList {
       new RNGestureHandlerPackage(),
       new PickerPackage(),
       new KeychainPackage(),
+      new LinearGradientPackage(),
       new NavigationPackage(reactNativeHost),
       new ReanimatedPackage(),
       new SvgPackage(),
