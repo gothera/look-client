@@ -63,15 +63,9 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId, savedEntity }) => {
   );
 
   const renderScene = ({ route }: { route: TabRoute }) => {
-    if (
-      route.key === Categories.makeup.toLowerCase() &&
-      savedEntity === SavedEntity.Artists
-    ) {
+    if (savedEntity === SavedEntity.Artists) {
       return <SavedArtistsList componentId={componentId} />;
-    } else if (
-      route.key === Categories.makeup.toLowerCase() &&
-      savedEntity === SavedEntity.Posts
-    ) {
+    } else if (savedEntity === SavedEntity.Posts) {
       return <PostsColumnList componentId={componentId} />;
     }
     return null;

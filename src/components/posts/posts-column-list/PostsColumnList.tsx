@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
-import { POST_CARD_WIDTH } from '../../../res/constants';
 import { Category } from '../../../types';
 import PostCard from '../../post/post-card/PostCard';
 import { styles } from './styles';
@@ -35,6 +34,18 @@ const DUMMY_POSTS: PostAux[] = [
     artistFullName: 'Andrei Stanila',
     artistPhoto:
       'https://1.bp.blogspot.com/-4W8VShiMuiY/XWAMQgI495I/AAAAAAAAio0/e5sHkEGSAKs2tOagU7leTzWBbRl8QwokwCLcBGAs/s1600/ema%2Buta%2Bbiografie%2Bde%2Bstilista%2Btalentata.jpg',
+    artistCategory: Category.Makeup,
+  },
+  {
+    photo: 'https://imgur.com/Lrb9qjl.png',
+    artistFullName: 'Andrei Stanila',
+    artistPhoto: 'https://imgur.com/Lrb9qjl.png',
+    artistCategory: Category.Makeup,
+  },
+  {
+    photo: 'https://imgur.com/nf95KqH.png',
+    artistFullName: 'Andrei Stanila',
+    artistPhoto: 'https://imgur.com/nf95KqH.png',
     artistCategory: Category.Makeup,
   },
 ];
