@@ -23,3 +23,8 @@ export enum Currency {
   EUR,
   GBP,
 }
+
+export enum SavedEntity {
+  Artists,
+  Posts,
+}
