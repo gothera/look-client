@@ -1,10 +1,10 @@
 export const Categories = {
   makeup: 'Makeup',
-  lashes: 'Lashes',
-  eyebrows: 'Eyebrows',
   nails: 'Nails',
-  bodyCare: 'Body Care',
   hair: 'Hair',
+  eyebrows: 'Eyebrows',
+  bodyCare: 'Body Care',
+  lashes: 'Lashes',
 };
 
 export const Services = {

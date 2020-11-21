@@ -1,10 +1,10 @@
 export enum Category {
   Makeup,
-  Lashes,
+  Nails,
   Hair,
   Eyebrows,
-  Nails,
   BodyCare,
+  Lashes,
 }
 
 export enum DaysAbbreviation {
@@ -22,4 +22,9 @@ export enum Currency {
   USD,
   EUR,
   GBP,
+}
+
+export enum SavedEntity {
+  Artists,
+  Posts,
 }
