@@ -22,7 +22,7 @@ export const styles = StyleSheet.create<Style>({
     textTransform: 'capitalize',
   },
   selectedLabel: {
-    color: color.textSecondary,
+    color: color.textPrimary,
   },
   tabStyle: {
     width: 'auto',

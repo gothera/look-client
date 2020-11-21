@@ -20,7 +20,7 @@ export const styles = StyleSheet.create<Style>({
     paddingHorizontal: spacing.smaller,
   },
   selectedText: {
-    color: color.textSecondary,
+    color: color.textPrimary,
   },
   unselectedText: {
     color: color.muted,
