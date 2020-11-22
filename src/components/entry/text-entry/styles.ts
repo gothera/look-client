@@ -1,5 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import { typography, color } from '../../../theme';
+import { typography, color, spacing } from '../../../theme';
 
 interface Style {
   container: ViewStyle;
@@ -10,11 +10,11 @@ interface Style {
 export const styles = StyleSheet.create<Style>({
   container: {
     width: '100%',
-    paddingVertical: 10,
+    paddingVertical: spacing.base,
   },
   title: {
-    ...typography.headlineSemiBold,
-    color: color.textSecondary,
+    ...typography.headline,
+    color: color.textPrimary,
   },
   root: {
     width: '100%',

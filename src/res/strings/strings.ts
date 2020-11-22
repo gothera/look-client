@@ -16,6 +16,27 @@ const strings = {
         description:
           'Log in or sign up to schedule your favorite beauty artist.',
       },
+      loggedIn: {
+        account: {
+          label: 'Account',
+          settings: 'Settings',
+          billingInformation: 'Billing Information',
+        },
+        about: {
+          label: 'About',
+          learnAboutLook: 'Learn about look',
+          becomeAnArtist: 'Become an artist',
+        },
+        support: {
+          label: 'Support',
+          rateUs: 'Rate us',
+          contactUs: 'Contact us',
+        },
+        legal: {
+          termsOfService: 'Terms of service',
+          privacyPolicy: 'Privacy policy',
+        },
+      },
     },
     auth: {
       buttons: {

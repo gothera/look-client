@@ -5,16 +5,18 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
-  TouchableOpacity,
+  TouchableHighlight,
 } from 'react-native';
 import { styles } from './styles';
 import LineDivider from '../../ui/LineDivider';
+import { color } from '../../../theme';
 
 interface OwnProps {
   containerStyle?: StyleProp<ViewStyle>;
   title: string;
   onPress: () => void;
   titleStyle?: StyleProp<TextStyle>;
+  dividerStyle?: StyleProp<ViewStyle>;
 }
 
 const TextEntry: React.FC<OwnProps> = ({
@@ -22,16 +24,18 @@ const TextEntry: React.FC<OwnProps> = ({
   title,
   onPress,
   titleStyle,
+  dividerStyle,
 }) => {
   return (
     <View style={styles.root}>
-      <TouchableOpacity
+      <TouchableHighlight
         style={[styles.container, containerStyle]}
         onPress={onPress}
+        underlayColor={color.highlight}
       >
         <Text style={[styles.title, titleStyle]}>{title}</Text>
-      </TouchableOpacity>
-      <LineDivider />
+      </TouchableHighlight>
+      <LineDivider style={dividerStyle} />
     </View>
   );
 };
