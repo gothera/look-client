@@ -3,13 +3,19 @@ import { Text, Animated } from 'react-native';
 import PrimaryButton from '../../../../components/button/PrimaryButton';
 import SocialSignupOptions from '../../../../components/social-signup-options/SocialSignupOptions';
 import TopBarLeftAlignment from '../../../../components/top-bar/top-bar-left-alignment/TopBarLeftAlignment';
-import LineDivider from '../../../../components/ui/LineDivider';
 import OrLineDivider from '../../../../components/ui/OrLineDivider';
-import { showStartAuthModal } from '../../../../navigation';
+import {
+  pushFinishSignUpScreen,
+  showStartAuthModal,
+} from '../../../../navigation';
 import strings from '../../../../res/strings/strings';
 import { styles } from './styles';
 
-const OfflineProfileOptions = () => {
+interface OwnProps {
+  componentId: string;
+}
+
+const OfflineProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   const onScroll = useRef(
@@ -44,7 +50,12 @@ const OfflineProfileOptions = () => {
         <SocialSignupOptions
           onApple={() => {}}
           onFacebook={() => {}}
-          onGoogle={() => {}}
+          onGoogle={() => {
+            // e cont nou =>
+            pushFinishSignUpScreen(componentId, {
+              props: { suggestedFirstName: 'andrei test', isSocial: true },
+            });
+          }}
         />
       </Animated.ScrollView>
     </>

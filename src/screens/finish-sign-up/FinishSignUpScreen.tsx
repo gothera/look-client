@@ -5,16 +5,18 @@ interface OwnProps {
   componentId: string;
   suggestedFirstName?: string;
   suggestedLastName?: string;
+  isSocial: boolean; // if show password input or not
 }
 
 const FinishSignUpScreen: React.FC<OwnProps> = ({
   componentId,
   suggestedFirstName,
   suggestedLastName,
+  isSocial,
 }) => {
   return (
     <ScrollView>
-      <Text>sabin</Text>
+      <Text>{suggestedFirstName}</Text>
     </ScrollView>
   );
 };

@@ -3,10 +3,14 @@ import { SafeAreaView } from 'react-native';
 import OfflineProfileOptions from './components/offline-profile-options/OfflineProfileOptions';
 import { styles } from './styles';
 
-const ProfileScreen = () => {
+interface OwnProps {
+  componentId: string;
+}
+
+const ProfileScreen: React.FC<OwnProps> = ({ componentId }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <OfflineProfileOptions />
+      <OfflineProfileOptions componentId={componentId} />
     </SafeAreaView>
   );
 };
