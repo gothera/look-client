@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
+import { showSearchModal } from '../../../../navigation';
 import strings from '../../../../res/strings/strings';
 import { SearchIcon } from '../../../../res/svg';
 import { styles } from './styles';
@@ -9,13 +10,19 @@ interface OwnProps {
 }
 
 const ExploreSearchBar: React.FC<OwnProps> = ({ componentId }) => {
+  const onSearchPress = () => {
+    showSearchModal();
+  };
+
   return (
-    <View style={styles.container}>
-      <SearchIcon />
-      <Text style={styles.placeholderText}>
-        {strings.screen.explore.searchPlaceholder}
-      </Text>
-    </View>
+    <TouchableWithoutFeedback onPress={onSearchPress}>
+      <View style={styles.container}>
+        <SearchIcon />
+        <Text style={styles.placeholderText}>
+          {strings.screen.explore.searchPlaceholder}
+        </Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

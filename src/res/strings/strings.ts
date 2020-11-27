@@ -2,6 +2,9 @@ const strings = {
   screen: {
     explore: {
       searchPlaceholder: 'Try favorite  makeup artist name',
+      categories: {
+        label: 'Categories',
+      },
     },
     saves: {
       artists: 'Artists',
@@ -72,6 +75,7 @@ const strings = {
     logout: 'Logout',
     continue: 'Continue',
     logIn: 'Log in',
+    cancel: 'Cancel',
   },
 };
 

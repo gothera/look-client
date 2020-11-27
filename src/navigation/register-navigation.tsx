@@ -4,7 +4,7 @@ import { getGenericPassword } from 'react-native-keychain';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { StartAuthModal } from '../modals';
+import { SearchModal, StartAuthModal } from '../modals';
 import {
   AppointmentsScreen,
   AuthScreen,
@@ -12,11 +12,11 @@ import {
   HomeScreen,
   ProfileScreen,
   SavesScreen,
+  FinishSignUpScreen,
 } from '../screens';
-import FinishSignUpScreen from '../screens/finish-sign-up/FinishSignUpScreen';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
-import { START_AUTH_MODAL } from './modal-constants';
+import { SEARCH_MODAL, START_AUTH_MODAL } from './modal-constants';
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
@@ -68,6 +68,10 @@ const registerScreens = () => {
 const registerModals = () => {
   Navigation.registerComponent(START_AUTH_MODAL, () =>
     WrappedComponent(StartAuthModal),
+  );
+
+  Navigation.registerComponent(SEARCH_MODAL, () =>
+    WrappedComponent(SearchModal),
   );
 };
 

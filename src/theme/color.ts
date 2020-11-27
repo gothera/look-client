@@ -7,6 +7,7 @@ export const color = {
   brand: '#E0525C',
   modalBackground: 'rgba(0, 0, 0, 0.6)',
   background: '#FFFFFF',
+  underground: '#F8F8F8',
   success: '#00A26A',
   delete: '#D34848',
   highlight: '#F0F0F0',

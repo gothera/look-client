@@ -46,146 +46,175 @@ const designSystemTypography = {
   largeTitle: {
     ...font.medium,
     fontSize: 34,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   largeTitleBold: {
     ...font.bold,
     fontSize: 34,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title1: {
     ...font.medium,
     fontSize: 28,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title1Bold: {
     ...font.bold,
     fontSize: 28,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title2: {
     ...font.medium,
     fontSize: 22,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title2Bold: {
     ...font.bold,
     fontSize: 22,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title3: {
     ...font.medium,
     fontSize: 20,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title3Bold: {
     ...font.bold,
     fontSize: 20,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   title3SemiBold: {
     ...font.semiBold,
     fontSize: 20,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   headline: {
     ...font.medium,
     fontSize: 18,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   headlineSemiBold: {
     ...font.semiBold,
     fontSize: 18,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   headlineBold: {
     ...font.bold,
     fontSize: 18,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   body: {
     ...font.medium,
     fontSize: 16,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   bodySemiBold: {
     ...font.semiBold,
     fontSize: 16,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   bodyRegular: {
     ...font.regular,
     fontSize: 16,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   subheadline: {
     ...font.medium,
     fontSize: 14,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   subheadlineSemiBold: {
     ...font.semiBold,
+    letterSpacing: 0.2,
     fontSize: 14,
   } as TextStyle,
 
   subheadlineRegular: {
     ...font.regular,
     fontSize: 14,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   footnote: {
     ...font.medium,
     fontSize: 13,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   footnoteSemiBold: {
     ...font.semiBold,
     fontSize: 13,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   footnoteRegular: {
     ...font.regular,
     fontSize: 13,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption1: {
     ...font.medium,
     fontSize: 12,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption1SemiBold: {
     ...font.semiBold,
     fontSize: 12,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption1Regular: {
     ...font.regular,
     fontSize: 12,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption1Bold: {
     ...font.bold,
     fontSize: 12,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption2: {
     ...font.medium,
     fontSize: 11,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption2SemiBold: {
     ...font.semiBold,
     fontSize: 11,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption2Regular: {
     ...font.regular,
     fontSize: 11,
+    letterSpacing: 0.2,
   } as TextStyle,
 
   caption2Bold: {
     ...font.bold,
     fontSize: 11,
+    letterSpacing: 0.2,
   } as TextStyle,
 };
 

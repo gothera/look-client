@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { color } from '../../../theme';
 import { Category } from '../../../types';
+import { getCategoryColor } from '../../../utils/global';
 import UserAvatar from '../user-avatar/UserAvatar';
 
 interface OwnProps {
@@ -11,22 +11,7 @@ interface OwnProps {
 }
 
 const UserCategoryAvatar: React.FC<OwnProps> = ({ size, photo, category }) => {
-  const getBorderColor = () => {
-    switch (category) {
-      case Category.Makeup:
-        return color.makeup;
-      case Category.Lashes:
-        return color.lashes;
-      case Category.Eyebrows:
-        return color.eyebrows;
-      case Category.Nails:
-        return color.nails;
-      case Category.BodyCare:
-        return color.bodyCare;
-      case Category.Hair:
-        return color.hair;
-    }
-  };
+  const categoryColor = getCategoryColor(category);
 
   return (
     <View
@@ -37,7 +22,7 @@ const UserCategoryAvatar: React.FC<OwnProps> = ({ size, photo, category }) => {
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: size + 6,
-        borderColor: getBorderColor(),
+        borderColor: categoryColor,
       }}
     >
       <UserAvatar photoUrl={photo} size={size} />

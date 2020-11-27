@@ -10,6 +10,7 @@ import {
   bodyCareServicesSelection,
   hairServicesSelection,
 } from '../res/constants/pickerItems';
+import { color } from '../theme';
 
 export type ContentProp = keyof Notification;
 
@@ -193,4 +194,21 @@ export const dateToDayMonth = (date: string) => {
   const dayNumber = parseInt(date.split('-')[2]);
   const monthName = monthNumberToMonthName(parseInt(date.split('-')[1]));
   return dayNumber + ' ' + monthName;
+};
+
+export const getCategoryColor = (category: Category) => {
+  switch (category) {
+    case Category.Makeup:
+      return color.makeup;
+    case Category.Lashes:
+      return color.lashes;
+    case Category.Eyebrows:
+      return color.eyebrows;
+    case Category.Nails:
+      return color.nails;
+    case Category.BodyCare:
+      return color.bodyCare;
+    case Category.Hair:
+      return color.hair;
+  }
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView } from 'react-native';
+import CategoriesGrid from './components/categories-grid/CategoriesGrid';
 import ExploreSearchBar from './components/explore-search-bar/ExploreSearchBar';
 import { styles } from './styles';
 
@@ -9,9 +10,10 @@ interface OwnProps {
 
 const ExploreScreen: React.FC<OwnProps> = ({ componentId }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ExploreSearchBar componentId={componentId} />
-    </View>
+      <CategoriesGrid componentId={componentId} />
+    </SafeAreaView>
   );
 };
 

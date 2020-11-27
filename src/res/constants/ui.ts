@@ -36,3 +36,8 @@ export const LINEAR_GRADIENT_TRANSPARENT_COLOR = [
   'rgba(0,0,0,0.4)',
   'rgba(0,0,0,0.8)',
 ];
+
+export const CATEGORIES_GRID_COLUMNS = 3;
+
+export const CATEGORY_CARD_DIAMETER =
+  (Dimensions.get('screen').width - 64) / CATEGORIES_GRID_COLUMNS;
