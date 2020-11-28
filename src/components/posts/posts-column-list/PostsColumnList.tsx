@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
+import { showPostModal } from '../../../navigation';
 import { Category } from '../../../types';
 import PostCard from '../../post/post-card/PostCard';
 import { styles } from './styles';
 
 interface PostAux {
+  id: number;
   photo: string;
   artistFullName: string;
   artistPhoto: string;
@@ -13,6 +15,7 @@ interface PostAux {
 
 const DUMMY_POSTS: PostAux[] = [
   {
+    id: 1,
     photo:
       'https://emauta.beautyclasses.ro/wp-content/uploads/2018/03/Ema-Uta.jpg',
     artistFullName: 'Ema Uta',
@@ -21,6 +24,7 @@ const DUMMY_POSTS: PostAux[] = [
     artistCategory: Category.Makeup,
   },
   {
+    id: 2,
     photo:
       'https://i.pinimg.com/originals/d2/f5/9c/d2f59ccedd6b37082e6c2aac9d353df6.jpg',
     artistFullName: 'Bogdan Muscalau',
@@ -29,6 +33,7 @@ const DUMMY_POSTS: PostAux[] = [
     artistCategory: Category.Makeup,
   },
   {
+    id: 3,
     photo:
       'https://ea.md/wp-content/uploads/2019/09/66112478_503480507122611_2278682628086290503_n.jpg',
     artistFullName: 'Andrei Stanila',
@@ -37,12 +42,14 @@ const DUMMY_POSTS: PostAux[] = [
     artistCategory: Category.Makeup,
   },
   {
+    id: 4,
     photo: 'https://imgur.com/Lrb9qjl.png',
     artistFullName: 'Andrei Stanila',
     artistPhoto: 'https://imgur.com/Lrb9qjl.png',
     artistCategory: Category.Makeup,
   },
   {
+    id: 5,
     photo: 'https://imgur.com/nf95KqH.png',
     artistFullName: 'Andrei Stanila',
     artistPhoto: 'https://imgur.com/nf95KqH.png',
@@ -62,6 +69,9 @@ const PostsColumnList: React.FC<OwnProps> = ({ componentId }) => {
     item: PostAux;
     index: number;
   }) => {
+    const onPostPress = () => {
+      showPostModal();
+    };
     return (
       <View style={styles.postContainer}>
         <PostCard
@@ -74,6 +84,7 @@ const PostsColumnList: React.FC<OwnProps> = ({ componentId }) => {
               ? styles.firstColumnPostContainer
               : styles.secondColumnPostContainer
           }
+          onPress={onPostPress}
         />
       </View>
     );

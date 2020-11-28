@@ -5,7 +5,7 @@ import {
 import { Config, getConfig } from './utils-navigation';
 import { color } from '../theme';
 import strings from '../res/strings/strings';
-import { SEARCH_MODAL, START_AUTH_MODAL } from './modal-constants';
+import { POST_MODAL, SEARCH_MODAL, START_AUTH_MODAL } from './modal-constants';
 
 export const showStartAuthModal = (pushConfig?: Config) => {
   const config = getConfig(pushConfig);
@@ -69,6 +69,29 @@ export const showSearchModal = (pushConfig?: Config) => {
                   },
                 },
               },
+              topBar: {
+                visible: false,
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+};
+
+export const showPostModal = (pushConfig?: Config) => {
+  const config = getConfig(pushConfig);
+  Navigation.showModal({
+    stack: {
+      children: [
+        {
+          component: {
+            name: POST_MODAL,
+            passProps: { ...config.props },
+            options: {
+              modalPresentationStyle:
+                OptionsModalPresentationStyle.overCurrentContext,
               topBar: {
                 visible: false,
               },

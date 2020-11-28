@@ -8,6 +8,7 @@ interface Style {
 export const styles = StyleSheet.create<Style>({
   text: {
     ...typography.footnoteRegular,
+    letterSpacing: 0.3,
     color: color.textPrimary,
     marginTop: 4,
   },

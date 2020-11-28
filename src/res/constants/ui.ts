@@ -1,5 +1,5 @@
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 const AUX_BOTTOM_SPACE = getBottomSpace() !== 0 ? getBottomSpace() + 10 : 30;
@@ -41,3 +41,12 @@ export const CATEGORIES_GRID_COLUMNS = 3;
 
 export const CATEGORY_CARD_DIAMETER =
   (Dimensions.get('screen').width - 64) / CATEGORIES_GRID_COLUMNS;
+
+export const ANIMATED_HEADER_CIRCLE_BUTTON_SIZE = 34;
+
+export const POST_MODAL_IMAGE_HEIGHT = Dimensions.get('screen').height * 0.42;
+
+export const POST_MODAL_IMAGE_OPACITY_RANGE =
+  Platform.OS === 'ios'
+    ? POST_MODAL_IMAGE_HEIGHT - STATUS_BAR_HEIGHT * 3
+    : POST_MODAL_IMAGE_HEIGHT - 60;

@@ -14,6 +14,7 @@ interface OwnProps {
   artistPhoto: string;
   category: Category;
   style?: StyleProp<ViewStyle>;
+  onPress: () => void;
 }
 
 const PostCard: React.FC<OwnProps> = ({
@@ -22,15 +23,20 @@ const PostCard: React.FC<OwnProps> = ({
   artistPhoto,
   category,
   style,
+  onPress,
 }) => {
   return (
-    <PressableCard onPress={() => {}}>
+    <PressableCard onPress={onPress}>
       <View style={[styles.container, style]}>
         <LinearGradient
           colors={LINEAR_GRADIENT_TRANSPARENT_COLOR}
           style={styles.gradient}
         />
-        <FastImage source={{ uri: photo }} style={styles.imageStyle} />
+        <FastImage
+          source={{ uri: photo }}
+          style={styles.imageStyle}
+          resizeMode="cover"
+        />
         <PostCardArtistData
           style={styles.artistDataContainer}
           photo={artistPhoto}
