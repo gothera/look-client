@@ -8,5 +8,6 @@
         "persistor",
         "pressable",
         "subheadline"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
