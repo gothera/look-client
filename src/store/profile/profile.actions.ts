@@ -2,15 +2,10 @@ import {
   setGenericPassword,
   resetGenericPassword,
 } from 'react-native-keychain';
-import {
-  setHomeRoot,
-  pushAuthScreen,
-} from '../../navigation';
-import {
-  LoginResponse,
-  SignupResponse,
-} from '../../services/api/api.types';
+import { setHomeRoot, pushAuthScreen } from '../../navigation';
+import { LoginResponse, SignupResponse } from '../../services/api/api.types';
 import * as AuthService from '../../services/api/AuthService';
+import { Client } from '../../types';
 import { ThunkResult } from '../store.types';
 import * as profileConstants from './profile.constants';
 import * as profileTypes from './profile.types';
@@ -44,24 +39,15 @@ const loginFailure = (): profileTypes.LoginFailure => {
 export const login = (
   email: string,
   password: string,
-  isRegister?: boolean,
+  onSuccess?: () => void,
 ): ThunkResult<void> => {
   return async function (dispatch, getState) {
-    // if (getState().profile.isLogging) {
-    //   return Promise.resolve();
-    // }
-
     dispatch(loginRequest());
 
     return AuthService.login(email, password)
       .then((response: LoginResponse) => {
         dispatch(loginKeychain(response.accessToken));
-      })
-      .then(() => {
-        if (!isRegister) {
-          // pushHomeScreen();
-          setHomeRoot();
-        }
+        onSuccess && onSuccess();
       })
       .catch((error) => {
         dispatch(loginFailure());
@@ -114,32 +100,91 @@ export const signUpFailure = (): profileTypes.SignUpFailure => {
 
 export const signUpSuccess = (
   userId: number,
-  artistId: number,
+  clientId: number,
   email: string,
 ): profileTypes.SignUpSuccess => {
   return {
     type: profileConstants.SIGNUP_SUCCESS,
-    payload: { email: email, artistId: artistId, userId: userId },
+    payload: { email: email, clientId: clientId, userId: userId },
   };
 };
 
-export const signUp = (email: string, password: string): ThunkResult<void> => {
+export const signUp = (
+  email: string,
+  password: string,
+  birthDate: string,
+  firstName: string,
+  lastName: string,
+  onSuccess?: () => void,
+): ThunkResult<void> => {
   return async function (dispatch, _) {
     dispatch(signUpRequest);
 
-    return AuthService.signUp(email, password)
+    return AuthService.signUp(email, password, birthDate, firstName, lastName)
       .then((response: SignupResponse) => {
         const userId = response.user.id;
-        const artistId = response.id;
+        const clientId = response.id;
 
-        dispatch(signUpSuccess(userId, artistId, email));
+        dispatch(signUpSuccess(userId, clientId, email));
       })
       .then(() => {
-        dispatch(login(email, password, true));
+        dispatch(login(email, password, onSuccess));
       })
       .catch((error) => {
         dispatch(loginFailure());
         console.log('Login error', error);
       });
+  };
+};
+
+/**
+ * LOGIN
+ */
+const fetchProfileRequest = (): profileTypes.fetchProfileRequest => {
+  return {
+    type: profileConstants.FETCH_PROFILE_REQUEST,
+  };
+};
+
+const fetchProfileSuccess = (
+  profile: Client,
+): profileTypes.fetchProfileSuccess => {
+  return {
+    type: profileConstants.FETCH_PROFILE_SUCCESS,
+    payload: { profile },
+  };
+};
+
+const fetchProfileFailure = (): profileTypes.fetchProfileFailure => {
+  return {
+    type: profileConstants.FETCH_PROFILE_FAILURE,
+  };
+};
+
+/**
+ * Used when pressing Login
+ * API Call for login
+ */
+export const fetchProfile = (): ThunkResult<void> => {
+  return async function (dispatch, getState) {
+    // if (getState().profile.isLogging) {
+    //   return Promise.resolve();
+    // }
+    dispatch(loginRequest());
+
+    // return AuthService.login(email, password)
+    //   .then((response: LoginResponse) => {
+    //     dispatch(loginKeychain(response.accessToken));
+    //   })
+    //   .then(() => {
+    //     if (!isRegister) {
+    //       // pushHomeScreen();
+    //       setHomeRoot();
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     dispatch(loginFailure());
+    //     console.log('Login error', error);
+    //   });
   };
 };

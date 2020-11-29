@@ -1,4 +1,4 @@
-import { postRequest } from './apiRequest';
+import { getRequest, postRequest } from './apiRequest';
 import { LoginResponse, SignupResponse } from './api.types';
 
 export const login = (
@@ -16,12 +16,23 @@ export const login = (
 export const signUp = (
   email: string,
   password: string,
+  birthDate: string,
+  firstName: string,
+  lastName: string,
 ): Promise<SignupResponse> => {
   const url = 'auth/signup';
   const data = {
-    type: 'Artist',
+    type: 'Client',
     email: email,
     password: password,
+    birthDate,
+    firstName,
+    lastName,
   };
   return postRequest<SignupResponse>(url, data);
+};
+
+export const emailExists = (email: string): Promise<boolean> => {
+  const url = `client/exists/${email}`;
+  return getRequest<boolean>(url);
 };

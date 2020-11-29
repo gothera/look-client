@@ -50,7 +50,7 @@ function profileReducer(
         isLogging: false,
         email: action.payload.email,
         userId: action.payload.userId,
-        artistId: action.payload.artistId,
+        clientId: action.payload.clientId,
       };
     }
     case profileConstants.SIGNUP_FAILURE: {

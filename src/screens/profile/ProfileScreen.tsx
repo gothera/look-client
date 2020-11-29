@@ -1,5 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
+import { connect, ConnectedProps } from 'react-redux';
+import { State } from '../../store/store.types';
 import OfflineProfileOptions from './components/offline-profile-options/OfflineProfileOptions';
 import ProfileOptions from './components/profile-options/ProfileOptions';
 import { styles } from './styles';
@@ -8,8 +10,20 @@ interface OwnProps {
   componentId: string;
 }
 
-const ProfileScreen: React.FC<OwnProps> = ({ componentId }) => {
-  const loggedIn = true;
+const mapStateToProps = (store: State) => {
+  return {
+    token: store.profile.token,
+  };
+};
+
+const connector = connect(mapStateToProps);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+const ProfileScreen: React.FC<OwnProps & PropsFromRedux> = ({
+  componentId,
+  token,
+}) => {
+  const loggedIn = !!token;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,4 +36,4 @@ const ProfileScreen: React.FC<OwnProps> = ({ componentId }) => {
   );
 };
 
-export default ProfileScreen;
+export default connector(ProfileScreen);

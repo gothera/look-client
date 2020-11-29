@@ -5,7 +5,12 @@ import {
 import { Config, getConfig } from './utils-navigation';
 import { color } from '../theme';
 import strings from '../res/strings/strings';
-import { POST_MODAL, SEARCH_MODAL, START_AUTH_MODAL } from './modal-constants';
+import {
+  POST_MODAL,
+  SEARCH_MODAL,
+  START_AUTH_MODAL,
+  SELECT_DATE_MODAL,
+} from './modal-constants';
 
 export const showStartAuthModal = (pushConfig?: Config) => {
   const config = getConfig(pushConfig);
@@ -33,6 +38,24 @@ export const showStartAuthModal = (pushConfig?: Config) => {
           },
         },
       ],
+    },
+  });
+};
+
+export const showSelectDateModal = (pushConfig?: Config) => {
+  const config = getConfig(pushConfig);
+  Navigation.showOverlay({
+    component: {
+      name: SELECT_DATE_MODAL,
+      passProps: { ...config.props },
+      options: {
+        modalPresentationStyle:
+          OptionsModalPresentationStyle.overCurrentContext,
+        layout: {
+          backgroundColor: 'transparent',
+          componentBackgroundColor: 'transparent',
+        },
+      },
     },
   });
 };

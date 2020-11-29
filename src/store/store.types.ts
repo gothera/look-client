@@ -11,6 +11,7 @@ export interface ProfileState {
   userId?: number;
   isFetching: boolean;
   email?: string;
+  clientId? :number;
 }
 
 export interface State {

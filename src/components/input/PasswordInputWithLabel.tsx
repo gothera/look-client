@@ -8,14 +8,14 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { color, typography, spacing } from '../../theme';
+import { color, typography } from '../../theme';
 import LineDivider from '../ui/LineDivider';
 
 interface OwnProps {
   containerStyle?: StyleProp<ViewStyle>;
   placeholder: string;
   description?: string;
-  setText: React.Dispatch<React.SetStateAction<string>>;
+  setText: (_: string) => void;
   text: string;
 }
 
@@ -27,9 +27,7 @@ const PasswordInputWithLabel: React.FC<OwnProps> = ({
   setText,
 }) => {
   const _onChangeText = (newText: string) => {
-    setText(() => {
-      return newText;
-    });
+    setText(newText);
   };
 
   return (
@@ -64,14 +62,14 @@ const styles = StyleSheet.create<Style>({
     width: '100%',
   },
   label: {
-    ...typography.caption2SemiBold,
-    color: color.muted,
+    ...typography.subheadline,
+    color: color.textPrimary,
   },
   input: {
     ...typography.body,
     color: color.textSecondary,
-    paddingVertical: 8,
-    marginTop: spacing.smallest,
+    marginBottom: 8,
+    marginTop: 10,
   },
   labelDescription: {
     ...typography.caption2Regular,

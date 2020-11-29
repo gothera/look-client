@@ -10,8 +10,8 @@ interface Style {
 
 export const styles = StyleSheet.create<Style>({
   label: {
-    ...typography.subheadlineSemiBold,
-    color: color.textSecondary,
+    ...typography.subheadline,
+    color: color.textPrimary,
   },
   input: {
     ...typography.body,
@@ -23,6 +23,6 @@ export const styles = StyleSheet.create<Style>({
   },
   pressableContainer: {
     paddingVertical: spacing.smaller,
-    marginTop: spacing.smallest,
+    marginTop: spacing.smaller,
   },
 });

@@ -1,11 +1,12 @@
 import { StyleSheet, ViewStyle } from 'react-native';
-import { color, spacing } from '../../theme';
+import { color, spacing, typography } from '../../theme';
 
 interface Style {
   container: ViewStyle;
   scrollContentContainer: ViewStyle;
   continueBtn: ViewStyle;
   orDivider: ViewStyle;
+  errorLabel: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -23,5 +24,10 @@ export const styles = StyleSheet.create<Style>({
   orDivider: {
     marginTop: spacing.largest,
     marginBottom: 4,
+  },
+  errorLabel: {
+    ...typography.caption2Regular,
+    color: color.delete,
+    marginTop: spacing.smallest,
   },
 });

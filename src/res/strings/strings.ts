@@ -58,6 +58,17 @@ const strings = {
     },
     finishSignUp: {
       title: 'Finish sign up',
+      labels: {
+        firstName: 'First Name',
+        lastName: 'Last Name',
+        date: 'Date',
+        email: 'Email',
+        password: 'Password',
+      },
+      placeholders: {
+        birthDayPlaceholder: 'Select Birthday',
+        password: 'Introduce a password',
+      },
     },
   },
   modal: {
@@ -75,6 +86,7 @@ const strings = {
     logout: 'Logout',
     continue: 'Continue',
     logIn: 'Log in',
+    done: 'Done',
     cancel: 'Cancel',
   },
 };

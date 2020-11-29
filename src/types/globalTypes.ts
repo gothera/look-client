@@ -72,6 +72,16 @@ export interface ArtistResponseApi {
   birthDate: string;
 }
 
+export interface Client {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  bio: string;
+  birthDate: string;
+}
+
 export interface Appointment {
   id?: number;
   artistId?: number;

@@ -37,6 +37,7 @@ export async function getRequest<T = any>(
   url: string,
   config?: AxiosRequestConfig | undefined,
 ) {
+  console.log(url);
   return client
     .get<T, AxiosResponse<T>>(url, config)
     .then(onRequestSuccess)

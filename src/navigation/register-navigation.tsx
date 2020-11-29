@@ -4,7 +4,12 @@ import { getGenericPassword } from 'react-native-keychain';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { PostModal, SearchModal, StartAuthModal } from '../modals';
+import {
+  PostModal,
+  SearchModal,
+  SelectDateModal,
+  StartAuthModal,
+} from '../modals';
 import {
   AppointmentsScreen,
   AuthScreen,
@@ -16,7 +21,12 @@ import {
 } from '../screens';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
-import { POST_MODAL, SEARCH_MODAL, START_AUTH_MODAL } from './modal-constants';
+import {
+  POST_MODAL,
+  SEARCH_MODAL,
+  SELECT_DATE_MODAL,
+  START_AUTH_MODAL,
+} from './modal-constants';
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
@@ -70,6 +80,9 @@ const registerModals = () => {
     WrappedComponent(StartAuthModal),
   );
 
+  Navigation.registerComponent(SELECT_DATE_MODAL, () =>
+    WrappedComponent(SelectDateModal),
+  );
   Navigation.registerComponent(SEARCH_MODAL, () =>
     WrappedComponent(SearchModal),
   );

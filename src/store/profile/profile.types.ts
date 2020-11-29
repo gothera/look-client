@@ -1,3 +1,4 @@
+import { Client } from '../../types';
 import * as profileConstants from './profile.constants';
 
 export interface InvalidateStoreAction {
@@ -23,11 +24,24 @@ export interface SignUpRequest {
 
 export interface SignUpSuccess {
   type: typeof profileConstants.SIGNUP_SUCCESS;
-  payload: { userId: number; artistId: number; email: string };
+  payload: { userId: number; clientId: number; email: string };
 }
 
 export interface SignUpFailure {
   type: typeof profileConstants.SIGNUP_FAILURE;
+}
+
+export interface fetchProfileRequest {
+  type: typeof profileConstants.FETCH_PROFILE_REQUEST;
+}
+
+export interface fetchProfileSuccess {
+  type: typeof profileConstants.FETCH_PROFILE_SUCCESS;
+  payload: {profile: Client};
+}
+
+export interface fetchProfileFailure {
+  type: typeof profileConstants.FETCH_PROFILE_FAILURE;
 }
 
 export interface postLogout {

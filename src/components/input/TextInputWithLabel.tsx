@@ -26,6 +26,8 @@ interface OwnProps {
   dividerStyle?: ViewStyle;
   labelStyle?: StyleProp<TextStyle>;
   description?: string;
+  disabled?: boolean;
+  password?: boolean;
 }
 
 const TextInputWithLabel: React.FC<OwnProps> = ({
@@ -42,6 +44,8 @@ const TextInputWithLabel: React.FC<OwnProps> = ({
   text,
   dividerStyle,
   description,
+  disabled,
+  password,
 }) => {
   const textInputRef = createRef<TextInput>();
 
@@ -61,11 +65,14 @@ const TextInputWithLabel: React.FC<OwnProps> = ({
 
   return (
     <View style={[styles.container, containerStyle]}>
-      <Text style={[styles.label, labelStyle]}>{label}</Text>
+      <Text style={[disabled ? styles.disabledText : styles.input, labelStyle]}>
+        {label}
+      </Text>
       {description && <Text style={styles.description}>{description}</Text>}
       <TextInput
+        secureTextEntry={password}
         ref={textInputRef}
-        style={styles.input}
+        style={disabled ? styles.disabledText : styles.input}
         keyboardType={keyboardType || 'default'}
         maxLength={maxLengthUndefined ? undefined : 80}
         value={text}
@@ -76,6 +83,7 @@ const TextInputWithLabel: React.FC<OwnProps> = ({
         numberOfLines={numOfLines}
         multiline={multiline}
         placeholderTextColor={color.muted}
+        editable={!disabled}
       />
       <LineDivider style={dividerStyle} />
     </View>
@@ -87,6 +95,7 @@ interface Style {
   label: TextStyle;
   input: TextStyle;
   description: TextStyle;
+  disabledText: TextStyle;
 }
 
 const styles = StyleSheet.create<Style>({
@@ -95,18 +104,24 @@ const styles = StyleSheet.create<Style>({
   },
   label: {
     ...typography.subheadline,
-    color: color.textSecondary,
+    color: color.textPrimary,
   },
   input: {
     ...typography.body,
-    color: color.textSecondary,
-    paddingVertical: 8,
-    marginTop: spacing.smallest,
+    color: color.textPrimary,
+    marginBottom: 8,
+    marginTop: 10,
   },
   description: {
     ...typography.caption2Regular,
     marginTop: spacing.smallest,
     color: color.muted,
+  },
+  disabledText: {
+    ...typography.body,
+    color: color.muted,
+    marginBottom: 8,
+    marginTop: 10,
   },
 });
 
