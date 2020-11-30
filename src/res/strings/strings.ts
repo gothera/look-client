@@ -5,6 +5,9 @@ const strings = {
       categories: {
         label: 'Categories',
       },
+      recentAppointments: {
+        label: 'Recent Appointments',
+      },
     },
     saves: {
       artists: 'Artists',

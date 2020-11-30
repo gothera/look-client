@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 import CategoriesGrid from './components/categories-grid/CategoriesGrid';
 import ExploreSearchBar from './components/explore-search-bar/ExploreSearchBar';
 import { styles } from './styles';

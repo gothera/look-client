@@ -1,4 +1,4 @@
-import { Currency } from './enums';
+import { Category, Currency } from './enums';
 
 export interface ImagePickerResponse {
   path: string;
@@ -68,6 +68,7 @@ export interface Client {
   bio: string;
   birthDate: string;
   profilePicture: string;
+  latestAppointments: Appointment[];
 }
 
 export interface Appointment {
@@ -84,6 +85,9 @@ export interface Appointment {
   currency: Currency;
   type: AppointmentType;
   date: string;
+  artistName?: string;
+  artistPhoto?: string;
+  category?: Category;
 }
 // nu am pus toate prorietatile unei pagini
 export interface Page<T> {

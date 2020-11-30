@@ -4,6 +4,7 @@ import CategoryCard from '../../../../components/category/category-card/Category
 import { CATEGORIES_GRID_COLUMNS } from '../../../../res/constants';
 import strings from '../../../../res/strings/strings';
 import { Category } from '../../../../types';
+import RecentAppointments from '../recent-appointments/RecentAppointments';
 import { styles } from './styles';
 
 interface CategoryCardModel {
@@ -71,14 +72,21 @@ const CategoriesGrid: React.FC<OwnProps> = ({ componentId }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>
-        {strings.screen.explore.categories.label}
-      </Text>
       <FlatList
         data={CATEGORY_CARD}
         numColumns={CATEGORIES_GRID_COLUMNS}
         renderItem={renderCategoryCard}
         bounces={false}
+        keyExtractor={(_, index) => `categories-grid-item-${index}`}
+        ListHeaderComponent={
+          <>
+            <RecentAppointments />
+            <Text style={styles.label}>
+              {strings.screen.explore.categories.label}
+            </Text>
+          </>
+        }
+        contentContainerStyle={styles.contentContainer}
       />
     </View>
   );

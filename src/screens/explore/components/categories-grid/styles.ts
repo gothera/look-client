@@ -8,17 +8,18 @@ interface Style {
   categoryCardContainer: ViewStyle;
   firstColumnCategory: ViewStyle;
   lastColumnCategory: ViewStyle;
+  contentContainer: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
   container: {
     marginTop: spacing.largest,
-    marginHorizontal: spacing.base,
   },
   label: {
     ...typography.body,
     color: color.textPrimary,
     marginBottom: spacing.base,
+    marginTop: spacing.large,
   },
   categoryCardContainer: {
     flex: 1 / CATEGORIES_GRID_COLUMNS,
@@ -30,5 +31,8 @@ export const styles = StyleSheet.create<Style>({
   },
   lastColumnCategory: {
     alignItems: 'flex-end',
+  },
+  contentContainer: {
+    marginHorizontal: spacing.base,
   },
 });
