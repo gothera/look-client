@@ -31,20 +31,20 @@ export interface SignUpFailure {
   type: typeof profileConstants.SIGNUP_FAILURE;
 }
 
-export interface fetchProfileRequest {
+export interface FetchProfileRequest {
   type: typeof profileConstants.FETCH_PROFILE_REQUEST;
 }
 
-export interface fetchProfileSuccess {
+export interface FetchProfileSuccess {
   type: typeof profileConstants.FETCH_PROFILE_SUCCESS;
-  payload: {profile: Client};
+  payload: { profile: Client };
 }
 
-export interface fetchProfileFailure {
+export interface FetchProfileFailure {
   type: typeof profileConstants.FETCH_PROFILE_FAILURE;
 }
 
-export interface postLogout {
+export interface PostLogout {
   type: typeof profileConstants.POST_LOGOUT;
 }
 
@@ -56,4 +56,7 @@ export type ProfileAction =
   | SignUpRequest
   | SignUpSuccess
   | SignUpFailure
-  | postLogout;
+  | FetchProfileFailure
+  | FetchProfileRequest
+  | FetchProfileSuccess
+  | PostLogout;

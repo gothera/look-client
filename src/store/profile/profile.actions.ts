@@ -5,6 +5,7 @@ import {
 import { setHomeRoot, pushAuthScreen } from '../../navigation';
 import { LoginResponse, SignupResponse } from '../../services/api/api.types';
 import * as AuthService from '../../services/api/AuthService';
+import * as ProfileService from '../../services/api/ProfileService';
 import { Client } from '../../types';
 import { ThunkResult } from '../store.types';
 import * as profileConstants from './profile.constants';
@@ -81,7 +82,7 @@ export const loginKeychain = (token: string): ThunkResult<void> => {
   return async function (dispatch) {
     setGenericPassword('token', token).then(async () => {
       dispatch(loginSuccess(token));
-      // dispatch(fetchProfile(token));
+      dispatch(fetchProfile(token));
     });
   };
 };
@@ -140,7 +141,7 @@ export const signUp = (
 /**
  * LOGIN
  */
-const fetchProfileRequest = (): profileTypes.fetchProfileRequest => {
+const fetchProfileRequest = (): profileTypes.FetchProfileRequest => {
   return {
     type: profileConstants.FETCH_PROFILE_REQUEST,
   };
@@ -148,14 +149,14 @@ const fetchProfileRequest = (): profileTypes.fetchProfileRequest => {
 
 const fetchProfileSuccess = (
   profile: Client,
-): profileTypes.fetchProfileSuccess => {
+): profileTypes.FetchProfileSuccess => {
   return {
     type: profileConstants.FETCH_PROFILE_SUCCESS,
     payload: { profile },
   };
 };
 
-const fetchProfileFailure = (): profileTypes.fetchProfileFailure => {
+const fetchProfileFailure = (): profileTypes.FetchProfileFailure => {
   return {
     type: profileConstants.FETCH_PROFILE_FAILURE,
   };
@@ -165,12 +166,11 @@ const fetchProfileFailure = (): profileTypes.fetchProfileFailure => {
  * Used when pressing Login
  * API Call for login
  */
-export const fetchProfile = (): ThunkResult<void> => {
+export const fetchProfile = (token: string): ThunkResult<void> => {
   return async function (dispatch, getState) {
     // if (getState().profile.isLogging) {
     //   return Promise.resolve();
     // }
-    dispatch(loginRequest());
 
     // return AuthService.login(email, password)
     //   .then((response: LoginResponse) => {
@@ -186,5 +186,12 @@ export const fetchProfile = (): ThunkResult<void> => {
     //     dispatch(loginFailure());
     //     console.log('Login error', error);
     //   });
+    return ProfileService.getProfile(token)
+      .then((profileResponse) => {
+        console.log('=== profile response ===');
+      })
+      .catch((error) => {
+        console.log('fetch profile error', error);
+      });
   };
 };

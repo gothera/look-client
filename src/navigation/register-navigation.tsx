@@ -97,9 +97,11 @@ export async function initNavigationAsync() {
       const genericPassword = await getGenericPassword();
 
       const loggedIn = genericPassword && genericPassword.username === 'token';
+      if (loggedIn) {
+        store.dispatch(loginKeychain((genericPassword as any).password));
+      }
 
       setHomeRoot();
-      // pushAuthScreen();
 
       // if (loggedIn) {
       //   store.dispatch(loginKeychain((genericPassword as any).password));

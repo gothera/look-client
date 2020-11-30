@@ -23,22 +23,9 @@ export interface OfferedService {
   currency: Currency;
 }
 
-export enum NotificationType {
-  NewAppointment,
-  CancelledAppointment,
-  Review,
-}
-
 export enum AppointmentType {
   Free,
   Reserved,
-}
-
-export interface Notification {
-  id: number;
-  extra: any;
-  type: NotificationType;
-  date: string;
 }
 
 export interface ArtistProgramEntry {
