@@ -4,12 +4,25 @@ import TextEntry from '../../../../components/entry/text-entry/TextEntry';
 import strings from '../../../../res/strings/strings';
 import ProfileHeader from '../profile-header/ProfileHeader';
 import { styles } from './styles';
+import { logout } from '../../../../store/profile/profile.actions';
+import { connect, ConnectedProps } from 'react-redux';
 
 interface OwnProps {
   componentId: string;
 }
 
-const ProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
+const mapDispatchToProps = {
+  logout,
+};
+
+const connector = connect(null, mapDispatchToProps);
+
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+const ProfileOptions: React.FC<OwnProps & PropsFromRedux> = ({
+  componentId,
+  logout,
+}) => {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   const onScroll = useRef(
@@ -17,6 +30,10 @@ const ProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
       useNativeDriver: true,
     }),
   ).current;
+
+  const onLogout = () => {
+    logout();
+  };
 
   return (
     <>
@@ -84,7 +101,7 @@ const ProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
         />
         <TextEntry
           title={strings.action.logout}
-          onPress={() => {}}
+          onPress={onLogout}
           titleStyle={[styles.textEntryName, styles.logoutText]}
           dividerStyle={styles.textEntryDivider}
           containerStyle={styles.logoutContainer}
@@ -98,4 +115,4 @@ const ProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
   );
 };
 
-export default ProfileOptions;
+export default connector(ProfileOptions) as React.FC<OwnProps>;

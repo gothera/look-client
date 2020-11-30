@@ -1,7 +1,8 @@
 import { AxiosRequestConfig } from 'axios';
+import { Client } from '../../types';
 import { getRequest } from './apiRequest';
 
-export const getProfile = (token?: string): Promise<any> => {
+export const getProfile = (token?: string): Promise<Client> => {
   const url = `client/current/`;
 
   const extraConfig: AxiosRequestConfig = {
@@ -10,5 +11,5 @@ export const getProfile = (token?: string): Promise<any> => {
     },
   };
 
-  return getRequest<any>(url, { ...(token && extraConfig) });
+  return getRequest<Client>(url, { ...(token && extraConfig) });
 };

@@ -45,12 +45,24 @@ function profileReducer(
       };
     }
     case profileConstants.SIGNUP_SUCCESS: {
+      const { userId, clientId, email } = action.payload;
+
       return {
         ...state,
         isLogging: false,
-        email: action.payload.email,
-        userId: action.payload.userId,
-        clientId: action.payload.clientId,
+        userId: userId,
+        clientId: clientId,
+        client: {
+          ...state.client,
+          id: action.payload.clientId,
+          firstName: '',
+          lastName: '',
+          email: email,
+          phone: '',
+          bio: '',
+          birthDate: '',
+          profilePicture: '',
+        },
       };
     }
     case profileConstants.SIGNUP_FAILURE: {
@@ -59,7 +71,30 @@ function profileReducer(
         isLogging: false,
       };
     }
-  
+
+    case profileConstants.FETCH_PROFILE_REQUEST: {
+      return {
+        ...state,
+        isFetching: true,
+      };
+    }
+
+    case profileConstants.FETCH_PROFILE_SUCCESS: {
+      const { client } = action.payload;
+      return {
+        ...state,
+        isFetching: false,
+        client: client,
+        clientId: client.id,
+      };
+    }
+
+    case profileConstants.FETCH_PROFILE_FAILURE: {
+      return {
+        ...state,
+        isFetching: false,
+      };
+    }
 
     default:
       return state;

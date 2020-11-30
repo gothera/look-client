@@ -37,7 +37,7 @@ export interface FetchProfileRequest {
 
 export interface FetchProfileSuccess {
   type: typeof profileConstants.FETCH_PROFILE_SUCCESS;
-  payload: { profile: Client };
+  payload: { client: Client };
 }
 
 export interface FetchProfileFailure {

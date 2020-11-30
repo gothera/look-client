@@ -67,6 +67,7 @@ export interface Client {
   phone: string;
   bio: string;
   birthDate: string;
+  profilePicture: string;
 }
 
 export interface Appointment {

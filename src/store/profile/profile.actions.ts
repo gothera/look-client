@@ -2,7 +2,6 @@ import {
   setGenericPassword,
   resetGenericPassword,
 } from 'react-native-keychain';
-import { setHomeRoot, pushAuthScreen } from '../../navigation';
 import { LoginResponse, SignupResponse } from '../../services/api/api.types';
 import * as AuthService from '../../services/api/AuthService';
 import * as ProfileService from '../../services/api/ProfileService';
@@ -59,7 +58,7 @@ export const login = (
 
 /** LOGOUT */
 
-export const postLogout = (): profileTypes.postLogout => {
+export const postLogout = (): profileTypes.PostLogout => {
   return {
     type: profileConstants.POST_LOGOUT,
   };
@@ -69,7 +68,6 @@ export const logout = (): ThunkResult<void> => {
   return function (dispatch) {
     resetGenericPassword().then(async () => {
       dispatch(postLogout());
-      pushAuthScreen();
     });
   };
 };
@@ -138,9 +136,8 @@ export const signUp = (
   };
 };
 
-/**
- * LOGIN
- */
+// Fetch Profile
+
 const fetchProfileRequest = (): profileTypes.FetchProfileRequest => {
   return {
     type: profileConstants.FETCH_PROFILE_REQUEST,
@@ -148,11 +145,11 @@ const fetchProfileRequest = (): profileTypes.FetchProfileRequest => {
 };
 
 const fetchProfileSuccess = (
-  profile: Client,
+  client: Client,
 ): profileTypes.FetchProfileSuccess => {
   return {
     type: profileConstants.FETCH_PROFILE_SUCCESS,
-    payload: { profile },
+    payload: { client },
   };
 };
 
@@ -162,36 +159,21 @@ const fetchProfileFailure = (): profileTypes.FetchProfileFailure => {
   };
 };
 
-/**
- * Used when pressing Login
- * API Call for login
- */
 export const fetchProfile = (token: string): ThunkResult<void> => {
   return async function (dispatch, getState) {
-    // if (getState().profile.isLogging) {
-    //   return Promise.resolve();
-    // }
+    if (getState().profile.isFetching) {
+      return Promise.resolve();
+    }
 
-    // return AuthService.login(email, password)
-    //   .then((response: LoginResponse) => {
-    //     dispatch(loginKeychain(response.accessToken));
-    //   })
-    //   .then(() => {
-    //     if (!isRegister) {
-    //       // pushHomeScreen();
-    //       setHomeRoot();
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     dispatch(loginFailure());
-    //     console.log('Login error', error);
-    //   });
+    dispatch(fetchProfileRequest());
+
     return ProfileService.getProfile(token)
       .then((profileResponse) => {
-        console.log('=== profile response ===');
+        dispatch(fetchProfileSuccess(profileResponse));
       })
       .catch((error) => {
         console.log('fetch profile error', error);
+        dispatch(fetchProfileFailure());
       });
   };
 };
