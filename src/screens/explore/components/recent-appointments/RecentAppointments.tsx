@@ -27,8 +27,6 @@ const RecentAppointments: React.FC<OwnProps & PropsFromRedux> = ({
   loggedIn,
   latestAppointments,
 }) => {
-  console.log('== latest appoint ==', latestAppointments);
-
   if (
     !loggedIn ||
     latestAppointments === undefined ||

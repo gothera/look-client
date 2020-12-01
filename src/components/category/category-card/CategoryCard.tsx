@@ -10,14 +10,15 @@ import { styles } from './styles';
 interface OwnProps {
   category: Category;
   photo: string;
+  onPress: () => void;
 }
 
-const CategoryCard: React.FC<OwnProps> = ({ category, photo }) => {
+const CategoryCard: React.FC<OwnProps> = ({ category, photo, onPress }) => {
   const categoryName = categoryEnumToStr(category);
   const categoryColor = getCategoryColor(category);
 
   return (
-    <PressableCard onPress={() => {}}>
+    <PressableCard onPress={onPress}>
       <View style={styles.container}>
         <FastImage source={{ uri: photo }} style={styles.image} />
         <View

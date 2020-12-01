@@ -1,6 +1,5 @@
 import { DAYS_ABBREVIATION } from '../res/constants';
 import { DaysAbbreviation, Category } from '../types/enums';
-import { Notification, SelectedDateCalendar } from '../types/globalTypes';
 import { Categories } from '../res/strings/categories';
 import {
   makeupServicesSelection,
@@ -11,9 +10,17 @@ import {
   hairServicesSelection,
 } from '../res/constants/pickerItems';
 import { color } from '../theme';
+import { Artist } from '../types';
 
-export type ContentProp = keyof Notification;
+// todo
+export type ContentProp = keyof Artist;
 
+/**
+ *
+ * @param dict initial dictionary
+ * @param arr array to be added
+ * @param prop key of the dictionary
+ */
 export const addArrayToDictByProp = <T extends any, A extends any>(
   dict: T,
   arr: A[] = [],
@@ -25,6 +32,25 @@ export const addArrayToDictByProp = <T extends any, A extends any>(
 
   return dict;
 };
+
+/**
+ * Only overwrite common properties, don't delete undefined properties
+ * @param dict initial dictionary
+ * @param arr array to be added
+ * @param prop key of the dictionary
+ */
+export const addArrayToDictByPropOverwrite = <T extends any, A extends any>(
+  dict: T,
+  arr: A[] = [],
+  prop: ContentProp = 'id',
+) => {
+  arr.forEach((elem) => {
+    dict[elem[prop]] = { ...dict[elem[prop]], ...elem };
+  });
+
+  return dict;
+};
+
 export const textWithZecimals = (text: string) => {
   if (text.includes('.')) {
     return `${text.split('.')[0]}.${text.split('.')[1][0]}`;
@@ -79,22 +105,6 @@ export const dayAbbEnumValue = (dayAbb: DaysAbbreviation) => {
     case DaysAbbreviation.Sun:
       return DAYS_ABBREVIATION.SUNDAY;
   }
-};
-
-/**
- * @param selectedDates object {selected: true/ false}
- * @return array of date strings where object.selected = true
- */
-export const getSelectedDatesArrayFromCalendar = (
-  selectedDates: SelectedDateCalendar,
-): string[] => {
-  const arrDates: string[] = [];
-  for (let date in selectedDates) {
-    if (selectedDates[date].selected) {
-      arrDates.push(date);
-    }
-  }
-  return arrDates;
 };
 
 /**

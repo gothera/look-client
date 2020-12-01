@@ -3,6 +3,7 @@
         "Formik",
         "Gilroy",
         "Keychain",
+        "Pageable",
         "Signup",
         "iphone",
         "persistor",

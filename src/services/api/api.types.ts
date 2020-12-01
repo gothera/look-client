@@ -1,4 +1,4 @@
-import { AppointmentType, Notification } from '../../types/globalTypes';
+import { AppointmentType, Artist } from '../../types/globalTypes';
 import { DaysAbbreviation, Currency } from '../../types/enums';
 
 export interface UserResponse {
@@ -36,11 +36,6 @@ export interface SetupBody {
   price: number;
   duration: number;
   birthDate: string; // ISO string
-}
-
-export interface FetchNotificationsResponse {
-  totalPages: number;
-  content: Notification[];
 }
 
 export interface AppointmentResponse {
@@ -88,4 +83,10 @@ export interface AddOfferedServiceApi {
   price: number;
   duration: number;
   currency: Currency;
+}
+
+export interface ExploreCategoryArtistsResponse {
+  content: Artist[];
+  last: boolean;
+  number: number;
 }

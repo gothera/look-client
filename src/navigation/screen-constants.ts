@@ -5,3 +5,4 @@ export const SAVES_SCREEN = 'look-client.SavesScreen';
 export const APPOINTMENTS_SCREEN = 'look-client.AppointmentsScreen';
 export const PROFILE_SCREEN = 'look-client.ProfileScreen';
 export const FINISH_SIGN_UP_SCREEN = 'look-client.FinishSignUpScreen';
+export const EXPLORE_CATEGORY_SCREEN = 'look-client.ExploreCategoryScreen';

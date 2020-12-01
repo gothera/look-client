@@ -8,10 +8,10 @@ import ArtistEntryStats from '../artist-entry-stats/ArtistEntryStats';
 import { styles } from './styles';
 
 interface OwnProps {
-  photo: string;
+  photo?: string;
   fullName: string;
   stars: number;
-  reviewsCount: number;
+  reviewsCount?: number;
   onPress?: () => void;
   category: Category;
   showDivider?: boolean;
@@ -33,7 +33,9 @@ const ArtistEntryRow: React.FC<OwnProps> = ({
           <UserCategoryAvatar photo={photo} size={50} category={category} />
           <View style={styles.textContainer}>
             <Text style={styles.fullName}>{fullName}</Text>
-            <ArtistEntryStats stars={stars} reviewsCount={reviewsCount} />
+            {reviewsCount !== null && reviewsCount !== undefined && (
+              <ArtistEntryStats stars={stars} reviewsCount={reviewsCount} />
+            )}
           </View>
         </View>
         {showDivider && <LineDivider style={styles.divider} />}

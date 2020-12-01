@@ -71,6 +71,26 @@ export interface Client {
   latestAppointments: Appointment[];
 }
 
+export interface Artist {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  category: Category;
+  phone: string;
+  bio: string;
+  offeredServices: any[];
+  profilePicture?: string;
+  rating: number;
+  saves: number;
+  appointmentsCount: number;
+  programEntries: any[];
+  defaultProgram: any[];
+  scheduledDates: any[];
+  reviewsCount: number;
+  birthDate: string;
+}
+
 export interface Appointment {
   id?: number;
   artistId?: number;
@@ -110,7 +130,12 @@ declare global {
   }
 }
 
-export type RequestStatus = 'loading' | 'success' | 'failure';
+export type RequestStatus =
+  | 'initial-loading'
+  | 'loading'
+  | 'success'
+  | 'failure'
+  | undefined;
 
 export interface Review {
   id: number;
@@ -122,9 +147,8 @@ export interface Review {
   description: string;
   date: string;
 }
-export interface SelectedDateCalendar {
-  [date: string]: {
-    selected: boolean;
-    selectedColor: string;
-  };
+
+export interface Pageable {
+  pageNumber: number;
+  last: boolean;
 }

@@ -6,6 +6,27 @@ const initialState: StoreState = {
     isFetching: false,
     token: undefined,
   },
+  artists: {
+    local: {},
+    makeup: {
+      byId: [],
+    },
+    nails: {
+      byId: [],
+    },
+    hair: {
+      byId: [],
+    },
+    eyebrows: {
+      byId: [],
+    },
+    bodyCare: {
+      byId: [],
+    },
+    lashes: {
+      byId: [],
+    },
+  },
 };
 
 export default initialState;

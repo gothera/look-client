@@ -18,6 +18,7 @@ import {
   ProfileScreen,
   SavesScreen,
   FinishSignUpScreen,
+  ExploreCategoryScreen,
 } from '../screens';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
@@ -30,6 +31,7 @@ import {
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
+  EXPLORE_CATEGORY_SCREEN,
   EXPLORE_SCREEN,
   FINISH_SIGN_UP_SCREEN,
   HOME_SCREEN,
@@ -70,6 +72,9 @@ const registerScreens = () => {
   );
   Navigation.registerComponent(FINISH_SIGN_UP_SCREEN, () =>
     WrappedComponent(FinishSignUpScreen),
+  );
+  Navigation.registerComponent(EXPLORE_CATEGORY_SCREEN, () =>
+    WrappedComponent(ExploreCategoryScreen),
   );
 
   registerModals();

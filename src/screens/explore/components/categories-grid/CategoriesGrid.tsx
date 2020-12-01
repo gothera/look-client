@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import CategoryCard from '../../../../components/category/category-card/CategoryCard';
+import { pushExploreCategoryScreen } from '../../../../navigation';
 import { CATEGORIES_GRID_COLUMNS } from '../../../../res/constants';
 import strings from '../../../../res/strings/strings';
 import { Category } from '../../../../types';
@@ -56,6 +57,12 @@ const CategoriesGrid: React.FC<OwnProps> = ({ componentId }) => {
     item: CategoryCardModel;
     index: number;
   }) => {
+    const onPress = () => {
+      pushExploreCategoryScreen(componentId, {
+        props: { category: item.category },
+      });
+    };
+
     return (
       <View
         style={[
@@ -65,7 +72,11 @@ const CategoriesGrid: React.FC<OwnProps> = ({ componentId }) => {
             styles.lastColumnCategory,
         ]}
       >
-        <CategoryCard category={item.category} photo={item.photo} />
+        <CategoryCard
+          category={item.category}
+          photo={item.photo}
+          onPress={onPress}
+        />
       </View>
     );
   };

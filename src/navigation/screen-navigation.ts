@@ -4,6 +4,7 @@ import { color } from '../theme';
 import {
   APPOINTMENTS_SCREEN,
   AUTH_SCREEN,
+  EXPLORE_CATEGORY_SCREEN,
   EXPLORE_SCREEN,
   FINISH_SIGN_UP_SCREEN,
   HOME_SCREEN,
@@ -240,6 +241,29 @@ export const pushFinishSignUpScreen = (
             icon: require('../res/images/icons/chevron-left-icon.png'),
             color: color.textPrimary,
           },
+        },
+      },
+    },
+  });
+};
+
+export const pushExploreCategoryScreen = (
+  componentId: string,
+  pushConfig?: Config,
+) => {
+  const config = getConfig(pushConfig);
+
+  Navigation.push(componentId, {
+    component: {
+      name: EXPLORE_CATEGORY_SCREEN,
+      passProps: { ...config.props },
+      options: {
+        overlay: {
+          interceptTouchOutside: true,
+          handleKeyboardEvents: true,
+        },
+        layout: {
+          componentBackgroundColor: color.background,
         },
       },
     },

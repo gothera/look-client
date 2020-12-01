@@ -6,7 +6,7 @@ import UserAvatar from '../user-avatar/UserAvatar';
 
 interface OwnProps {
   size: number;
-  photo: string;
+  photo?: string;
   category: Category;
 }
 
