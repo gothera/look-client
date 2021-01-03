@@ -10,6 +10,7 @@ export const color = {
   underground: '#F8F8F8',
   success: '#00A26A',
   delete: '#D34848',
+  alert: '#fdb827',
   highlight: '#F0F0F0',
   makeup: '#D68FA7',
   nails: '#DBC7EB',

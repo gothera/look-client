@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleProp } from 'react-native';
 import FastImage, { ImageStyle } from 'react-native-fast-image';
 
@@ -11,10 +11,19 @@ interface OwnProps {
 }
 
 const UserAvatar: React.FC<OwnProps> = ({ size, style, photoUrl }) => {
+  const [isError, setIsError] = useState(false);
+
+  const onImageError = () => {
+    setIsError(true);
+  };
+
   return (
     <FastImage
-      source={photoUrl ? { uri: photoUrl } : WOMAN_AVATAR_PLACEHOLDER}
+      source={
+        photoUrl && !isError ? { uri: photoUrl } : WOMAN_AVATAR_PLACEHOLDER
+      }
       style={[{ width: size, height: size, borderRadius: size }, style]}
+      onError={onImageError}
     />
   );
 };

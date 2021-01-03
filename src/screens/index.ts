@@ -6,3 +6,4 @@ export { default as AppointmentsScreen } from './appointments/AppointmentsScreen
 export { default as ProfileScreen } from './profile/ProfileScreen';
 export { default as FinishSignUpScreen } from './finish-sign-up/FinishSignUpScreen';
 export { default as ExploreCategoryScreen } from './explore-category/ExploreCategoryScreen';
+export { default as ArtistScreen } from './artist/ArtistScreen';

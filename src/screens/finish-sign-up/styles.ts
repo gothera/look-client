@@ -18,6 +18,7 @@ export const styles = StyleSheet.create<Style>({
   scrollContentContainer: {
     paddingTop: spacing.larger,
     paddingHorizontal: spacing.base,
+    paddingBottom: spacing.extraLarge,
   },
   continueBtn: {
     marginTop: spacing.larger,

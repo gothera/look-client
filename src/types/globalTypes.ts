@@ -1,3 +1,9 @@
+import {
+  ArtistApi,
+  OfferedServiceApi,
+  PostApi,
+  ReviewApi,
+} from '../services/api/api.types';
 import { Category, Currency } from './enums';
 
 export interface ImagePickerResponse {
@@ -13,15 +19,7 @@ export interface PickerItem {
   value: string;
 }
 
-export interface OfferedService {
-  name: string;
-  category: string;
-  description: string;
-  price: number;
-  duration: number;
-  id: number;
-  currency: Currency;
-}
+export interface OfferedService extends OfferedServiceApi {}
 
 export enum AppointmentType {
   Free,
@@ -32,13 +30,6 @@ export interface ArtistProgramEntry {
   date: string;
   startTime: string;
   endTime: string;
-}
-
-export interface Post {
-  id: number;
-  description: string;
-  pictures: string[];
-  artistId: number;
 }
 
 export interface ArtistResponseApi {
@@ -71,25 +62,19 @@ export interface Client {
   latestAppointments: Appointment[];
 }
 
-export interface Artist {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  category: Category;
-  phone: string;
-  bio: string;
-  offeredServices: any[];
-  profilePicture?: string;
-  rating: number;
-  saves: number;
-  appointmentsCount: number;
-  programEntries: any[];
-  defaultProgram: any[];
-  scheduledDates: any[];
-  reviewsCount: number;
-  birthDate: string;
+export interface Artist extends ArtistApi {
+  posts: {
+    byId: number[];
+    requestStatus: RequestStatus;
+    pageable: Pageable;
+  };
 }
+
+export interface Post extends PostApi {
+  requestStatus: RequestStatus;
+}
+
+export interface Review extends ReviewApi {}
 
 export interface Appointment {
   id?: number;
@@ -151,4 +136,12 @@ export interface Review {
 export interface Pageable {
   pageNumber: number;
   last: boolean;
+}
+
+export interface ArtistData {
+  artistPicture: string;
+  rating: number;
+  name: string;
+  reviewsCount: number;
+  category: Category;
 }

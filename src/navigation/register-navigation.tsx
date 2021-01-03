@@ -19,6 +19,7 @@ import {
   SavesScreen,
   FinishSignUpScreen,
   ExploreCategoryScreen,
+  ArtistScreen,
 } from '../screens';
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
@@ -30,6 +31,7 @@ import {
 } from './modal-constants';
 import {
   APPOINTMENTS_SCREEN,
+  ARTIST_SCREEN,
   AUTH_SCREEN,
   EXPLORE_CATEGORY_SCREEN,
   EXPLORE_SCREEN,
@@ -75,6 +77,10 @@ const registerScreens = () => {
   );
   Navigation.registerComponent(EXPLORE_CATEGORY_SCREEN, () =>
     WrappedComponent(ExploreCategoryScreen),
+  );
+
+  Navigation.registerComponent(ARTIST_SCREEN, () =>
+    WrappedComponent(ArtistScreen),
   );
 
   registerModals();

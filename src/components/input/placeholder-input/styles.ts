@@ -15,7 +15,7 @@ export const styles = StyleSheet.create<Style>({
   },
   input: {
     ...typography.body,
-    color: color.textSecondary,
+    color: color.textPrimary,
   },
   placeholder: {
     ...typography.body,

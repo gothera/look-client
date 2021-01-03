@@ -8,6 +8,7 @@ import { StoreState } from '../../../../store/store.types';
 import { selectExploreArtistsByCategory } from '../../../../store/artists/artists.selectors';
 import ArtistEntryStateful from '../../../../components/artist/artist-entry-stateful/ArtistEntryStateful';
 import { color } from '../../../../theme';
+import { pushArtistScreen } from '../../../../navigation';
 
 interface OwnProps {
   componentId: string;
@@ -72,7 +73,9 @@ const ExploreArtistsList: React.FC<OwnProps & PropsFromRedux> = ({
     item: number;
     index: number;
   }) => {
-    const onArtistPress = () => {};
+    const onArtistPress = () => {
+      pushArtistScreen(componentId, { props: { artistId: item } });
+    };
 
     return (
       <ArtistEntryStateful

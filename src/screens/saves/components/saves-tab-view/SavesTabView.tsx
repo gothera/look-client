@@ -10,7 +10,8 @@ import { Category, SavedEntity, TabRoute } from '../../../../types';
 import SavedArtistsList from '../saved-artists-list/SavedArtistsList';
 import { styles } from './styles';
 import { Categories } from '../../../../res/strings/categories';
-import PostsColumnList from '../../../../components/posts/posts-column-list/PostsColumnList';
+import SavedPostsList from '../saved-posts-list/SavedPostsList';
+import { categoryStrToEnum } from '../../../../utils/global';
 
 type State = NavigationState<TabRoute>;
 
@@ -63,10 +64,24 @@ const SavesTabView: React.FC<OwnProps> = ({ componentId, savedEntity }) => {
   );
 
   const renderScene = ({ route }: { route: TabRoute }) => {
+    const currCategory = categoryStrToEnum(route.key.toLowerCase());
+
     if (savedEntity === SavedEntity.Artists) {
-      return <SavedArtistsList componentId={componentId} />;
+      return (
+        <SavedArtistsList
+          componentId={componentId}
+          category={currCategory}
+          shouldFetch={currCategory === categoryIndex}
+        />
+      );
     } else if (savedEntity === SavedEntity.Posts) {
-      return <PostsColumnList componentId={componentId} />;
+      return (
+        <SavedPostsList
+          componentId={componentId}
+          category={currCategory}
+          shouldFetch={currCategory === categoryIndex}
+        />
+      );
     }
     return null;
   };

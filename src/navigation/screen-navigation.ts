@@ -1,8 +1,10 @@
+import { Platform } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import strings from '../res/strings/strings';
 import { color } from '../theme';
 import {
   APPOINTMENTS_SCREEN,
+  ARTIST_SCREEN,
   AUTH_SCREEN,
   EXPLORE_CATEGORY_SCREEN,
   EXPLORE_SCREEN,
@@ -264,6 +266,41 @@ export const pushExploreCategoryScreen = (
         },
         layout: {
           componentBackgroundColor: color.background,
+        },
+      },
+    },
+  });
+};
+
+export const pushArtistScreen = (componentId: string, pushConfig?: Config) => {
+  const config = getConfig(pushConfig);
+
+  Navigation.push(componentId, {
+    component: {
+      name: ARTIST_SCREEN,
+      passProps: { ...config.props },
+      options: {
+        overlay: {
+          interceptTouchOutside: true,
+          handleKeyboardEvents: true,
+        },
+        layout: {
+          componentBackgroundColor: color.background,
+        },
+        ...Platform.select({
+          android: {
+            topBar: {
+              visible: true,
+              backButton: {
+                showTitle: false,
+                icon: require('../res/images/icons/chevron-left-icon.png'),
+                color: color.textPrimary,
+              },
+            },
+          },
+        }),
+        bottomTabs: {
+          visible: false,
         },
       },
     },

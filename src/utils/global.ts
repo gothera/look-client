@@ -10,10 +10,10 @@ import {
   hairServicesSelection,
 } from '../res/constants/pickerItems';
 import { color } from '../theme';
-import { Artist } from '../types';
+import { Artist, Post } from '../types';
 
 // todo
-export type ContentProp = keyof Artist;
+export type ContentProp = keyof Artist | keyof Post;
 
 /**
  *
@@ -27,7 +27,7 @@ export const addArrayToDictByProp = <T extends any, A extends any>(
   prop: ContentProp = 'id',
 ) => {
   arr.forEach((elem) => {
-    dict[elem[prop]] = elem;
+    dict[elem[prop]] = { ...dict[elem[prop]], ...elem };
   });
 
   return dict;
@@ -147,22 +147,22 @@ export const categoryEnumToStr = (category: Category) => {
 };
 
 export const categoryStrToEnum = (category: string) => {
-  if (category === Categories.makeup) {
+  if (category === Categories.makeup || category === 'makeup') {
     return Category.Makeup;
   }
-  if (category === Categories.lashes) {
+  if (category === Categories.lashes || category === 'lashes') {
     return Category.Lashes;
   }
-  if (category === Categories.hair) {
+  if (category === Categories.hair || category === 'hair') {
     return Category.Hair;
   }
-  if (category === Categories.eyebrows) {
+  if (category === Categories.eyebrows || category === 'eyebrows') {
     return Category.Eyebrows;
   }
-  if (category === Categories.nails) {
+  if (category === Categories.nails || category === 'nails') {
     return Category.Nails;
   }
-  if (category === Categories.bodyCare) {
+  if (category === Categories.bodyCare || category === 'bodycare') {
     return Category.BodyCare;
   }
   return Category.Makeup;

@@ -5,10 +5,13 @@
         "Keychain",
         "Pageable",
         "Signup",
+        "UNSAVE",
         "iphone",
         "persistor",
         "pressable",
         "subheadline"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
 }

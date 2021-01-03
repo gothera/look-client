@@ -21,7 +21,7 @@ export const styles = StyleSheet.create<Style>({
   contentContainer: {
     flex: 1,
     marginBottom: BOTTOM_SPACE,
-    paddingTop: spacing.larger,
+    paddingTop: spacing.base,
     paddingHorizontal: spacing.base,
   },
 });

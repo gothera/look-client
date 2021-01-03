@@ -4,13 +4,12 @@ import FastImage from 'react-native-fast-image';
 import { POST_MODAL_IMAGE_OPACITY_RANGE } from '../../../../res/constants';
 import { styles } from './styles';
 
-const photo = 'https://imgur.com/nf95KqH.png';
-
 interface OwnProps {
   scrollY: Animated.Value;
+  photos: string[];
 }
 
-const PostModalImages: React.FC<OwnProps> = ({ scrollY }) => {
+const PostModalImages: React.FC<OwnProps> = ({ scrollY, photos }) => {
   const opacityOverlayContainer = scrollY.interpolate({
     inputRange: [0, POST_MODAL_IMAGE_OPACITY_RANGE],
     outputRange: [0, 1],
@@ -23,7 +22,7 @@ const PostModalImages: React.FC<OwnProps> = ({ scrollY }) => {
         style={[styles.opacityOverlay, { opacity: opacityOverlayContainer }]}
       />
       <FastImage
-        source={{ uri: photo }}
+        source={{ uri: photos[0] }}
         style={styles.image}
         resizeMode="cover"
       />

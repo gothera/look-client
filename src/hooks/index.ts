@@ -1,1 +1,1 @@
-export * from './generic/usePrevious';
+export * from './generic';

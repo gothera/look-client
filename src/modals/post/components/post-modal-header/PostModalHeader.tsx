@@ -4,14 +4,20 @@ import { Navigation } from 'react-native-navigation';
 import AnimatedHeaderCircleButton from '../../../../components/header/animated-header-circle-button/AnimatedHeaderCircleButton';
 import { POST_MODAL_IMAGE_OPACITY_RANGE } from '../../../../res/constants';
 import { ChevronLeftIcon, HeartIcon } from '../../../../res/svg';
+import PostSaveButton from '../post-save-button/PostSaveButton';
 import { styles } from './styles';
 
 interface OwnProps {
   componentId: string;
   scrollY: Animated.Value;
+  postId: number;
 }
 
-const PostModalHeader: React.FC<OwnProps> = ({ componentId, scrollY }) => {
+const PostModalHeader: React.FC<OwnProps> = ({
+  componentId,
+  scrollY,
+  postId,
+}) => {
   const opacityBackgroundContainer = scrollY.interpolate({
     inputRange: [
       POST_MODAL_IMAGE_OPACITY_RANGE - 100,
@@ -30,9 +36,7 @@ const PostModalHeader: React.FC<OwnProps> = ({ componentId, scrollY }) => {
       <AnimatedHeaderCircleButton onPress={onBackPress}>
         <ChevronLeftIcon style={{ marginLeft: -2 }} />
       </AnimatedHeaderCircleButton>
-      <AnimatedHeaderCircleButton onPress={() => {}}>
-        <HeartIcon />
-      </AnimatedHeaderCircleButton>
+      <PostSaveButton postId={postId} />
       <Animated.View
         style={[
           styles.backgroundContainer,

@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { connect, ConnectedProps } from 'react-redux';
 import { selectArtistById } from '../../../store/artists/artists.selectors';
 import { StoreState } from '../../../store/store.types';

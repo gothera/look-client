@@ -77,6 +77,7 @@ const styles = StyleSheet.create<Style>({
     alignContent: 'center',
     borderRadius: 12,
     backgroundColor: color.brand,
+    height: 44,
   },
   text: {
     ...typography.bodySemiBold,

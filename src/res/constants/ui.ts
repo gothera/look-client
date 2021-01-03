@@ -12,11 +12,11 @@ export const COLLAPSED_HEADER_HEIGHT = STATUS_BAR_HEIGHT + 35;
 
 export const MODAL_BIG_SNAP_POINT = Dimensions.get('screen').height * 0.6;
 
-export const FOOTER_OPTIONS_HEIGHT = 70 + AUX_BOTTOM_SPACE;
-
 export const DIALOG_MODAL_HEIGHT = 180;
 
-export const BOTTOM_SPACE = AUX_BOTTOM_SPACE;
+export const BOTTOM_SPACE = Platform.OS === 'ios' ? AUX_BOTTOM_SPACE : 24;
+
+export const FOOTER_OPTIONS_HEIGHT = 48 + BOTTOM_SPACE;
 
 export const SEARCH_BAR_HEIGHT = 54;
 
@@ -50,3 +50,8 @@ export const POST_MODAL_IMAGE_OPACITY_RANGE =
   Platform.OS === 'ios'
     ? POST_MODAL_IMAGE_HEIGHT - STATUS_BAR_HEIGHT * 3
     : POST_MODAL_IMAGE_HEIGHT - 60;
+
+export const ANDROID_TOP_BAR_HEIGHT = 42;
+
+export const SCREEN_WIDTH = Dimensions.get('screen').width;
+export const SCREEN_HEIGHT = Dimensions.get('screen').height;

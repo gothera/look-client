@@ -7,3 +7,4 @@ export * from './CalendarDaysIcon';
 export * from './TimeIcon';
 export * from './SearchIcon';
 export * from './HeartIcon';
+export * from './HeartIconFilled'

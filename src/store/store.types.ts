@@ -1,7 +1,8 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
-import { Artist, Client, Pageable, RequestStatus } from '../types';
+import { Artist, Client, Pageable, Post, RequestStatus } from '../types';
 import { ArtistsAction } from './artists/artists.types';
 import { ProfileAction } from './profile/profile.types';
+import { PostsActions } from './posts/posts.types';
 
 export type Primitive = undefined | null | boolean | string | number | Function;
 
@@ -14,48 +15,40 @@ export interface ProfileState {
   client?: Client;
 }
 
+export interface PagedDataById {
+  byId: number[];
+  requestStatus?: RequestStatus;
+  pageable?: Pageable;
+}
+export interface EntitiesDataStore {
+  makeup: PagedDataById;
+  nails: PagedDataById;
+  hair: PagedDataById;
+  eyebrows: PagedDataById;
+  bodyCare: PagedDataById;
+  lashes: PagedDataById;
+}
+
 export interface ArtistsState {
   local: Record<number, Artist>;
-  makeup: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
-  nails: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
-  hair: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
-  eyebrows: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
-  bodyCare: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
-  lashes: {
-    byId: number[];
-    requestStatus?: RequestStatus;
-    pageable?: Pageable;
-  };
+  explore: EntitiesDataStore;
+  saved: EntitiesDataStore;
+}
+
+export interface PostsState {
+  local: Record<number, Post>;
+  saved: EntitiesDataStore
 }
 
 export interface State {
   profile: ProfileState;
   artists: ArtistsState;
+  posts: PostsState;
 }
 
 export type StoreState = State;
 
-export type TAction = ProfileAction | ArtistsAction;
+export type TAction = ProfileAction | ArtistsAction | PostsActions;
 
 export type ThunkResult<R> = ThunkAction<R, StoreState, null, TAction>;
 

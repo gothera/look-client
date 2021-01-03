@@ -1,5 +1,5 @@
-import { AppointmentType, Artist } from '../../types/globalTypes';
-import { DaysAbbreviation, Currency } from '../../types/enums';
+import { AppointmentType, ArtistData } from '../../types/globalTypes';
+import { DaysAbbreviation, Currency, Category } from '../../types/enums';
 
 export interface UserResponse {
   id: number;
@@ -86,7 +86,88 @@ export interface AddOfferedServiceApi {
 }
 
 export interface ExploreCategoryArtistsResponse {
-  content: Artist[];
+  content: ArtistApi[];
   last: boolean;
   number: number;
+}
+
+export interface CategorySavedPostsResponse {
+  content: PostApi[];
+  last: boolean;
+  number: number;
+}
+
+export interface OfferedServiceApi {
+  id: number;
+  category: Category;
+  description: string;
+  name: string;
+  price: number;
+  duration: number;
+  currency: Currency;
+}
+
+export interface ArtistApi {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  category: Category;
+  phone: string;
+  bio: string;
+  offeredServices: OfferedServiceApi[];
+  profilePicture?: string;
+  rating: number;
+  saves: number;
+  appointmentsCount: number;
+  programEntries: any[];
+  defaultProgram: any[];
+  scheduledDates: any[];
+  reviewsCount: number;
+  birthDate: string;
+  saved: boolean;
+}
+
+export interface PostApi {
+  id: number;
+  description: string;
+  pictures: string[];
+  artistId: number;
+  saves: number;
+  isSaved: boolean;
+  artistData: ArtistData;
+}
+
+export interface ArtistPostsResponse {
+  content: PostApi[];
+  last: boolean;
+  number: number;
+}
+
+export interface ReviewApi {
+  id: number;
+  artistId: number;
+  clientId: number;
+  name: string;
+  avatar: string;
+  rating: number;
+  description: string;
+  date: string;
+}
+
+export interface ArtistReviewsSummarization {
+  reviewsAverage: number;
+  reviewsCount: number;
+  numberOf1s: number;
+  numberOf2s: number;
+  numberOf3s: number;
+  numberOf4s: number;
+  numberOf5s: number;
+}
+
+export interface ArtistReviewsResponse {
+  content: ReviewApi[];
+  last: boolean;
+  number: number;
+  summarization: ArtistReviewsSummarization;
 }

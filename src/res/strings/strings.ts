@@ -91,6 +91,12 @@ const strings = {
     logIn: 'Log in',
     done: 'Done',
     cancel: 'Cancel',
+    book: 'Book',
+  },
+  common: {
+    rate: 'Rate',
+    saves: 'Saves',
+    appointments: 'Appointments',
   },
 };
 

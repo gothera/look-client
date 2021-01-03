@@ -1,3 +1,4 @@
+import { createEntitiesDataStore } from '../utils/store.utils';
 import { StoreState } from './store.types';
 
 const initialState: StoreState = {
@@ -8,24 +9,18 @@ const initialState: StoreState = {
   },
   artists: {
     local: {},
-    makeup: {
-      byId: [],
+    explore: {
+      ...createEntitiesDataStore()
     },
-    nails: {
-      byId: [],
-    },
-    hair: {
-      byId: [],
-    },
-    eyebrows: {
-      byId: [],
-    },
-    bodyCare: {
-      byId: [],
-    },
-    lashes: {
-      byId: [],
-    },
+    saved: {
+      ...createEntitiesDataStore()
+    }
+  },
+  posts: {
+    local: {},
+    saved: {
+      ...createEntitiesDataStore()
+    }
   },
 };
 
