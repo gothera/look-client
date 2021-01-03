@@ -1,5 +1,10 @@
 import { AppointmentType, ArtistData } from '../../types/globalTypes';
-import { DaysAbbreviation, Currency, Category } from '../../types/enums';
+import {
+  DaysAbbreviation,
+  Currency,
+  Category,
+  LocationType,
+} from '../../types/enums';
 
 export interface UserResponse {
   id: number;
@@ -97,6 +102,12 @@ export interface CategorySavedPostsResponse {
   number: number;
 }
 
+export interface OwnAppointmentsResponse {
+  content: AppointmentApi[];
+  last: boolean;
+  number: number;
+}
+
 export interface OfferedServiceApi {
   id: number;
   category: Category;
@@ -170,4 +181,30 @@ export interface ArtistReviewsResponse {
   last: boolean;
   number: number;
   summarization: ArtistReviewsSummarization;
+}
+
+export interface AppointmentApi {
+  id?: number;
+  artistId?: number;
+  clientId?: number;
+  serviceId?: number;
+  clientName?: string;
+  clientPhoto?: string;
+  serviceName?: string;
+  startingTime: string;
+  endingTime: string;
+  cost?: number;
+  currency: Currency;
+  type: AppointmentType;
+  date: string;
+  artistName?: string;
+  artistPhoto?: string;
+  category?: Category;
+  latitude: number;
+  longitude: number;
+  contact: {
+    instagram: string;
+    phone: string;
+  };
+  locationType: LocationType;
 }

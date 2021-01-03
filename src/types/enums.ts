@@ -28,3 +28,8 @@ export enum SavedEntity {
   Artists,
   Posts,
 }
+
+export enum LocationType {
+  Artist,
+  Client,
+}

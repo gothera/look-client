@@ -1,4 +1,5 @@
 import {
+  AppointmentApi,
   ArtistApi,
   OfferedServiceApi,
   PostApi,
@@ -50,6 +51,10 @@ export interface ArtistResponseApi {
   birthDate: string;
 }
 
+export interface Appointment extends AppointmentApi {
+  requestStatus: RequestStatus;
+}
+
 export interface Client {
   id: number;
   firstName: string;
@@ -59,7 +64,7 @@ export interface Client {
   bio: string;
   birthDate: string;
   profilePicture: string;
-  latestAppointments: Appointment[];
+  latestAppointments: AppointmentApi[];
 }
 
 export interface Artist extends ArtistApi {
@@ -68,6 +73,10 @@ export interface Artist extends ArtistApi {
     requestStatus: RequestStatus;
     pageable: Pageable;
   };
+}
+
+export interface Post extends PostApi {
+  requestStatus: RequestStatus;
 }
 
 export interface Post extends PostApi {
@@ -94,6 +103,9 @@ export interface Appointment {
   artistPhoto?: string;
   category?: Category;
 }
+
+export interface Review extends ReviewApi {}
+
 // nu am pus toate prorietatile unei pagini
 export interface Page<T> {
   content: T[];
