@@ -69,6 +69,7 @@ const SavedArtistsList: React.FC<OwnProps> = ({
       renderItem={renderArtistRow}
       onEndReached={() => fetchMoreSaved(false)}
       ListEmptyComponent={SavedArtistsEmptyList}
+      keyExtractor={(i: number) => `saved-artist-${category}-${i}`}
     />
   );
 };

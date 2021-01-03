@@ -1,8 +1,16 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
-import { Artist, Client, Pageable, Post, RequestStatus } from '../types';
+import {
+  Appointment,
+  Artist,
+  Client,
+  Pageable,
+  Post,
+  RequestStatus,
+} from '../types';
 import { ArtistsAction } from './artists/artists.types';
 import { ProfileAction } from './profile/profile.types';
 import { PostsActions } from './posts/posts.types';
+import { AppointmentsActions } from './appointments/appointments.types';
 
 export type Primitive = undefined | null | boolean | string | number | Function;
 
@@ -37,18 +45,28 @@ export interface ArtistsState {
 
 export interface PostsState {
   local: Record<number, Post>;
-  saved: EntitiesDataStore
+  saved: EntitiesDataStore;
+}
+
+export interface AppointmentsState {
+  local: Record<number, Appointment>;
+  own: PagedDataById;
 }
 
 export interface State {
   profile: ProfileState;
   artists: ArtistsState;
   posts: PostsState;
+  appointments: AppointmentsState;
 }
 
 export type StoreState = State;
 
-export type TAction = ProfileAction | ArtistsAction | PostsActions;
+export type TAction =
+  | ProfileAction
+  | ArtistsAction
+  | PostsActions
+  | AppointmentsActions;
 
 export type ThunkResult<R> = ThunkAction<R, StoreState, null, TAction>;
 

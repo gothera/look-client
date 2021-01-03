@@ -10,17 +10,23 @@ const initialState: StoreState = {
   artists: {
     local: {},
     explore: {
-      ...createEntitiesDataStore()
+      ...createEntitiesDataStore(),
     },
     saved: {
-      ...createEntitiesDataStore()
-    }
+      ...createEntitiesDataStore(),
+    },
   },
   posts: {
     local: {},
     saved: {
-      ...createEntitiesDataStore()
-    }
+      ...createEntitiesDataStore(),
+    },
+  },
+  appointments: {
+    local: {},
+    own: {
+      byId: [],
+    },
   },
 };
 

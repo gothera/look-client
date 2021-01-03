@@ -41,8 +41,8 @@ const PostModal: React.FC<OwnProps> = ({ componentId, postId }) => {
       />
       <Animated.ScrollView style={styles.container} onScroll={onScroll}>
         <PostModalImages photos={post.pictures} scrollY={scrollY} />
-        <PostArtistRow post={post} />
-        <PostDetails />
+        <PostArtistRow post={post} componentId={componentId} />
+        <PostDetails post={post} />
       </Animated.ScrollView>
     </>
   );
