@@ -5,6 +5,7 @@ import { fetchSavedPostsByCategory } from '../../../../store/posts/posts.actions
 import { selectSavedPostsByCategory } from '../../../../store/posts/posts.selectors';
 import { AsyncDispatch } from '../../../../store/store.types';
 import { Category } from '../../../../types';
+import SavedPostsEmptyList from '../saved-posts-empty-list/SavedPostsEmptyList';
 interface OwnProps {
   componentId: string;
   category: Category;
@@ -43,6 +44,7 @@ const SavedPostsList: React.FC<OwnProps> = ({
       data={posts.byId}
       componentId={componentId}
       onEndReached={() => fetchMoreSaved(false)}
+      ListEmptyComponent={SavedPostsEmptyList}
     />
   );
 };

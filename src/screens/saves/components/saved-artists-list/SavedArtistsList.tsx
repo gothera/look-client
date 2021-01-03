@@ -7,6 +7,7 @@ import { fetchSavedCategoryArtists } from '../../../../store/artists/artists.act
 import { selectSavedArtistsByCategory } from '../../../../store/artists/artists.selectors';
 import { AsyncDispatch } from '../../../../store/store.types';
 import { Category } from '../../../../types';
+import SavedArtistsEmptyList from '../saved-artists-empty-list/SavedArtistsEmptyList';
 
 interface OwnProps {
   componentId: string;
@@ -67,6 +68,7 @@ const SavedArtistsList: React.FC<OwnProps> = ({
       data={artists.byId}
       renderItem={renderArtistRow}
       onEndReached={() => fetchMoreSaved(false)}
+      ListEmptyComponent={SavedArtistsEmptyList}
     />
   );
 };
