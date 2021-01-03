@@ -1,7 +1,8 @@
 import React from 'react';
 import { Animated, View } from 'react-native';
-import FastImage from 'react-native-fast-image';
+import PhotosCarousel from '../../../../components/carousel/photos-carousel/PhotosCarousel';
 import { POST_MODAL_IMAGE_OPACITY_RANGE } from '../../../../res/constants';
+import PostImageView from '../post-image-view/PostImageView';
 import { styles } from './styles';
 
 interface OwnProps {
@@ -16,16 +17,19 @@ const PostModalImages: React.FC<OwnProps> = ({ scrollY, photos }) => {
     extrapolate: 'clamp',
   });
 
+  const hasMoreImages = photos.length > 1;
+
   return (
     <View style={styles.container}>
       <Animated.View
         style={[styles.opacityOverlay, { opacity: opacityOverlayContainer }]}
+        pointerEvents="none"
       />
-      <FastImage
-        source={{ uri: photos[0] }}
-        style={styles.image}
-        resizeMode="cover"
-      />
+      {hasMoreImages ? (
+        <PhotosCarousel photos={photos} />
+      ) : (
+        <PostImageView photos={photos} index={0} />
+      )}
     </View>
   );
 };

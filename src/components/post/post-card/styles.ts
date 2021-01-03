@@ -11,6 +11,7 @@ interface Style {
   imageStyle: ImageStyle;
   gradient: ViewStyle;
   artistDataContainer: ViewStyle;
+  layersIconContainer: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -38,5 +39,11 @@ export const styles = StyleSheet.create<Style>({
     bottom: 10,
     left: 10,
     zIndex: 3,
+  },
+  layersIconContainer: {
+    position: 'absolute',
+    zIndex: 3,
+    right: 10,
+    top: 10,
   },
 });

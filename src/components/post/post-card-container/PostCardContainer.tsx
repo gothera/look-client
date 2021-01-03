@@ -30,6 +30,7 @@ const PostCardContainer: React.FC<OwnPros> = ({
       category={post.artistData.category}
       style={style}
       onPress={onPress}
+      hasMorePhotos={post.pictures.length > 1}
     />
   );
 };
