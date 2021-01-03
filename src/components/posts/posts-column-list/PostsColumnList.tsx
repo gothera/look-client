@@ -21,7 +21,7 @@ interface OwnProps {
   onMomentumScrollEnd?: () => void;
   onScrollEndDrag?: () => void;
   onGetRef?: (ref: FlatList) => void;
-  ListEmptyComponent?: JSX.Element;
+  ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
 }
 
 const PostsColumnList: React.FC<OwnProps> = ({
