@@ -32,7 +32,7 @@ const AppointmentsList: React.FC<OwnProps> = ({ componentId, scrollY }) => {
   };
 
   useEffect(() => {
-    fetchMoreAppointments(true);
+    dispatch(fetchOwnAppointments(true, 0));
   }, []);
 
   const renderAppointmentRow = ({
