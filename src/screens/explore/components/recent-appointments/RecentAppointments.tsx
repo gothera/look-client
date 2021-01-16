@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { connect, ConnectedProps } from 'react-redux';
+import { showAppointmentModal } from '../../../../navigation';
 import strings from '../../../../res/strings/strings';
 import { selectLatestAppointments } from '../../../../store/profile/profile.selectors';
 import { StoreState } from '../../../../store/store.types';
@@ -41,6 +42,10 @@ const RecentAppointments: React.FC<OwnProps & PropsFromRedux> = ({
         {strings.screen.explore.recentAppointments.label}
       </Text>
       {latestAppointments.map((appointment, index) => {
+        const goToAppointment = () => {
+          showAppointmentModal({ props: { appointmentId: appointment.id } });
+        };
+
         return appointment.artistName &&
           appointment.artistPhoto &&
           appointment.category !== undefined &&
@@ -51,7 +56,7 @@ const RecentAppointments: React.FC<OwnProps & PropsFromRedux> = ({
             category={appointment.category}
             date={appointment.date}
             serviceName={appointment.serviceName}
-            onPress={() => {}} // push appointment screen
+            onPress={goToAppointment}
             key={`$appointment-recent-${index}`}
           />
         ) : null;
