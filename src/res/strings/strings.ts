@@ -1,5 +1,9 @@
 const strings = {
   screen: {
+    appointment: {
+      title: 'Appointment Info',
+    },
+
     explore: {
       searchPlaceholder: 'Try favorite  makeup artist name',
       categories: {
@@ -74,6 +78,9 @@ const strings = {
       },
     },
   },
+  chip: {
+    cancelled: 'Cancelled',
+  },
   modal: {
     startAuth: {
       title: 'Log in or sign up',
@@ -92,6 +99,7 @@ const strings = {
     done: 'Done',
     cancel: 'Cancel',
     book: 'Book',
+    cancelAppointment: 'Cancel Appointment',
   },
   common: {
     rate: 'Rate',

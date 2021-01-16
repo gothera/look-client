@@ -60,6 +60,33 @@ const postsReducer = (
       };
     }
 
+    case appointmentsConstants.FETCH_APPOINTMENT_ACTION: {
+      const { appointment } = action.payload;
+
+      return {
+        ...state,
+        local: {
+          ...state.local,
+          [appointment.id]: appointment,
+        },
+      };
+    }
+
+    case appointmentsConstants.CANCEL_APPOINTMENT_ACTION: {
+      const { appointmentId } = action.payload;
+
+      return {
+        ...state,
+        local: {
+          ...state.local,
+          [appointmentId]: {
+            ...state.local[appointmentId],
+            cancelled: true,
+          },
+        },
+      };
+    }
+
     default:
       return state;
   }

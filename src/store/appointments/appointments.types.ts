@@ -20,7 +20,24 @@ export interface FetchOwnAppointmentsSuccess {
   };
 }
 
+// Fetch Appointment
+export interface FetchAppointmentAction {
+  type: typeof appointmentsConstants.FETCH_APPOINTMENT_ACTION;
+  payload: {
+    appointment: Appointment;
+  };
+}
+
+export interface CancelAppointmentAction {
+  type: typeof appointmentsConstants.CANCEL_APPOINTMENT_ACTION;
+  payload: {
+    appointmentId: number;
+  };
+}
+
 export type AppointmentsActions =
   | FetchOwnAppointmentsRequest
   | FetchOwnAppointmentsFailure
-  | FetchOwnAppointmentsSuccess;
+  | FetchOwnAppointmentsSuccess
+  | FetchAppointmentAction
+  | CancelAppointmentAction;

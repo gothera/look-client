@@ -42,5 +42,4 @@ export const font = {
 
 export const typography = {
   ...designSystemTypography,
-
 };

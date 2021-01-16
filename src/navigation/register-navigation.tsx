@@ -5,6 +5,7 @@ import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import {
+  AppointmentModal,
   PostModal,
   SearchModal,
   SelectDateModal,
@@ -24,6 +25,7 @@ import {
 import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
 import {
+  APPOINTMENT_MODAL,
   POST_MODAL,
   SEARCH_MODAL,
   SELECT_DATE_MODAL,
@@ -44,16 +46,16 @@ import {
 import { pushAuthScreen, setHomeRoot } from './screen-navigation';
 
 const WrappedComponent = (Component: React.ComponentType<any>) => {
-  return gestureHandlerRootHOC(
-    React.memo((props) => {
-      return (
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            <Component {...props} />
-          </PersistGate>
-        </Provider>
-      );
-    }),
+  return gestureHandlerRootHOC(reduxProvider(Component));
+};
+
+const reduxProvider = (Component: React.ComponentType<any>) => (props: any) => {
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Component {...props} />
+      </PersistGate>
+    </Provider>
   );
 };
 
@@ -99,6 +101,10 @@ const registerModals = () => {
   );
 
   Navigation.registerComponent(POST_MODAL, () => WrappedComponent(PostModal));
+
+  Navigation.registerComponent(APPOINTMENT_MODAL, () =>
+    WrappedComponent(AppointmentModal),
+  );
 };
 
 export async function initNavigationAsync() {

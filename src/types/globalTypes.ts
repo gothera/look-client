@@ -1,3 +1,4 @@
+import { SHARE_APPS_BY_OPTIONS } from '../res/constants';
 import {
   AppointmentApi,
   ArtistApi,
@@ -52,7 +53,7 @@ export interface ArtistResponseApi {
 }
 
 export interface Appointment extends AppointmentApi {
-  requestStatus: RequestStatus;
+  requestStatus?: RequestStatus;
 }
 
 export interface Client {
@@ -84,25 +85,6 @@ export interface Post extends PostApi {
 }
 
 export interface Review extends ReviewApi {}
-
-export interface Appointment {
-  id?: number;
-  artistId?: number;
-  clientId?: number;
-  serviceId?: number;
-  clientName?: string;
-  photo?: string;
-  serviceName?: string;
-  startingTime: string;
-  endingTime: string;
-  cost?: number;
-  currency: Currency;
-  type: AppointmentType;
-  date: string;
-  artistName?: string;
-  artistPhoto?: string;
-  category?: Category;
-}
 
 export interface Review extends ReviewApi {}
 
@@ -156,4 +138,12 @@ export interface ArtistData {
   name: string;
   reviewsCount: number;
   category: Category;
+}
+
+export type ShareByAppOption = typeof SHARE_APPS_BY_OPTIONS[number];
+
+export interface AppPackageData {
+  packageName: string;
+  urlScheme: string;
+  urlParams: string;
 }

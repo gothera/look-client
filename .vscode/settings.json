@@ -10,7 +10,8 @@
         "iphone",
         "persistor",
         "pressable",
-        "subheadline"
+        "subheadline",
+        "whatsapp"
     ],
     "git.ignoreLimitWarning": true,
     "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },

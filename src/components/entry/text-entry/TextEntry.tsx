@@ -17,6 +17,7 @@ interface OwnProps {
   onPress: () => void;
   titleStyle?: StyleProp<TextStyle>;
   dividerStyle?: StyleProp<ViewStyle>;
+  leftIcon?: JSX.Element;
 }
 
 const TextEntry: React.FC<OwnProps> = ({
@@ -25,15 +26,15 @@ const TextEntry: React.FC<OwnProps> = ({
   onPress,
   titleStyle,
   dividerStyle,
+  leftIcon,
 }) => {
   return (
     <View style={styles.root}>
-      <TouchableHighlight
-        style={[styles.container, containerStyle]}
-        onPress={onPress}
-        underlayColor={color.highlight}
-      >
-        <Text style={[styles.title, titleStyle]}>{title}</Text>
+      <TouchableHighlight onPress={onPress} underlayColor={color.highlight}>
+        <View style={[styles.container, containerStyle]}>
+          {leftIcon && <View style={styles.leftIconContainer}>{leftIcon}</View>}
+          <Text style={[styles.title, titleStyle]}>{title}</Text>
+        </View>
       </TouchableHighlight>
       <LineDivider style={dividerStyle} />
     </View>

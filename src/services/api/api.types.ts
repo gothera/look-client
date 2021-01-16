@@ -184,27 +184,30 @@ export interface ArtistReviewsResponse {
 }
 
 export interface AppointmentApi {
-  id?: number;
-  artistId?: number;
-  clientId?: number;
-  serviceId?: number;
-  clientName?: string;
+  id: number;
+  artistId: number;
+  clientId: number;
+  serviceId: number;
+  clientName: string;
   clientPhoto?: string;
-  serviceName?: string;
+  serviceName: string;
   startingTime: string;
   endingTime: string;
   cost?: number;
   currency: Currency;
   type: AppointmentType;
   date: string;
-  artistName?: string;
+  artistName: string;
   artistPhoto?: string;
-  category?: Category;
-  latitude: number;
-  longitude: number;
+  category: Category;
+  latitude: string;
+  longitude: string;
   contact: {
     instagram: string;
     phone: string;
   };
   locationType: LocationType;
+  cancelled: boolean;
+  serviceDescription?: string;
+  serviceDuration: number;
 }

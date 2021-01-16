@@ -6,9 +6,14 @@ import { styles } from './styles';
 interface OwnProps {
   title: string;
   scrollY?: Animated.Value;
+  rightButton?: JSX.Element;
 }
 
-const TopBarLeftAlignment: React.FC<OwnProps> = ({ title, scrollY }) => {
+const TopBarLeftAlignment: React.FC<OwnProps> = ({
+  title,
+  scrollY,
+  rightButton,
+}) => {
   const dividerOpacity = scrollY?.interpolate({
     inputRange: [0, 10],
     outputRange: [0, 1],
@@ -19,6 +24,7 @@ const TopBarLeftAlignment: React.FC<OwnProps> = ({ title, scrollY }) => {
     <>
       <View style={styles.container}>
         <Text style={styles.title}>{title}</Text>
+        {rightButton}
       </View>
       <Animated.View
         style={scrollY !== undefined && { opacity: dividerOpacity }}

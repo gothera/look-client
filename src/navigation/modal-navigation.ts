@@ -10,6 +10,7 @@ import {
   SEARCH_MODAL,
   START_AUTH_MODAL,
   SELECT_DATE_MODAL,
+  APPOINTMENT_MODAL,
 } from './modal-constants';
 
 export const showStartAuthModal = (pushConfig?: Config) => {
@@ -116,6 +117,37 @@ export const showPostModal = (pushConfig?: Config) => {
               modalPresentationStyle:
                 OptionsModalPresentationStyle.overCurrentContext,
               topBar: {
+                visible: false,
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+};
+
+export const showAppointmentModal = (pushConfig?: Config) => {
+  const config = getConfig(pushConfig);
+
+  Navigation.showModal({
+    stack: {
+      children: [
+        {
+          component: {
+            name: APPOINTMENT_MODAL,
+            passProps: { ...config.props },
+
+            options: {
+              modalPresentationStyle:
+                OptionsModalPresentationStyle.overCurrentContext,
+              layout: {
+                componentBackgroundColor: color.background,
+              },
+              topBar: {
+                visible: false,
+              },
+              bottomTabs: {
                 visible: false,
               },
             },

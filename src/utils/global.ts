@@ -11,7 +11,7 @@ import {
 } from '../res/constants/pickerItems';
 import { color } from '../theme';
 import { Artist, Post } from '../types';
-
+import dayjs from 'dayjs';
 // todo
 export type ContentProp = keyof Artist | keyof Post;
 
@@ -229,4 +229,28 @@ export const roundUpNumber = (number: number): string => {
   else if (number < 1000000) return Math.floor(number / 1000) + 'K';
   else if (number < 10000000) return Math.floor(number / 100000) / 10 + 'M';
   else return Math.floor(number / 10000000) + 'M';
+};
+
+export const hourPrittier = (hour: string): string => {
+  return hour.substring(0, hour.lastIndexOf(':'));
+};
+const weekdays = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+export const datePrittier = (date: string): string => {
+  const day = dayjs(date).day();
+
+  return `${weekdays[day]}, ${dayjs(date).date()} ${monthNumberToMonthName(
+    new Date(date).getMonth() + 1,
+  )}`;
+};
+
+export const minutesToPresentedDuration = (minutes: number): string => {
+  return `${minutes >= 60 ? minutes / 60 + 'h' : ''} ${minutes % 60}min`;
 };

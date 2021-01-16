@@ -1,9 +1,9 @@
-import { Category, Pageable, Appointment } from '../../types';
+import { Pageable, Appointment } from '../../types';
 import { ThunkResult } from '../store.types';
 import * as appointmentsConstants from './appointments.constants';
 import * as appointmentsTypes from './appointments.types';
 import * as AppointmentService from '../../services/api/AppointmentService';
-import { OwnAppointmentsResponse, PostApi } from '../../services/api/api.types';
+import { OwnAppointmentsResponse } from '../../services/api/api.types';
 
 // Fetch Own Appointments
 
@@ -57,6 +57,70 @@ export const fetchOwnAppointments = (
       })
       .catch(() => {
         dispatch(fetchOwnAppointmentsFailure());
+      });
+  };
+};
+
+// Fetch Appointment
+
+const fetchAppointmentAction = (
+  appointment: Appointment,
+): appointmentsTypes.FetchAppointmentAction => {
+  return {
+    type: appointmentsConstants.FETCH_APPOINTMENT_ACTION,
+    payload: { appointment },
+  };
+};
+
+export const fetchAppointment = (
+  appointmentId: number,
+  onRequestSuccess?: () => void,
+  onRequestFailure?: () => void,
+  onRequestFinish?: () => void,
+): ThunkResult<void> => {
+  return async (dispatch) => {
+    return AppointmentService.getAppointment(appointmentId)
+      .then((appointmentApi) => {
+        dispatch(fetchAppointmentAction(appointmentApi));
+        onRequestSuccess?.();
+      })
+      .catch((err) => {
+        console.log('fetch appointment error', err);
+        onRequestFailure?.();
+      })
+      .finally(() => {
+        onRequestFinish?.();
+      });
+  };
+};
+
+const cancelAppointmentAction = (
+  appointmentId: number,
+): appointmentsTypes.CancelAppointmentAction => {
+  return {
+    type: appointmentsConstants.CANCEL_APPOINTMENT_ACTION,
+    payload: { appointmentId },
+  };
+};
+
+export const cancelAppointment = (
+  appointmentId: number,
+  onRequestSuccess?: () => void,
+  onRequestFailure?: () => void,
+  onRequestFinish?: () => void,
+): ThunkResult<void> => {
+  return async (dispatch) => {
+    return AppointmentService.cancelAppointment(appointmentId)
+      .then(() => {
+        dispatch(cancelAppointmentAction(appointmentId));
+        onRequestSuccess?.();
+      })
+      .catch((err) => {
+        console.log('fetch appointment error', err);
+        onRequestFailure?.();
+      })
+      .finally(() => {
+        onRequestFinish?.();
       });
   };
 };
