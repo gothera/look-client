@@ -19,6 +19,7 @@ import {
   minutesToPresentedDuration,
 } from '../../../../utils/global';
 import AppointmentContactEntry from '../appointment-contact-entry/AppointmentContactEntry';
+import dayjs from 'dayjs';
 
 interface Props {
   appointmentId: number;
@@ -65,6 +66,11 @@ const AppointmentScrollData: React.FC<Props> = ({
       },
     });
   };
+
+  const isOverdue = dayjs(date).isBefore(new Date().toISOString());
+
+  const showCancel = !cancelled && !isOverdue;
+
   const dispatch = useDispatch<AsyncDispatch>();
 
   const onCancel = () => {
@@ -111,7 +117,7 @@ const AppointmentScrollData: React.FC<Props> = ({
       />
       <AppointmentContactEntry contact={contact} />
 
-      {!cancelled && (
+      {showCancel && (
         <TextEntry
           title={strings.action.cancelAppointment}
           onPress={onCancel}

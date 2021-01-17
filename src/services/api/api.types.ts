@@ -1,4 +1,4 @@
-import { AppointmentType, ArtistData } from '../../types/globalTypes';
+import { AppointmentType, ArtistData, Interval } from '../../types/globalTypes';
 import {
   DaysAbbreviation,
   Currency,
@@ -210,4 +210,18 @@ export interface AppointmentApi {
   cancelled: boolean;
   serviceDescription?: string;
   serviceDuration: number;
+}
+
+export interface FreeIntervalHoursApi {
+  date: string;
+  maximumInterval: number;
+  freeSpots: Interval[];
+}
+
+export interface CreateAppointment {
+  artistId: number;
+  clientId: number;
+  serviceId: number;
+  startingTime: string;
+  date: string;
 }

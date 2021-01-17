@@ -4,7 +4,7 @@ import UserCategoryAvatar from '../../../../components/avatar/user-category-avat
 import LineDivider from '../../../../components/ui/LineDivider';
 import { color } from '../../../../theme';
 import { Category } from '../../../../types';
-import { categoryEnumToStr } from '../../../../utils/global';
+import { categoryEnumToStr, datePrittier } from '../../../../utils/global';
 import { styles } from './styles';
 
 interface OwnProps {
@@ -42,7 +42,7 @@ const AppointmentEntryRow: React.FC<OwnProps> = ({
             <Text
               style={styles.description}
             >{`${categoryName}, ${serviceName}`}</Text>
-            <Text style={styles.date}>{date}</Text>
+            <Text style={styles.date}>{datePrittier(date)}</Text>
           </View>
         </View>
         {showDivider && <LineDivider style={styles.divider} />}

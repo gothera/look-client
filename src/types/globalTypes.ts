@@ -147,3 +147,8 @@ export interface AppPackageData {
   urlScheme: string;
   urlParams: string;
 }
+
+export interface Interval {
+  startTime: string;
+  endTime: string;
+}

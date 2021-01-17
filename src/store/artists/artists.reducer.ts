@@ -510,6 +510,23 @@ const artistsReducer = (
       };
     }
 
+    case artistsConstants.FETCH_SERVICES_OF_ARTIST: {
+      const { artistId, services } = action.payload;
+
+      return {
+        ...state,
+        local: {
+          ...state.local,
+          ...(state.local[artistId] && {
+            [artistId]: {
+              ...state.local[artistId],
+              offeredServices: services,
+            },
+          }),
+        },
+      };
+    }
+
     default:
       return state;
   }

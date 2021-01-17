@@ -13,8 +13,9 @@ interface OwnProps {
 const mapStateToProps = (state: StoreState) => {
   return {
     // get data from store
-    photo: 'https://imgur.com/Lrb9qjl.png',
-    firstName: 'Andrei',
+    photo:
+      state.profile.client?.profilePicture || 'https://imgur.com/Lrb9qjl.png',
+    firstName: state.profile.client?.lastName || 'Andrei',
   };
 };
 

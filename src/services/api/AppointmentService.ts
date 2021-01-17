@@ -1,5 +1,9 @@
-import { AppointmentApi, OwnAppointmentsResponse } from './api.types';
-import { deleteRequest, getRequest } from './apiRequest';
+import {
+  AppointmentApi,
+  CreateAppointment,
+  OwnAppointmentsResponse,
+} from './api.types';
+import { deleteRequest, getRequest, postRequest } from './apiRequest';
 
 export const getOwnAppointments = (
   nextPage: number,
@@ -20,4 +24,10 @@ export const cancelAppointment = (appointmentId: number): Promise<void> => {
   const url = `artist/appointment/${appointmentId}`;
 
   return deleteRequest<void>(url);
+};
+
+export const postAppointmen = (appointment: CreateAppointment) => {
+  const url = `artist/appointment/`;
+
+  return postRequest<AppointmentApi>(url, appointment);
 };

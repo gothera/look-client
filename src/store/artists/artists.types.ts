@@ -1,4 +1,4 @@
-import { Artist, Category, Pageable, Post } from '../../types';
+import { Artist, Category, OfferedService, Pageable, Post } from '../../types';
 import * as artistsConstants from './artists.constants';
 
 // Fetch Category Artists
@@ -64,6 +64,14 @@ export interface UnsaveArtistAction {
   payload: { artistId: number };
 }
 
+export interface FetchServicesOfArtist {
+  type: typeof artistsConstants.FETCH_SERVICES_OF_ARTIST;
+  payload: {
+    artistId: number;
+    services: OfferedService[];
+  };
+}
+
 export type ArtistsAction =
   | FetchCategoryArtistsRequest
   | FetchCategoryArtistsSuccess
@@ -75,4 +83,5 @@ export type ArtistsAction =
   | FetchCategorySavedArtistsSuccess
   | FetchCategorySavedArtistsFailure
   | SaveArtistAction
-  | UnsaveArtistAction;
+  | UnsaveArtistAction
+  | FetchServicesOfArtist;

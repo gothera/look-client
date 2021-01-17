@@ -1,9 +1,11 @@
 import * as artistsTypes from './artists.types';
 import * as artistsConstants from './artists.constants';
-import { Artist, Category, Pageable, Post } from '../../types';
+import { Artist, Category, OfferedService, Pageable, Post } from '../../types';
 import { ThunkResult } from '../store.types';
 import * as ArtistService from '../../services/api/ArtistService';
 import * as PostService from '../../services/api/PostService';
+import { OfferedServiceApi } from '../../services/api/api.types';
+import { replace } from 'formik';
 
 // Fetch Category Artists
 
@@ -47,19 +49,21 @@ export const fetchCategoryArtists = (
 
     return ArtistService.getCategoryArtists(category, nextPage)
       .then((response) => {
-        const artists = response.content.map((artist): Artist => {
-          return {
-            ...artist,
-            posts: {
-              byId: [],
-              pageable: {
-                pageNumber: 0,
-                last: false
+        const artists = response.content.map(
+          (artist): Artist => {
+            return {
+              ...artist,
+              posts: {
+                byId: [],
+                pageable: {
+                  pageNumber: 0,
+                  last: false,
+                },
+                requestStatus: undefined,
               },
-              requestStatus: undefined
-            }
-          }
-        });
+            };
+          },
+        );
         const pageable: Pageable = {
           pageNumber: response.number,
           last: response.last,
@@ -134,7 +138,6 @@ export const fetchArtistPosts = (
   };
 };
 
-
 // Fetch Saved Category Artists
 
 const fetchCategorySavedArtistsRequest = (
@@ -177,19 +180,21 @@ export const fetchSavedCategoryArtists = (
 
     return ArtistService.getCategorySavedArtists(category, nextPage)
       .then((response) => {
-        const artists = response.content.map((artist): Artist => {
-          return {
-            ...artist,
-            posts: {
-              byId: [],
-              pageable: {
-                pageNumber: 0,
-                last: false
+        const artists = response.content.map(
+          (artist): Artist => {
+            return {
+              ...artist,
+              posts: {
+                byId: [],
+                pageable: {
+                  pageNumber: 0,
+                  last: false,
+                },
+                requestStatus: undefined,
               },
-              requestStatus: undefined
-            }
-          }
-        });
+            };
+          },
+        );
         const pageable: Pageable = {
           pageNumber: response.number,
           last: response.last,
@@ -248,6 +253,35 @@ export const unsaveArtist = (
       })
       .catch((err) => {
         console.log('unsave artist error', err);
+      })
+      .finally(() => {
+        onRequestFinish?.();
+      });
+  };
+};
+
+// Unsave Artist
+
+const fetchServicesOfArtistAction = (
+  artistId: number,
+  services: OfferedService[],
+): artistsTypes.FetchServicesOfArtist => ({
+  type: artistsConstants.FETCH_SERVICES_OF_ARTIST,
+  payload: { artistId, services },
+});
+
+export const fetchServicesOfArtist = (
+  artistId: number,
+  onRequestFinish?: () => void,
+): ThunkResult<void> => {
+  return async (dispatch, _) => {
+    return ArtistService.getServicesOfArtist(artistId)
+      .then((response: OfferedServiceApi[]) => {
+        const services: OfferedService[] = response;
+        dispatch(fetchServicesOfArtistAction(artistId, services));
+      })
+      .catch((err) => {
+        console.log('fetch services artist error', err);
       })
       .finally(() => {
         onRequestFinish?.();
