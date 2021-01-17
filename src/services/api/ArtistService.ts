@@ -46,17 +46,17 @@ export const getFreeIntervalHoursOfMonth = (
   artistId: number,
   date: string,
   nextMonth: boolean,
-): Promise<FreeIntervalHoursApi> => {
+): Promise<FreeIntervalHoursApi[]> => {
   const url = `client/calendar/spots/${artistId}/${date}?nextMonth=${nextMonth}`;
 
-  return getRequest<FreeIntervalHoursApi>(url);
+  return getRequest<FreeIntervalHoursApi[]>(url);
 };
 
 export const getFreeIntervalHoursOfDay = (
   artistId: number,
   date: string,
-): Promise<Interval[]> => {
+): Promise<FreeIntervalHoursApi> => {
   const url = `client/free/spots/${artistId}/${date}`;
 
-  return getRequest<Interval[]>(url);
+  return getRequest<FreeIntervalHoursApi>(url);
 };

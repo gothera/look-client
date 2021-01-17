@@ -10,7 +10,7 @@ import {
   NativeScrollEvent,
 } from 'react-native';
 import { OfferedService } from '../../types';
-import ServiceEntry from '../service-entry/ServiceEntry';
+import ServiceEntry from '../service/service-entry/ServiceEntry';
 import LineDivider from '../ui/LineDivider';
 import { styles } from './style';
 

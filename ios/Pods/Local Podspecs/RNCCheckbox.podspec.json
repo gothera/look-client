@@ -1,11 +1,11 @@
 {
   "name": "RNCCheckbox",
-  "version": "0.4.2",
-  "summary": "React Native Checkbox native modules for Android and IOS",
+  "version": "0.5.7",
+  "summary": "React Native Checkbox native modules for Android , iOS and Windows",
   "license": "MIT",
   "authors": "Nicholas Lee <nicholaslee119@gmail.com>",
   "homepage": "https://github.com/react-native-community/react-native-checkbox#readme",
-  "description": "React Native Checkbox native modules for Android and IOS",
+  "description": "React Native Checkbox native modules for Android , iOS and Windows",
   "platforms": {
     "ios": "9.0"
   },
@@ -15,7 +15,7 @@
   },
   "source_files": "ios/**/*.{h,m}",
   "dependencies": {
-    "React": [
+    "React-Core": [
 
     ]
   }

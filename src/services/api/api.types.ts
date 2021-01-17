@@ -137,6 +137,8 @@ export interface ArtistApi {
   reviewsCount: number;
   birthDate: string;
   saved: boolean;
+  latitude?: string;
+  longitude?: string;
 }
 
 export interface PostApi {

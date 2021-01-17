@@ -179,6 +179,15 @@ const designSystemTypography = {
   } as TextStyle,
 
   /**
+   * fontSize = 16
+   */
+  bodyBold: {
+    ...font.bold,
+    fontSize: 16,
+    letterSpacing: 0.2,
+  } as TextStyle,
+
+  /**
    * fontSize = 14
    */
   subheadline: {

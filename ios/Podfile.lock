@@ -322,8 +322,8 @@ PODS:
     - React-RCTText
   - rn-fetch-blob (0.12.0):
     - React-Core
-  - RNCCheckbox (0.4.2):
-    - React
+  - RNCCheckbox (0.5.7):
+    - React-Core
   - RNFastImage (8.3.2):
     - React
     - SDWebImage (~> 5.8)
@@ -562,7 +562,7 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   ReactNativeNavigation: a4ca957f6656172b6a7632592c101a5f75a0c9a2
   rn-fetch-blob: f065bb7ab7fb48dd002629f8bdcb0336602d3cba
-  RNCCheckbox: 357578d3b42652c78ee9a1bb9bcfc3195af6e161
+  RNCCheckbox: d1749e6a92178ce5dbc31e63becd1f34f0c76bbd
   RNFastImage: e19ba191922e7dab9d932a4d59d62d76660aa222
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNImageCropPicker: f0557a908758c4a3f83978894ec7227651529b45

@@ -33,3 +33,10 @@ export enum LocationType {
   Artist,
   Client,
 }
+
+export enum BookArtistStep {
+  Service,
+  Date,
+  Location,
+  Confirmation,
+}

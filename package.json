@@ -20,7 +20,7 @@
     "validate": "npm-run-all --parallel check-types check-format check-build lint test"
   },
   "dependencies": {
-    "@react-native-community/checkbox": "0.4.2",
+    "@react-native-community/checkbox": "0.5.7",
     "axios": "0.19.1",
     "dayjs": "^1.10.3",
     "formik": "2.1.5",
@@ -28,7 +28,7 @@
     "postinstall-postinstall": "2.1.0",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-calendars": "1.403.0",
+    "react-native-calendars": "https://github.com/wix/react-native-calendars.git",
     "react-native-date-picker": "3.2.3",
     "react-native-fast-image": "8.3.2",
     "react-native-gesture-handler": "1.6.0",

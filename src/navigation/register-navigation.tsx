@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import {
   AppointmentModal,
+  BookingModal,
   PostModal,
   SearchModal,
   SelectDateModal,
@@ -26,6 +27,7 @@ import { persistor, store } from '../store';
 import { loginKeychain } from '../store/profile/profile.actions';
 import {
   APPOINTMENT_MODAL,
+  BOOKING_MODAL,
   POST_MODAL,
   SEARCH_MODAL,
   SELECT_DATE_MODAL,
@@ -104,6 +106,10 @@ const registerModals = () => {
 
   Navigation.registerComponent(APPOINTMENT_MODAL, () =>
     WrappedComponent(AppointmentModal),
+  );
+
+  Navigation.registerComponent(BOOKING_MODAL, () =>
+    WrappedComponent(BookingModal),
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { OfferedService } from '../../types';
-import SmallButton from '../button/small-button/SmallButton';
+import { OfferedService } from '../../../types';
+import SmallButton from '../../button/small-button/SmallButton';
 import { styles } from './styles';
 
 interface OwnProps {

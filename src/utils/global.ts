@@ -12,8 +12,12 @@ import {
 import { color } from '../theme';
 import { Artist, Post } from '../types';
 import dayjs from 'dayjs';
+import { FreeIntervalHoursApi } from '../services/api/api.types';
 // todo
-export type ContentProp = keyof Artist | keyof Post;
+export type ContentProp =
+  | keyof Artist
+  | keyof Post
+  | keyof FreeIntervalHoursApi;
 
 /**
  *
@@ -231,7 +235,10 @@ export const roundUpNumber = (number: number): string => {
   else return Math.floor(number / 10000000) + 'M';
 };
 
-export const hourPrittier = (hour: string): string => {
+export const hourPrittier = (hour?: string): string => {
+  if (!hour) {
+    return '';
+  }
   return hour.substring(0, hour.lastIndexOf(':'));
 };
 const weekdays = [
@@ -253,4 +260,27 @@ export const datePrittier = (date: string): string => {
 
 export const minutesToPresentedDuration = (minutes: number): string => {
   return `${minutes >= 60 ? minutes / 60 + 'h' : ''} ${minutes % 60}min`;
+};
+
+export const darkenColor = (insertedColor: string, percent: number) => {
+  let R = parseInt(insertedColor.substring(1, 3), 16);
+  let G = parseInt(insertedColor.substring(3, 5), 16);
+  let B = parseInt(insertedColor.substring(5, 7), 16);
+
+  R = parseInt(((R * (100 + percent)) / 100).toString(), 10);
+  G = parseInt(((G * (100 + percent)) / 100).toString(), 10);
+  B = parseInt(((B * (100 + percent)) / 100).toString(), 10);
+
+  R = R < 255 ? R : 255;
+  G = G < 255 ? G : 255;
+  B = B < 255 ? B : 255;
+
+  const RR =
+    R.toString(16).length === 1 ? '0' + R.toString(16) : R.toString(16);
+  const GG =
+    G.toString(16).length === 1 ? '0' + G.toString(16) : G.toString(16);
+  const BB =
+    B.toString(16).length === 1 ? '0' + B.toString(16) : B.toString(16);
+
+  return '#' + RR + GG + BB;
 };

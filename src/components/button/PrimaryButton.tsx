@@ -7,7 +7,9 @@ import {
   TextStyle,
   ViewStyle,
   Animated,
+  View,
 } from 'react-native';
+import { DotIndicator } from 'react-native-indicators';
 import { color, typography } from '../../theme';
 
 interface OwnProps {
@@ -16,6 +18,7 @@ interface OwnProps {
   onPress: () => void;
   title: string;
   isDisabled?: boolean;
+  isLoading?: boolean;
 }
 
 const PrimaryButton: React.FC<OwnProps> = ({
@@ -24,6 +27,7 @@ const PrimaryButton: React.FC<OwnProps> = ({
   title,
   isDisabled,
   textStyles,
+  isLoading,
 }) => {
   const scale = useRef(new Animated.Value(1)).current;
 
@@ -56,9 +60,15 @@ const PrimaryButton: React.FC<OwnProps> = ({
         onPressIn={onPressIn}
         onPressOut={onPressOut}
         onPress={onPress}
-        disabled={isDisabled}
+        disabled={isDisabled || isLoading}
       >
-        <Text style={[styles.text, textStyles]}>{title}</Text>
+        {isLoading ? (
+          <View style={{ alignItems: 'center' }}>
+            <DotIndicator color={color.textInverted} size={5} />
+          </View>
+        ) : (
+          <Text style={[styles.text, textStyles]}>{title}</Text>
+        )}
       </Pressable>
     </Animated.View>
   );

@@ -37,7 +37,6 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Contact Artist</Text>
-      <View style={styles.textContainer}></View>
       {phone && (
         <TextEntry title={'Send SMS'} leftIcon={<SmsIcon />} onPress={onSms} />
       )}

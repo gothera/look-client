@@ -11,6 +11,7 @@ import {
   START_AUTH_MODAL,
   SELECT_DATE_MODAL,
   APPOINTMENT_MODAL,
+  BOOKING_MODAL,
 } from './modal-constants';
 
 export const showStartAuthModal = (pushConfig?: Config) => {
@@ -149,6 +150,40 @@ export const showAppointmentModal = (pushConfig?: Config) => {
               },
               bottomTabs: {
                 visible: false,
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+};
+
+export const showBookingModal = (pushConfig?: Config) => {
+  const config = getConfig(pushConfig);
+
+  Navigation.showModal({
+    stack: {
+      children: [
+        {
+          component: {
+            name: BOOKING_MODAL,
+            passProps: { ...config.props },
+
+            options: {
+              modalPresentationStyle:
+                OptionsModalPresentationStyle.overCurrentContext,
+              layout: {
+                componentBackgroundColor: color.background,
+              },
+              topBar: {
+                visible: false,
+              },
+              bottomTabs: {
+                visible: false,
+              },
+              statusBar: {
+                style: 'dark',
               },
             },
           },

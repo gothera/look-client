@@ -77,6 +77,22 @@ const strings = {
         password: 'Introduce a password',
       },
     },
+    booking: {
+      steps: {
+        service: {
+          title: 'Select Service',
+        },
+        date: {
+          title: 'Select Date and Hour',
+        },
+        location: {
+          title: 'Select Location',
+        },
+        confirmation: {
+          title: 'Confirmation',
+        },
+      },
+    },
   },
   chip: {
     cancelled: 'Cancelled',
@@ -100,6 +116,7 @@ const strings = {
     cancel: 'Cancel',
     book: 'Book',
     cancelAppointment: 'Cancel Appointment',
+    confirmAndBook: 'Confirm and Book',
   },
   common: {
     rate: 'Rate',

@@ -26,7 +26,7 @@ export const cancelAppointment = (appointmentId: number): Promise<void> => {
   return deleteRequest<void>(url);
 };
 
-export const postAppointmen = (appointment: CreateAppointment) => {
+export const postAppointment = (appointment: CreateAppointment) => {
   const url = `artist/appointment/`;
 
   return postRequest<AppointmentApi>(url, appointment);

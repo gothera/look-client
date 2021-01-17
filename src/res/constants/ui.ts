@@ -54,4 +54,7 @@ export const POST_MODAL_IMAGE_OPACITY_RANGE =
 export const ANDROID_TOP_BAR_HEIGHT = 42;
 
 export const SCREEN_WIDTH = Dimensions.get('screen').width;
+
 export const SCREEN_HEIGHT = Dimensions.get('screen').height;
+
+export const BOOKING_HEADER_HEIGHT = Platform.OS === 'ios' ? '20%' : '16%';

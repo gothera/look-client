@@ -65,6 +65,8 @@ export interface Client {
   bio: string;
   birthDate: string;
   profilePicture: string;
+  latitude?: string;
+  longitude?: string;
   latestAppointments: AppointmentApi[];
 }
 
