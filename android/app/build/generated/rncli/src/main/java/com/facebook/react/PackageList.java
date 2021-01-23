@@ -25,10 +25,14 @@ import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.oblador.keychain.KeychainPackage;
 // react-native-linear-gradient
 import com.BV.LinearGradient.LinearGradientPackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-navigation
 import com.reactnativenavigation.react.NavigationPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-share
+import cl.json.RNSharePackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
 // rn-fetch-blob
@@ -85,8 +89,10 @@ public class PackageList {
       new PickerPackage(),
       new KeychainPackage(),
       new LinearGradientPackage(),
+      new MapsPackage(),
       new NavigationPackage(reactNativeHost),
       new ReanimatedPackage(),
+      new RNSharePackage(),
       new SvgPackage(),
       new RNFetchBlobPackage()
     ));

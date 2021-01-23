@@ -111,6 +111,7 @@ attr alertDialogTheme
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
+attr ambientEnabled
 attr animationMode
 attr appBarLayoutStyle
 attr arrowHeadLength
@@ -173,10 +174,18 @@ attr buttonCompat
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr cameraBearing
+attr cameraMaxZoomPreference
+attr cameraMinZoomPreference
+attr cameraTargetLat
+attr cameraTargetLng
+attr cameraTilt
+attr cameraZoom
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -213,6 +222,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -243,6 +253,7 @@ attr colorPrimary
 attr colorPrimaryDark
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
@@ -423,6 +434,8 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr inactiveColor
 attr indeterminateProgressStyle
@@ -458,6 +471,10 @@ attr keylines
 attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
+attr latLngBoundsNorthEastLatitude
+attr latLngBoundsNorthEastLongitude
+attr latLngBoundsSouthWestLatitude
+attr latLngBoundsSouthWestLongitude
 attr layout
 attr layoutManager
 attr layout_anchor
@@ -489,8 +506,10 @@ attr listPreferredItemPaddingEnd
 attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
+attr liteMode
 attr logo
 attr logoDescription
+attr mapType
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -655,6 +674,7 @@ attr roundedCornerRadius
 attr roundingBorderColor
 attr roundingBorderPadding
 attr roundingBorderWidth
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -837,8 +857,17 @@ attr ucrop_grid_stroke_size
 attr ucrop_show_frame
 attr ucrop_show_grid
 attr ucrop_show_oval_crop_frame
+attr uiCompass
+attr uiMapToolbar
+attr uiRotateGestures
+attr uiScrollGestures
+attr uiScrollGesturesDuringRotateOrZoom
+attr uiTiltGestures
+attr uiZoomControls
+attr uiZoomGestures
 attr useCompatPadding
 attr useMaterialThemeColors
+attr useViewLifecycle
 attr verticalOffset
 attr viewAspectRatio
 attr viewInflaterClass
@@ -856,6 +885,7 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zOrderOnTop
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
@@ -919,6 +949,17 @@ color colorBottomNavigationPrimaryDark
 color colorBottomNavigationSelectedBackground
 color colorBottomNavigationTextAccent
 color colorBottomNavigationTextInactive
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1592,6 +1633,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable amu_bubble_mask
+drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -1602,6 +1645,25 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1611,6 +1673,8 @@ drawable design_snackbar_background
 drawable fab_add
 drawable fingerprint_dialog_error_to_fp
 drawable fingerprint_dialog_fp_to_error
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24dp
 drawable ic_arrow_back_black_rtl_24dp
 drawable ic_calendar_black_24dp
@@ -1742,10 +1806,13 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id adjust_height
+id adjust_width
 id alertTitle
 id all
 id always
 id ampm
+id amu_text
 id async
 id auto
 id beginning
@@ -1790,6 +1857,7 @@ id coordinator
 id custom
 id customPanel
 id cut
+id dark
 id date
 id date_picker_actions
 id day
@@ -1845,8 +1913,10 @@ id hideable
 id home
 id homeAsUp
 id hour
+id hybrid
 id icon
 id icon_group
+id icon_only
 id ifRoom
 id image
 id image_view_crop
@@ -1863,6 +1933,7 @@ id layout_aspect_ratio
 id layout_rotate_wheel
 id layout_scale_wheel
 id left
+id light
 id line1
 id line3
 id listMode
@@ -1954,6 +2025,7 @@ id rn_redbox_report_label
 id rn_redbox_stack
 id rotate_scroll_wheel
 id rounded
+id satellite
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -1992,6 +2064,7 @@ id split_action_bar
 id src_atop
 id src_in
 id src_over
+id standard
 id start
 id state_aspect_ratio
 id state_rotate
@@ -2009,6 +2082,7 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
@@ -2056,6 +2130,9 @@ id view_overlay
 id view_tag_instance_handle
 id view_tag_native_id
 id visible
+id webview
+id wide
+id window
 id withText
 id wrap_content
 id wrapper_controls
@@ -2071,6 +2148,7 @@ integer cancel_button_image_alpha
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer google_play_services_version
 integer hide_password_duration
 integer mtrl_badge_max_character_count
 integer mtrl_btn_anim_delay_ms
@@ -2126,6 +2204,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout amu_info_window
+layout amu_text_bubble
+layout amu_webview
 layout bottom_navigation_item
 layout bottom_navigation_small_item
 layout custom_dialog
@@ -2224,6 +2305,26 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw amu_ballon_gx_prefix
+raw amu_basic_folder
+raw amu_basic_placemark
+raw amu_cdata
+raw amu_default_balloon
+raw amu_document_nest
+raw amu_draw_order_ground_overlay
+raw amu_extended_data
+raw amu_ground_overlay
+raw amu_ground_overlay_color
+raw amu_inline_style
+raw amu_multigeometry_placemarks
+raw amu_multiple_placemarks
+raw amu_nested_folders
+raw amu_nested_multigeometry
+raw amu_poly_style_boolean_alpha
+raw amu_poly_style_boolean_numeric
+raw amu_unknwown_folder
+raw amu_unsupported
+raw amu_visibility_ground_overlay
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2291,6 +2392,24 @@ string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
 string combobox_description
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string confirm_device_credential_password
 string default_error_msg
 string drawer_close
@@ -3096,6 +3215,9 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style amu_Bubble_TextAppearance_Dark
+style amu_Bubble_TextAppearance_Light
+style amu_ClusterIcon_TextAppearance
 style android_native
 style android_native_small
 style android_native_theme
@@ -3156,6 +3278,8 @@ styleable Insets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets p
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialButton android_insetLeft android_insetRight android_insetTop android_insetBottom android_checkable backgroundTint backgroundTintMode cornerRadius elevation icon iconGravity iconPadding iconSize iconTint iconTintMode rippleColor shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
@@ -3182,6 +3306,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView strokeColor strokeWidth
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable SimpleDraweeView actualImageResource actualImageScaleType actualImageUri backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable Slider android_value android_stepSize android_valueFrom android_valueTo floatingLabel haloColor haloRadius labelStyle thumbColor thumbElevation thumbRadius tickColor tickColorActive tickColorInactive trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
@@ -3206,6 +3331,7 @@ styleable ucrop_AspectRatioTextView ucrop_artv_ratio_title ucrop_artv_ratio_x uc
 styleable ucrop_UCropView ucrop_aspect_ratio_x ucrop_aspect_ratio_y ucrop_circle_dimmed_layer ucrop_dimmed_color ucrop_frame_color ucrop_frame_stroke_size ucrop_grid_color ucrop_grid_column_count ucrop_grid_row_count ucrop_grid_stroke_size ucrop_show_frame ucrop_show_grid ucrop_show_oval_crop_frame
 xml provider_paths
 xml rn_dev_preferences
+xml share_download_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

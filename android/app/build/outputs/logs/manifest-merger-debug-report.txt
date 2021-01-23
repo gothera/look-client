@@ -15,11 +15,13 @@ MERGED from [:react-native-fast-image] /Users/sabinhantu/RNProject/look-client/n
 MERGED from [:react-native-gesture-handler] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-28:12
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
+MERGED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-47:12
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/504844d12897fd5e56f09caba00b387a/jetified-react-native-0.63.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/07f12c5d0bf69a257f51ce6eb85938a0/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/fd2cd427c1b18958832af63f586dd268/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -52,6 +54,12 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/sabin
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8a33da9e024d71439a75f238286d7d45/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.3.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/205fcbec6326d6e5910d207d50fcee6b/core-ktx-1.3.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5d4c698c7a5abb42f027a48b83d2f46a/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d0e24a6792563410fe9f297ea240711c/play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9538d4f6d9196b477f65a11c52b0e610/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8f4684905e7dfec54dffd6a6db4f7abf/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/1fe4e6bdc5428dc4955d05a855b301c5/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/fa99749678bae065236b2fa17f702ecd/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/1d87ce5cd705bd064c351870b5658975/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -85,9 +93,10 @@ MERGED from [com.henninghall.android:NumberPickerView:1.1.5] /Users/sabinhantu/.
 MERGED from [net.time4j:time4j-android:4.2-2018i] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/c10f6cd37b06441670a587566af9f9a2/time4j-android-4.2-2018i/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02883001d46367d9d54dea2b2f534f94/biometric-1.0.1/AndroidManifest.xml:17:1-34:12
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/de96d21746610fb2c3966b1bd1c7c517/conceal-1.1.3/AndroidManifest.xml:7:1-16:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.clans:fab:1.6.4] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f81fbcd7a6e760f2cc34f2ac9f34ef2d/fab-1.6.4/AndroidManifest.xml:2:1-14:12
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e270beea3dc4a8e9bab9744876641e7d/annotation-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/2357180c8ebcadc9c25a07114f6b8324/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b8a981e001514be3e97df412477495d8/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/a1e486b205794752eefab4d8082d1f76/ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/88e7a3f0a707191d9c4bf4cf0aa37c12/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/sabinhantu/RNProject/look-client/android/app/src/debug/AndroidManifest.xml:2:1-8:12
@@ -114,8 +123,12 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.facebook.flipper:flipper:0.37.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/10c4b51a5921dc08a69c9bd892693f91/flipper-0.37.0/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.37.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/10c4b51a5921dc08a69c9bd892693f91/flipper-0.37.0/AndroidManifest.xml:15:5-67
+MERGED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-67
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/sabinhantu/RNProject/look-client/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
@@ -144,10 +157,12 @@ MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/nod
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-21:19
 MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:11:5-15:19
 MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:5-45:19
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/504844d12897fd5e56f09caba00b387a/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/504844d12897fd5e56f09caba00b387a/jetified-react-native-0.63.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/16cf47707c06a07a08800959212e5e68/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/16cf47707c06a07a08800959212e5e68/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.github.wix-playground:ahbottomnavigation:3.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3b4d085db764b422b38064e6b4d021f5/ahbottomnavigation-3.2.0/AndroidManifest.xml:11:5-20
@@ -158,6 +173,18 @@ MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sabinh
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3eff73f90971f135bb24d0cd512341fb/okhttp3-integration-4.11.0/AndroidManifest.xml:10:5-14:19
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e1ff0cffe58cc868b54146679539608f/glide-4.11.0/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e1ff0cffe58cc868b54146679539608f/glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d0e24a6792563410fe9f297ea240711c/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d0e24a6792563410fe9f297ea240711c/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9538d4f6d9196b477f65a11c52b0e610/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9538d4f6d9196b477f65a11c52b0e610/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8f4684905e7dfec54dffd6a6db4f7abf/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8f4684905e7dfec54dffd6a6db4f7abf/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/c36e54eaf891c3919ec2158203db73be/gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/c36e54eaf891c3919ec2158203db73be/gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.3.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/edb3e227103316871c25f962da3e32ee/core-1.3.0/AndroidManifest.xml:24:5-89
@@ -168,6 +195,8 @@ MERGED from [net.time4j:time4j-android:4.2-2018i] /Users/sabinhantu/.gradle/cach
 MERGED from [net.time4j:time4j-android:4.2-2018i] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/c10f6cd37b06441670a587566af9f9a2/time4j-android-4.2-2018i/AndroidManifest.xml:11:5-20
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02883001d46367d9d54dea2b2f534f94/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02883001d46367d9d54dea2b2f534f94/biometric-1.0.1/AndroidManifest.xml:27:5-32:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
 MERGED from [com.github.clans:fab:1.6.4] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f81fbcd7a6e760f2cc34f2ac9f34ef2d/fab-1.6.4/AndroidManifest.xml:12:5-20
 MERGED from [com.github.clans:fab:1.6.4] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f81fbcd7a6e760f2cc34f2ac9f34ef2d/fab-1.6.4/AndroidManifest.xml:12:5-20
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e270beea3dc4a8e9bab9744876641e7d/annotation-0.8.2/AndroidManifest.xml:11:5-20
@@ -252,16 +281,20 @@ MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-c
 MERGED from [:react-native-image-crop-picker] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-navigation] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative63Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5e4b0d92c435bc8e671761522a81b7d2/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/504844d12897fd5e56f09caba00b387a/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/504844d12897fd5e56f09caba00b387a/jetified-react-native-0.63.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d786dbd89cf9a0af3a1b7745537c503f/reflow-animator-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/07f12c5d0bf69a257f51ce6eb85938a0/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
@@ -326,6 +359,18 @@ MERGED from [androidx.core:core-ktx:1.3.0] /Users/sabinhantu/.gradle/caches/tran
 MERGED from [androidx.core:core-ktx:1.3.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/205fcbec6326d6e5910d207d50fcee6b/core-ktx-1.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5d4c698c7a5abb42f027a48b83d2f46a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/5d4c698c7a5abb42f027a48b83d2f46a/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d0e24a6792563410fe9f297ea240711c/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/d0e24a6792563410fe9f297ea240711c/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9538d4f6d9196b477f65a11c52b0e610/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9538d4f6d9196b477f65a11c52b0e610/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8f4684905e7dfec54dffd6a6db4f7abf/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/8f4684905e7dfec54dffd6a6db4f7abf/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/1fe4e6bdc5428dc4955d05a855b301c5/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/1fe4e6bdc5428dc4955d05a855b301c5/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/fa99749678bae065236b2fa17f702ecd/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -392,12 +437,14 @@ MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/cache
 MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02883001d46367d9d54dea2b2f534f94/biometric-1.0.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/de96d21746610fb2c3966b1bd1c7c517/conceal-1.1.3/AndroidManifest.xml:12:5-14:41
 MERGED from [com.facebook.conceal:conceal:1.1.3] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/de96d21746610fb2c3966b1bd1c7c517/conceal-1.1.3/AndroidManifest.xml:12:5-14:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
 MERGED from [com.github.clans:fab:1.6.4] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f81fbcd7a6e760f2cc34f2ac9f34ef2d/fab-1.6.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.clans:fab:1.6.4] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/f81fbcd7a6e760f2cc34f2ac9f34ef2d/fab-1.6.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e270beea3dc4a8e9bab9744876641e7d/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/e270beea3dc4a8e9bab9744876641e7d/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/2357180c8ebcadc9c25a07114f6b8324/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/2357180c8ebcadc9c25a07114f6b8324/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b8a981e001514be3e97df412477495d8/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b8a981e001514be3e97df412477495d8/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/a1e486b205794752eefab4d8082d1f76/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/a1e486b205794752eefab4d8082d1f76/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/88e7a3f0a707191d9c4bf4cf0aa37c12/annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -464,6 +511,20 @@ MERGED from [androidx.biometric:biometric:1.0.1] /Users/sabinhantu/.gradle/cache
 		ADDED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-64
 	android:name
 		ADDED from [:react-native-keychain] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-keychain/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:react-native-share] /Users/sabinhantu/RNProject/look-client/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-55
 uses-permission#com.android.vending.CHECK_LICENSE
 ADDED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-73
 	android:name
@@ -474,6 +535,8 @@ ADDED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules
 		ADDED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
 	android:name
 		ADDED from [:rn-fetch-blob] /Users/sabinhantu/RNProject/look-client/node_modules/rn-fetch-blob/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:22-76
 provider#com.RNFetchBlob.Utils.FileProvider
@@ -492,3 +555,31 @@ ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sabinha
 		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3eff73f90971f135bb24d0cd512341fb/okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
 	android:name
 		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/3eff73f90971f135bb24d0cd512341fb/okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/b39ea1025d5ba61f9b44f838ab4b147a/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/066dac43f66ed727b4f7a4d60fd18d59/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/02a2c5e7cdff13f71497aa1568aadb5b/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sabinhantu/.gradle/caches/transforms-2/files-2.1/9123a35cac1e50c19295ec561048fbbd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
