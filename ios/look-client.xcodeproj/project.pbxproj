@@ -741,7 +741,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "lookappro.look-client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lookbeautyapp.client";
 				PRODUCT_NAME = "look-client";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -768,7 +768,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "lookappro.look-client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lookbeautyapp.client";
 				PRODUCT_NAME = "look-client";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
