@@ -101,7 +101,7 @@ const BookingTime: React.FC<Props> = ({
       <ScrollView>
         <HorizontalCalendar
           freeDays={freeDaysArr}
-          isFetching={isFetching}
+          isFetching={false}
           onSelectDay={selectDay}
           selectedDay={selectedDay}
         />

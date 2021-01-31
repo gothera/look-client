@@ -106,9 +106,6 @@ const ProfileOptions: React.FC<OwnProps & PropsFromRedux> = ({
           dividerStyle={styles.textEntryDivider}
           containerStyle={styles.logoutContainer}
         />
-        {
-          // TODO: get version using library
-        }
         <Text style={styles.versionText}>look v0.0.1</Text>
       </Animated.ScrollView>
     </>

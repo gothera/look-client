@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { CalendarList } from 'react-native-calendars';
+import { CalendarList, DayComponentProps } from 'react-native-calendars';
 import { SCREEN_WIDTH } from '../../../res/constants';
 import CalendarDay from '../calenday-day/CalendarDay';
 import { styles } from './styles';
@@ -18,6 +18,18 @@ const HorizontalCalendar: React.FC<Props> = ({
   onSelectDay,
   selectedDay,
 }) => {
+  const renderCalendarDay = (day: DayComponentProps) => {
+    const isDisabled = !freeDays.includes(day.date.dateString);
+    return (
+      <CalendarDay
+        dayComponentProps={day}
+        isDisabled={isDisabled}
+        onSelectDay={onSelectDay}
+        selectedDay={selectedDay}
+      />
+    );
+  };
+
   return (
     <View style={styles.container}>
       {!isFetching && (
@@ -28,22 +40,11 @@ const HorizontalCalendar: React.FC<Props> = ({
           onMonthChange={(date) => {
             console.log('on month change', date);
           }}
-          dayComponent={(day) => {
-            const isDisabled = !freeDays.includes(day.date.dateString);
-
-            return (
-              <CalendarDay
-                dayComponentProps={day}
-                isDisabled={isDisabled}
-                onSelectDay={onSelectDay}
-                selectedDay={selectedDay}
-              />
-            );
-          }}
+          dayComponent={renderCalendarDay}
           onVisibleMonthsChange={(a) => {
-            // TODO FETCH NEXT MONTH
-            // console.log('==aaaaaaaaa=');
+            console.log('==aaaaaaaaa=', a);
           }}
+          markedDates={{ selectedDay: { color: 'red' } }} // will re-render days on change
         />
       )}
     </View>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FlatList } from 'react-native';
+import { useNavigationBottomTabSelect } from 'react-native-navigation-hooks/dist';
 import { useDispatch, useSelector } from 'react-redux';
 import ArtistEntryStateful from '../../../../components/artist/artist-entry-stateful/ArtistEntryStateful';
 import { pushArtistScreen } from '../../../../navigation';
@@ -43,6 +44,12 @@ const SavedArtistsList: React.FC<OwnProps> = ({
   useEffect(() => {
     shouldFetch && fetchMoreSaved(true);
   }, [category, shouldFetch]);
+
+  useNavigationBottomTabSelect((e) => {
+    if (e.selectedTabIndex === 1) {
+      shouldFetch && fetchMoreSaved(true);
+    }
+  });
 
   const renderArtistRow = ({
     item,

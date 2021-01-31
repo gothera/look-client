@@ -86,34 +86,34 @@ export const setHomeRoot = () => {
               },
             },
           },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: HOME_SCREEN,
-                  },
-                },
-              ],
-              options: {
-                bottomTab: {
-                  icon: require('../res/images/bottom-tabs/lips.png'),
-                  iconColor: color.muted,
-                  selectedIconColor: color.brand,
-                  // text: 'Appointments',
-                  // textColor: color.background,
-                  // selectedTextColor: color.textPrimary,
-                  // fontFamily: 'Gilroy-Medium',
-                  // fontSize: 10,
-                  // iconInsets: { bottom: 3 },
-                },
-                topBar: {
-                  visible: false,
-                  drawBehind: true,
-                },
-              },
-            },
-          },
+          // {
+          //   stack: {
+          //     children: [
+          //       {
+          //         component: {
+          //           name: HOME_SCREEN,
+          //         },
+          //       },
+          //     ],
+          //     options: {
+          //       bottomTab: {
+          //         icon: require('../res/images/bottom-tabs/lips.png'),
+          //         iconColor: color.muted,
+          //         selectedIconColor: color.brand,
+          //         // text: 'Appointments',
+          //         // textColor: color.background,
+          //         // selectedTextColor: color.textPrimary,
+          //         // fontFamily: 'Gilroy-Medium',
+          //         // fontSize: 10,
+          //         // iconInsets: { bottom: 3 },
+          //       },
+          //       topBar: {
+          //         visible: false,
+          //         drawBehind: true,
+          //       },
+          //     },
+          //   },
+          // },
           {
             stack: {
               children: [

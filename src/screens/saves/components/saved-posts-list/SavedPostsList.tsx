@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigationBottomTabSelect } from 'react-native-navigation-hooks/dist';
 import { useDispatch, useSelector } from 'react-redux';
 import PostsColumnList from '../../../../components/posts/posts-column-list/PostsColumnList';
 import { fetchSavedPostsByCategory } from '../../../../store/posts/posts.actions';
@@ -38,6 +39,12 @@ const SavedPostsList: React.FC<OwnProps> = ({
   useEffect(() => {
     shouldFetch && fetchMoreSaved(true);
   }, [category, shouldFetch]);
+
+  useNavigationBottomTabSelect((e) => {
+    if (e.selectedTabIndex === 1) {
+      shouldFetch && fetchMoreSaved(true);
+    }
+  });
 
   return (
     <PostsColumnList

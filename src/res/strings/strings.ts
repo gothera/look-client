@@ -19,6 +19,9 @@ const strings = {
     },
     appointments: {
       title: 'Appointments',
+      emptySI:
+        'You have no appointment at the moment. Your scheduled appointments will appear here.',
+      emptyNSI: 'Log in. Your appointments will appear here.',
     },
     profile: {
       offline: {

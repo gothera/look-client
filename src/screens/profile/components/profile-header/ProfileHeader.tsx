@@ -13,9 +13,10 @@ interface OwnProps {
 const mapStateToProps = (state: StoreState) => {
   return {
     // get data from store
-    photo:
-      state.profile.client?.profilePicture || 'https://imgur.com/Lrb9qjl.png',
-    firstName: state.profile.client?.lastName || 'Andrei',
+    photo: state.profile.client?.profilePicture,
+    name: state.profile.client
+      ? state.profile.client.firstName + ' ' + state.profile.client.lastName
+      : 'Your profile',
   };
 };
 
@@ -25,7 +26,7 @@ type PropsFromRedux = ConnectedProps<typeof connector>;
 
 const ProfileHeader: React.FC<OwnProps & PropsFromRedux> = ({
   photo,
-  firstName,
+  name,
   scrollY,
 }) => {
   const dividerOpacity = scrollY?.interpolate({
@@ -38,7 +39,7 @@ const ProfileHeader: React.FC<OwnProps & PropsFromRedux> = ({
     <>
       <View style={styles.container}>
         <UserAvatar photoUrl={photo} size={70} />
-        <Text style={styles.name}>{firstName}</Text>
+        <Text style={styles.name}>{name}</Text>
       </View>
       <Animated.View
         style={scrollY !== undefined && { opacity: dividerOpacity }}

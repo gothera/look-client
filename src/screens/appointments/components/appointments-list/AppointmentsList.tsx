@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Animated } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOwnAppointments } from '../../../../store/appointments/appointments.actions';
 import { selectAppointments } from '../../../../store/appointments/appointments.selectors';
 import { AsyncDispatch } from '../../../../store/store.types';
 import AppointmentEntryContainer from '../appointment-entry-container/AppointmentEntryContainer';
+import AppointmentsListEmpty from '../appointments-list-empty/AppointmentsListEmpty';
 import { styles } from './styles';
 
 interface OwnProps {
@@ -17,23 +18,17 @@ const AppointmentsList: React.FC<OwnProps> = ({ componentId, scrollY }) => {
 
   const dispatch = useDispatch<AsyncDispatch>();
 
-  const fetchMoreAppointments = (isInitialLoading: boolean) => {
+  const fetchMoreAppointments = () => {
     if (
       appointments.requestStatus === 'loading' ||
-      appointments.requestStatus === 'initial-loading'
+      appointments.requestStatus === 'initial-loading' ||
+      appointments.pageable?.last
     )
       return;
     dispatch(
-      fetchOwnAppointments(
-        isInitialLoading,
-        appointments.pageable?.pageNumber || 0,
-      ),
+      fetchOwnAppointments(false, appointments.pageable?.pageNumber || 0),
     );
   };
-
-  useEffect(() => {
-    dispatch(fetchOwnAppointments(true, 0));
-  }, []);
 
   const renderAppointmentRow = ({
     item,
@@ -64,7 +59,9 @@ const AppointmentsList: React.FC<OwnProps> = ({ componentId, scrollY }) => {
       contentContainerStyle={styles.containerList}
       onScroll={onScroll}
       keyExtractor={(i: number) => `appointment-list-${i}`}
-      onEndReached={() => fetchMoreAppointments(false)}
+      onEndReached={fetchMoreAppointments}
+      ListEmptyComponent={AppointmentsListEmpty}
+      onEndReachedThreshold={0.5}
     />
   );
 };

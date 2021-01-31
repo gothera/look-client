@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FlatList, RefreshControl, Text } from 'react-native';
+import { FlatList, RefreshControl } from 'react-native';
 import { connect, ConnectedProps } from 'react-redux';
 import { UIActivityIndicator } from 'react-native-indicators';
 import { Category } from '../../../../types';
@@ -104,7 +104,9 @@ const ExploreArtistsList: React.FC<OwnProps & PropsFromRedux> = ({
       onEndReached={onEndReached}
       onEndReachedThreshold={0.5}
       refreshControl={renderRefreshControl}
-      ListEmptyComponent={ExploreArtistsEmptyList}
+      ListEmptyComponent={
+        requestStatus === 'success' ? <ExploreArtistsEmptyList /> : null
+      }
     />
   );
 };

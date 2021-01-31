@@ -1,17 +1,18 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { useSelector } from 'react-redux';
+import strings from '../../../../res/strings/strings';
 import { StoreState } from '../../../../store/store.types';
 import { styles } from './styles';
 
-const SavedArtistsEmptyList = () => {
+const AppointmentsListEmpty = () => {
   const isLoggedIn = useSelector(
     (state: StoreState) => state.profile.token !== undefined,
   );
 
   const message = isLoggedIn
-    ? 'No artist saved for this category'
-    : 'Log in. Your favorite artists will appear here.';
+    ? strings.screen.appointments.emptySI
+    : strings.screen.appointments.emptyNSI;
 
   return (
     <View style={styles.container}>
@@ -20,4 +21,4 @@ const SavedArtistsEmptyList = () => {
   );
 };
 
-export default SavedArtistsEmptyList;
+export default AppointmentsListEmpty;
