@@ -1,5 +1,4 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import { ImageStyle } from 'react-native-fast-image';
+import { StyleSheet, ImageStyle, ViewStyle } from 'react-native';
 import { BORDER_RADIUS, CATEGORY_CARD_DIAMETER } from '../../../res/constants';
 import { spacing } from '../../../theme';
 
@@ -25,7 +24,9 @@ export const styles = StyleSheet.create<Style>({
     elevation: 3,
   },
   image: {
-    flex: 1,
+    // flex: 1,
+    width: CATEGORY_CARD_DIAMETER,
+    height: CATEGORY_CARD_DIAMETER,
     borderRadius: BORDER_RADIUS,
   },
 });

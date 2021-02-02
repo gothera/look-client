@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, Platform } from 'react-native';
-import FastImage from 'react-native-fast-image';
+import { View, Text, Platform, Image, ImageSourcePropType } from 'react-native';
 import { typography } from '../../../theme';
 import { Category } from '../../../types';
 import { categoryEnumToStr, getCategoryColor } from '../../../utils/global';
@@ -9,7 +8,7 @@ import { styles } from './styles';
 
 interface OwnProps {
   category: Category;
-  photo: string;
+  photo: ImageSourcePropType;
   onPress: () => void;
 }
 
@@ -20,7 +19,7 @@ const CategoryCard: React.FC<OwnProps> = ({ category, photo, onPress }) => {
   return (
     <PressableCard onPress={onPress}>
       <View style={styles.container}>
-        <FastImage source={{ uri: photo }} style={styles.image} />
+        <Image source={photo} style={styles.image} resizeMode={'contain'} />
         <View
           style={{
             position: 'absolute',
