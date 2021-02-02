@@ -93,6 +93,7 @@ const CategoriesGrid: React.FC<OwnProps> = ({ componentId }) => {
           </>
         }
         contentContainerStyle={styles.contentContainer}
+        style={{ height: '100%' }}
       />
     </View>
   );

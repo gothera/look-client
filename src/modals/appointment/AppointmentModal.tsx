@@ -57,11 +57,13 @@ const AppointmentModal: React.FC<Props> = ({ appointmentId, componentId }) => {
         rightButton={closeButton}
         scrollY={scrollY}
       />
-      <AppointmentScrollData
-        appointmentId={appointmentId}
-        scrollY={scrollY}
-        componentId={componentId}
-      />
+      {requestStatus !== undefined && (
+        <AppointmentScrollData
+          appointmentId={appointmentId}
+          scrollY={scrollY}
+          componentId={componentId}
+        />
+      )}
     </View>
   );
 };
