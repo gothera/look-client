@@ -14,20 +14,22 @@ import { styles } from './styles';
 
 interface Props {
   artistId: number;
+  initialServiceId?: number;
 }
 
 const BookingModal: React.FC<NavigationComponentProps & Props> = ({
   componentId,
   artistId,
+  initialServiceId,
 }) => {
   const [step, setStep] = useState<BookArtistStep>(BookArtistStep.Service);
 
   const [isConfirmLoading, setIsConfirmLoading] = useState(false);
 
   const [selectedService, setSelectedService] = useState<{
-    id: number;
-    duration: number;
-  }>();
+    id?: number;
+    duration?: number;
+  }>({ id: initialServiceId });
 
   const [time, setTime] = useState<{ date: string; startingHour: string }>();
 

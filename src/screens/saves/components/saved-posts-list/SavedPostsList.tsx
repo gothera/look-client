@@ -24,20 +24,22 @@ const SavedPostsList: React.FC<OwnProps> = ({
   const fetchMoreSaved = (isInitialLoading: boolean) => {
     if (
       posts.requestStatus === 'loading' ||
-      posts.requestStatus === 'initial-loading'
-    )
+      posts.requestStatus === 'initial-loading' ||
+      posts.pageable?.last === true
+    ) {
       return;
+    }
     dispatch(
       fetchSavedPostsByCategory(
         category,
         isInitialLoading,
-        posts.pageable?.pageNumber || 0,
+        (posts.pageable?.pageNumber || 0) + 1,
       ),
     );
   };
 
   useEffect(() => {
-    shouldFetch && fetchMoreSaved(true);
+    shouldFetch && dispatch(fetchSavedPostsByCategory(category, true, 0));
   }, [category, shouldFetch]);
 
   useNavigationBottomTabSelect((e) => {

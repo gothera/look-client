@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Navigation } from 'react-native-navigation';
+import { useSelector } from 'react-redux';
+import { selectArtistById } from '../../store/artists/artists.selectors';
 import { color } from '../../theme';
 import ArtistScreenContainer from './components/artist-screen-container/ArtistScreenContainer';
 import ArtistScreenFooterBook from './components/artist-screen-footer-book/ArtistScreenFooterBook';
@@ -30,10 +32,16 @@ const ArtistScreen: React.FC<OwnProps> = ({ componentId, artistId }) => {
     },
   });
 
+  const artist = useSelector(selectArtistById(artistId));
+
+  const { offeredServices } = artist;
+
   return (
     <View style={styles.container}>
       <ArtistScreenContainer artistId={artistId} componentId={componentId} />
-      <ArtistScreenFooterBook artistId={artistId} />
+      {offeredServices.length > 0 && (
+        <ArtistScreenFooterBook artistId={artistId} />
+      )}
     </View>
   );
 };

@@ -31,6 +31,7 @@ const profileBlacklist = createBlacklistFilter('profile', [
   'isUploadingProfilePicture',
 ]);
 
+const postsBlacklist = createBlacklistFilter('posts', ['saved']);
 
 const persistConfig: PersistConfig<StoreState> = {
   key: 'starter',
@@ -41,6 +42,7 @@ const persistConfig: PersistConfig<StoreState> = {
   // There is an issue with redux-persist code. This needs to be null not undefined
   timeout: null as any,
   migrate: createMigrate(migrations, { debug: false }),
+  blacklist: ['posts'],
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

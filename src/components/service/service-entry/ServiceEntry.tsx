@@ -6,12 +6,10 @@ import { styles } from './styles';
 
 interface OwnProps {
   offeredService: OfferedService;
-  componentId: string;
+  onBookPress: () => void;
 }
 
-// TODO add currency
-
-const ServiceEntry: React.FC<OwnProps> = ({ offeredService, componentId }) => {
+const ServiceEntry: React.FC<OwnProps> = ({ offeredService, onBookPress }) => {
   return (
     <View style={styles.container}>
       <View style={styles.rowContainer}>
@@ -23,7 +21,7 @@ const ServiceEntry: React.FC<OwnProps> = ({ offeredService, componentId }) => {
             style={styles.subheadline}
           >{`${offeredService.price} RON • ${offeredService.duration} m`}</Text>
         </View>
-        <SmallButton onPress={() => {}} title="Book" />
+        <SmallButton onPress={onBookPress} title="Book" />
       </View>
     </View>
   );

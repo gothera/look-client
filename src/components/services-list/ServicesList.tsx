@@ -9,6 +9,7 @@ import {
   NativeSyntheticEvent,
   NativeScrollEvent,
 } from 'react-native';
+import { showBookingModal } from '../../navigation';
 import { OfferedService } from '../../types';
 import ServiceEntry from '../service/service-entry/ServiceEntry';
 import LineDivider from '../ui/LineDivider';
@@ -23,6 +24,7 @@ interface OwnProps {
   onScrollEndDrag?: () => void;
   onGetRef?: (ref: FlatList) => void;
   onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
+  artistId: number;
 }
 
 const ServicesList: React.FC<OwnProps> = ({
@@ -34,6 +36,7 @@ const ServicesList: React.FC<OwnProps> = ({
   onScrollEndDrag,
   onGetRef,
   onScroll,
+  artistId,
 }) => {
   const renderServiceEntry = ({
     item,
@@ -42,7 +45,13 @@ const ServicesList: React.FC<OwnProps> = ({
     item: OfferedService;
     index: number;
   }) => {
-    return <ServiceEntry offeredService={item} componentId={componentId} />;
+    const initialServiceId = item.id;
+
+    const goToBooking = () => {
+      showBookingModal({ props: { artistId, initialServiceId } });
+    };
+
+    return <ServiceEntry offeredService={item} onBookPress={goToBooking} />;
   };
 
   const ListEmptyComponent = (

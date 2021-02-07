@@ -48,6 +48,7 @@ const ArtistServicesList: React.FC<OwnProps> = ({
         onScrollEndDrag={onScrollEndDrag}
         onGetRef={onGetRef}
         onScroll={onScroll}
+        artistId={artistId}
       />
     </>
   );
