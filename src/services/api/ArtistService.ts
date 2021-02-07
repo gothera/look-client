@@ -1,4 +1,4 @@
-import { Category, Interval } from '../../types';
+import { Category } from '../../types';
 import {
   ExploreCategoryArtistsResponse,
   OfferedServiceApi,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { ArtistReviewsSummarization } from '../../../services/api/api.types';
 import ReviewSumOverview from '../review-sum-overview/ReviewSumOverview';
 import ReviewSumPerStar from '../review-sum-per-star/ReviewSumPerStar';

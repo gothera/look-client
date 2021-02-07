@@ -88,7 +88,7 @@ export interface Post extends PostApi {
 
 export interface Review extends ReviewApi {}
 
-export interface Review extends ReviewApi {}
+// export interface Review extends ReviewApi {}
 
 // nu am pus toate prorietatile unei pagini
 export interface Page<T> {
