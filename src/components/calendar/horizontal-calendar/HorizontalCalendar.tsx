@@ -41,9 +41,6 @@ const HorizontalCalendar: React.FC<Props> = ({
             console.log('on month change', date);
           }}
           dayComponent={renderCalendarDay}
-          onVisibleMonthsChange={(a) => {
-            console.log('==aaaaaaaaa=', a);
-          }}
           markedDates={{ selectedDay: { color: 'red' } }} // will re-render days on change
         />
       )}
