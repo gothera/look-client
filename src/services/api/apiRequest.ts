@@ -11,6 +11,8 @@ const listener = () => {
   if (state.profile.token) {
     client.defaults.headers.common.Authorization =
       'Bearer ' + state.profile.token;
+  } else {
+    client.defaults.headers.common.Authorization = undefined;
   }
 };
 
