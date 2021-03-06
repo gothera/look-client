@@ -108,7 +108,7 @@ const FinishSignUpScreen: React.FC<OwnProps & PropsFromRedux> = ({
                     placeholder={strings.screen.finishSignUp.labels.lastName}
                   />
                   <PlaceholderInput
-                    label={strings.screen.finishSignUp.labels.date}
+                    label={strings.screen.finishSignUp.labels.birthday}
                     containerStyle={styles.inputText}
                     placeholder={
                       strings.screen.finishSignUp.placeholders
