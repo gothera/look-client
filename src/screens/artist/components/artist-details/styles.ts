@@ -26,6 +26,7 @@ export const styles = StyleSheet.create<Style>({
     ...typography.subheadlineRegular,
     color: color.textPrimary,
     marginTop: spacing.base,
+    lineHeight: 18,
   },
   rowContainer: {
     flexDirection: 'row',
