@@ -24,7 +24,7 @@ import {
   ArtistScreen,
 } from '../screens';
 import { persistor, store } from '../store';
-import { loginKeychain } from '../store/profile/profile.actions';
+import { login } from '../store/profile/profile.actions';
 import {
   APPOINTMENT_MODAL,
   BOOKING_MODAL,
@@ -117,11 +117,16 @@ export async function initNavigationAsync() {
   registerScreens();
   Navigation.events().registerAppLaunchedListener(async () => {
     try {
-      const genericPassword = await getGenericPassword();
+      // const genericPassword = await getGenericPassword();
 
-      const loggedIn = genericPassword && genericPassword.username === 'token';
-      if (loggedIn) {
-        store.dispatch(loginKeychain((genericPassword as any).password));
+      // const loggedIn = genericPassword && genericPassword.username === 'token';
+      // if (loggedIn) {
+      //   store.dispatch(loginKeychain((genericPassword as any).password));
+      // }
+
+      const credentials = await getGenericPassword();
+      if (credentials) {
+        store.dispatch(login(credentials.username, credentials.password));
       }
 
       setHomeRoot();

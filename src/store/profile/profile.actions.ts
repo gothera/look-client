@@ -46,7 +46,10 @@ export const login = (
 
     return AuthService.login(email, password)
       .then((response: LoginResponse) => {
-        dispatch(loginKeychain(response.accessToken));
+        setGenericPassword(email, password).then(() => {
+          dispatch(loginSuccess(response.accessToken));
+          dispatch(fetchProfile(response.accessToken));
+        });
         onSuccess && onSuccess();
       })
       .catch((error) => {
@@ -75,14 +78,15 @@ export const logout = (): ThunkResult<void> => {
 /**
  * Used after login request and on init navigation
  * Set login in keychain
+ * @deprecated
  */
 export const loginKeychain = (token: string): ThunkResult<void> => {
-  return async function (dispatch) {
-    setGenericPassword('token', token).then(async () => {
-      dispatch(loginSuccess(token));
-      dispatch(fetchProfile(token));
-    });
-  };
+  // return async function (dispatch) {
+  //   setGenericPassword('token', token).then(async () => {
+  //     dispatch(loginSuccess(token));
+  //     dispatch(fetchProfile(token));
+  //   });
+  // };
 };
 
 export const signUpRequest = (): profileTypes.SignUpRequest => {

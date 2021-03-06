@@ -74,6 +74,7 @@ const strings = {
         date: 'Date',
         email: 'Email',
         password: 'Password',
+        birthday: 'Birthday',
       },
       placeholders: {
         birthDayPlaceholder: 'Select Birthday',
