@@ -64,6 +64,8 @@ const ExploreArtistsList: React.FC<OwnProps & PropsFromRedux> = ({
       pageable.last
     )
       return;
+
+    console.log('==== on end reachec====');
     fetchCategoryArtists(category, false, pageable.pageNumber + 1);
   };
 

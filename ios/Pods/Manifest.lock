@@ -290,7 +290,7 @@ PODS:
     - TOCropViewController
   - RNKeychain (6.1.1):
     - React
-  - RNReanimated (1.13.2):
+  - RNReanimated (1.13.3):
     - React-Core
   - RNShare (5.1.0):
     - React-Core
@@ -474,7 +474,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNImageCropPicker: f0557a908758c4a3f83978894ec7227651529b45
   RNKeychain: db956c02a018f7dd3a0ea8a6cf3087bc1894bf2b
-  RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
+  RNReanimated: 514a11da3a2bcc6c3dfd9de32b38e2b9bf101926
   RNShare: fed99fd743f80ca255903c1da46fc9a6430efab6
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
@@ -484,4 +484,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 4035d338d89e3f08c94d01144dbe0b6e2be1b25e
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
