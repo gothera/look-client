@@ -37,17 +37,18 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Contact Artist</Text>
-      {phone && (
+      {phone !== undefined && (
         <TextEntry title={'Send SMS'} leftIcon={<SmsIcon />} onPress={onSms} />
       )}
-      {phone && (
+
+      {phone !== undefined && (
         <TextEntry
           title={'Contact via Whatsapp'}
           leftIcon={<WhatsappIcon />}
           onPress={onWhatsapp}
         />
       )}
-      {instagram && (
+      {instagram !== undefined && (
         <TextEntry
           title={'Instagram'}
           leftIcon={<InstagramIcon />}

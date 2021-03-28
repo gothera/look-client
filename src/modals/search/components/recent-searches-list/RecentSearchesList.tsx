@@ -72,7 +72,8 @@ const RecentSearchesList: React.FC<OwnProps> = ({ componentId }) => {
 
   return (
     <FlatList
-      data={DUMMY_RECENT_SEARCHES}
+      // data={DUMMY_RECENT_SEARCHES}
+      data={[]}
       renderItem={renderArtistRow}
       ListHeaderComponent={<Text style={styles.title}>Recent searches</Text>}
       ListHeaderComponentStyle={styles.listHeaderContainer}

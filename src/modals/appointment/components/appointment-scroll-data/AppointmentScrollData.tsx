@@ -116,7 +116,6 @@ const AppointmentScrollData: React.FC<Props> = ({
         longitude={longitude}
       />
       <AppointmentContactEntry contact={contact} />
-
       {showCancel && (
         <TextEntry
           title={strings.action.cancelAppointment}
