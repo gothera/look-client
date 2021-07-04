@@ -19,6 +19,8 @@ const BookingLocation: React.FC<Props> = ({
 }) => {
   const artist = useSelector(selectArtistById(artistId));
   const client = useSelector(selectCurrentClient);
+  console.log("Artistt :", artist);
+  console.log("Client :", client);
 
   const [selectedLocation, setSelectedLocation] = useState<LocationType>();
 
@@ -40,24 +42,24 @@ const BookingLocation: React.FC<Props> = ({
   return (
     <>
       <ScrollView contentContainerStyle={styles.contentContainer}>
-        {artist.latitude && artist.longitude && (
-          <ToggleLocation
-            name={'Artist Location'}
-            onSelect={selectArtistLocation}
-            isSelected={selectedLocation === LocationType.Artist}
-            latitude={artist.latitude}
-            longitude={artist.longitude}
-          />
-        )}
-        {client && client.latitude && client.longitude && (
-          <ToggleLocation
-            name={'Your Location'}
-            onSelect={selectClientLocation}
-            isSelected={selectedLocation === LocationType.Client}
-            latitude={client.latitude}
-            longitude={client.longitude}
-          />
-        )}
+
+        <ToggleLocation
+          name={'Artist Location'}
+          onSelect={selectArtistLocation}
+          isSelected={selectedLocation === LocationType.Artist}
+          latitude={artist.latitude}
+          longitude={artist.longitude}
+        />
+
+
+        {/* <ToggleLocation
+          name={'Your Location'}
+          onSelect={selectClientLocation}
+          isSelected={selectedLocation === LocationType.Client}
+          latitude={client.latitude}
+          longitude={client.longitude}
+        /> */}
+
       </ScrollView>
       <ContinueFooter
         show={selectedLocation !== undefined}

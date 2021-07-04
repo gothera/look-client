@@ -7,7 +7,7 @@ interface Style {
 }
 
 export const styles = StyleSheet.create<Style>({
-  container: {},
+  container: { marginBottom: 3 * spacing.largest },
   title: {
     ...typography.subheadlineRegular,
     marginLeft: spacing.base,

@@ -3,6 +3,7 @@ import {
   resetGenericPassword,
 } from 'react-native-keychain';
 import { LoginResponse, SignupResponse } from '../../services/api/api.types';
+import messaging from '@react-native-firebase/messaging';
 import * as AuthService from '../../services/api/AuthService';
 import * as ProfileService from '../../services/api/ProfileService';
 import { Client } from '../../types';
@@ -170,8 +171,10 @@ export const fetchProfile = (token: string): ThunkResult<void> => {
     }
 
     dispatch(fetchProfileRequest());
+    const fcmToken = await messaging().getToken();
+    console.log("Am tokenul ", fcmToken);
 
-    return ProfileService.getProfile(token)
+    return ProfileService.getProfile(token, fcmToken)
       .then((profileResponse) => {
         dispatch(fetchProfileSuccess(profileResponse));
       })

@@ -38,6 +38,7 @@ const BookingTime: React.FC<Props> = ({
       .then((res) => {
         const dictByDate = addArrayToDictByProp({}, res, 'date');
         setFreeDaysDict(dictByDate);
+        console.log("Dada", dictByDate);
       })
       .catch((err) => {
         console.error('get free interval hours of month error', err);
@@ -55,6 +56,8 @@ const BookingTime: React.FC<Props> = ({
     setIsFetching(true);
     getFreeIntervalHoursOfDay(artistId, selectedDay)
       .then((res) => {
+        // console.log("Era ", freeDaysDict);
+        // console.log("Adaug ", res);
         setFreeDaysDict((prevFreeDaysDict) => {
           return {
             ...prevFreeDaysDict,
@@ -78,6 +81,8 @@ const BookingTime: React.FC<Props> = ({
     }
     setIsFetching(true);
     setSelectedDay(dayString);
+    console.log("nnn", dayString);
+    console.log("ddd", freeDaysDict[dayString]);
     setIsFetching(false);
   };
 
@@ -96,6 +101,7 @@ const BookingTime: React.FC<Props> = ({
     onSelectTimeContinue(selectedDay, selectedHour);
   };
 
+
   return (
     <>
       <ScrollView>
@@ -105,18 +111,15 @@ const BookingTime: React.FC<Props> = ({
           onSelectDay={selectDay}
           selectedDay={selectedDay}
         />
-        <View>
-          <Text></Text>
-        </View>
-        {selectedDay && freeDaysDict[selectedDay] && (
-          <BookingSelectHour
-            freeIntervalHours={freeDaysDict[selectedDay]}
-            onSelectHour={selectHour}
-            selectedHour={selectedHour}
-            serviceDuration={serviceDuration}
-          />
-        )}
       </ScrollView>
+      {selectedDay && freeDaysDict[selectedDay] && (
+        <BookingSelectHour
+          freeIntervalHours={freeDaysDict[selectedDay]}
+          onSelectHour={selectHour}
+          selectedHour={selectedHour}
+          serviceDuration={serviceDuration}
+        />
+      )}
       <ContinueFooter show={showContinue} onContinue={onContinue} />
     </>
   );

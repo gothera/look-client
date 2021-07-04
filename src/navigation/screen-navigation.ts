@@ -22,7 +22,7 @@ export const setHomeRoot = () => {
         options: {
           bottomTabs: {
             animate: true,
-            titleDisplayMode: 'alwaysHide',
+            titleDisplayMode: 'alwaysShow',
             elevation: 30,
             backgroundColor: color.background,
             // drawBehind: true,

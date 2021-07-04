@@ -76,7 +76,6 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
     ) {
       return;
     }
-
     setIsConfirmLoading(true);
     postAppointment({
       artistId,
@@ -86,9 +85,10 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
       startingTime: time.startingHour,
     })
       .then(() => {
+        console.log("dada");
         setTimeout(() => {
           Navigation.dismissModal(componentId);
-        }, 500);
+        }, 50);
       })
       .catch((err) => {
         console.error('post appointment error', err);
