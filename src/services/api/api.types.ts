@@ -139,6 +139,7 @@ export interface ArtistApi {
   saved: boolean;
   latitude?: string;
   longitude?: string;
+  address: string;
 }
 
 export interface PostApi {

@@ -49,6 +49,7 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
 
   const onSelectLocation = (loc: LocationType) => {
     setLocation(loc);
+    console.log(clientId);
     setStep(BookArtistStep.Confirmation);
   };
 
