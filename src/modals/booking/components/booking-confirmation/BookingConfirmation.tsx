@@ -16,7 +16,7 @@ import { styles } from './styles';
 interface Props {
   serviceId: number;
   artistId: number;
-  selectedLocation: LocationType;
+  selectedLocation: string;
   date: string;
   hour: string;
   onConfirm: () => void;
@@ -38,14 +38,14 @@ const BookingConfirmation: React.FC<Props> = ({
     (offeredService) => offeredService.id === serviceId,
   )[0];
 
-  const getLocationName = () => {
-    switch (selectedLocation) {
-      case LocationType.Artist:
-        return 'Artist Location';
-      case LocationType.Client:
-        return 'Your Location';
-    }
-  };
+  // const getLocationName = () => {
+  //   switch (selectedLocation) {
+  //     case LocationType.Artist:
+  //       return 'Artist Location';
+  //     case LocationType.Client:
+  //       return 'Your Location';
+  //   }
+  // };
 
   return (
     <>
@@ -58,7 +58,7 @@ const BookingConfirmation: React.FC<Props> = ({
         <EntryWithLabel label={'Description'} name={service.description} />
         <EntryWithLabel label={'Date'} name={datePrittier(date)} />
         <EntryWithLabel label={'Hour'} name={hour} />
-        <EntryWithLabel label={'Location'} name={getLocationName()} />
+        <EntryWithLabel label={'Location'} name={selectedLocation} />
       </ScrollView>
       <FooterOptions contentContainerStyle={{ alignItems: 'center' }}>
         <PrimaryButton

@@ -25,14 +25,14 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
     );
   };
 
-  const onInstagram = () => {
-    if (!instagram) {
-      return;
-    }
-    Linking.openURL(`instagram://user?username=${instagram}`).catch((err) => {
-      console.error('open insta', err);
-    });
-  };
+  // const onInstagram = () => {
+  //   if (!instagram) {
+  //     return;
+  //   }
+  //   Linking.openURL(`instagram://user?username=${instagram}`).catch((err) => {
+  //     console.error('open insta', err);
+  //   });
+  // };
 
   return (
     <View style={styles.container}>
@@ -48,13 +48,13 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
           onPress={onWhatsapp}
         />
       )}
-      {instagram !== undefined && (
+      {/* {instagram !== undefined && (
         <TextEntry
           title={'Instagram'}
           leftIcon={<InstagramIcon />}
           onPress={onInstagram}
         />
-      )}
+      )} */}
     </View>
   );
 };

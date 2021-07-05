@@ -213,6 +213,7 @@ export interface AppointmentApi {
   cancelled: boolean;
   serviceDescription?: string;
   serviceDuration: number;
+  location: string;
 }
 
 export interface FreeIntervalHoursApi {
@@ -227,4 +228,5 @@ export interface CreateAppointment {
   serviceId: number;
   startingTime: string;
   date: string;
+  location: string;
 }

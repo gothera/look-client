@@ -52,6 +52,7 @@ const AppointmentScrollData: React.FC<Props> = ({
     latitude,
     longitude,
     locationType,
+    location,
     contact,
     date,
     cancelled,
@@ -111,7 +112,7 @@ const AppointmentScrollData: React.FC<Props> = ({
         name={`${hourPrittier(startingTime)} - ${hourPrittier(endingTime)}`}
       />
       <AppointmentLocationEntry
-        locationType={locationType}
+        locationType={location}
         latitude={latitude}
         longitude={longitude}
       />

@@ -8,7 +8,7 @@ import { styles } from './styles';
 interface Props {
   latitude: string;
   longitude: string;
-  locationType: LocationType;
+  locationType: string;
 }
 
 const AppointmentLocationEntry: React.FC<Props> = ({
@@ -16,25 +16,26 @@ const AppointmentLocationEntry: React.FC<Props> = ({
   longitude,
   locationType,
 }) => {
-  const getNameType = () => {
-    switch (locationType) {
-      case LocationType.Artist:
-        return "Artist's address";
-      case LocationType.Client:
-        return 'Your address';
-    }
-  };
 
+  // const getNameType = () => {
+  //   switch (locationType) {
+  //     case LocationType.Artist:
+  //       return "Artist's address";
+  //     case LocationType.Client:
+  //       return 'Your address';
+  //   }
+  // };
+  console.log("LOCATIA E ", locationType);
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Location</Text>
       <View style={styles.textContainer}>
-        <Text style={styles.addressType}>{getNameType()}</Text>
-        <MapContainer
+        <Text style={styles.addressType}>{locationType}</Text>
+        {/* <MapContainer
           style={styles.map}
           latitude={latitude}
           longitude={longitude}
-        />
+        /> */}
       </View>
       <LineDivider />
     </View>

@@ -10,7 +10,7 @@ import { styles } from './styles';
 
 interface Props {
   artistId: number;
-  onSelectLocationContinue: (location: LocationType) => void;
+  onSelectLocationContinue: (location: string) => void;
 }
 
 const BookingLocation: React.FC<Props> = ({
@@ -25,12 +25,12 @@ const BookingLocation: React.FC<Props> = ({
   const [selectedLocation, setSelectedLocation] = useState<LocationType>();
 
   const selectArtistLocation = () => {
-    setSelectedLocation(LocationType.Artist);
+    setSelectedLocation(artist.address);
   };
 
-  const selectClientLocation = () => {
-    setSelectedLocation(LocationType.Client);
-  };
+  // const selectClientLocation = () => {
+  //   setSelectedLocation(LocationType.Client);
+  // };
 
   const onContinue = () => {
     if (selectedLocation === undefined) {

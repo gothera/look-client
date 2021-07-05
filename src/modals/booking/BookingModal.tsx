@@ -33,7 +33,7 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
 
   const [time, setTime] = useState<{ date: string; startingHour: string }>();
 
-  const [location, setLocation] = useState<LocationType>();
+  const [location, setLocation] = useState<string>();
 
   const clientId = useSelector((state: StoreState) => state.profile.clientId);
 
@@ -47,7 +47,7 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
     setStep(BookArtistStep.Location);
   };
 
-  const onSelectLocation = (loc: LocationType) => {
+  const onSelectLocation = (loc: string) => {
     setLocation(loc);
     console.log(clientId);
     setStep(BookArtistStep.Confirmation);
@@ -84,6 +84,7 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
       serviceId: selectedService.id,
       date: time.date,
       startingTime: time.startingHour,
+      location: location
     })
       .then(() => {
         console.log("dada");
@@ -129,7 +130,7 @@ const BookingModal: React.FC<NavigationComponentProps & Props> = ({
           <BookingConfirmation
             artistId={artistId}
             serviceId={selectedService?.id || 0}
-            selectedLocation={location || LocationType.Artist}
+            selectedLocation={location}
             hour={time?.startingHour || ''}
             date={time?.date || ''}
             onConfirm={onConfirm}
