@@ -34,6 +34,7 @@ const ArtistScreenHeader: React.FC<OwnProps> = ({ artistId }) => {
         category={artist.category}
         bio={artist.bio}
         artistId={artistId}
+        address={artist.address}
       />
     </View>
   );

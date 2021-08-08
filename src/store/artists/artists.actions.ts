@@ -68,6 +68,7 @@ export const fetchCategoryArtists = (
           pageNumber: response.number,
           last: response.last,
         };
+        console.log("PAGINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",pageable.pageNumber)
 
         dispatch(fetchCategoryArtistsSuccess(category, artists, pageable));
       })

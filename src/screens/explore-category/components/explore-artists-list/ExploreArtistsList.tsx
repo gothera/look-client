@@ -57,9 +57,9 @@ const ExploreArtistsList: React.FC<OwnProps & PropsFromRedux> = ({
 
   const onEndReached = () => {
     if (
-      requestStatus === undefined ||
-      requestStatus === 'initial-loading' ||
-      requestStatus === 'loading' ||
+      // requestStatus === undefined ||
+      // requestStatus === 'initial-loading' ||
+      // requestStatus === 'loading' ||
       pageable === undefined ||
       pageable.last
     )

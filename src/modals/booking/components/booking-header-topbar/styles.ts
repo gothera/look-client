@@ -8,7 +8,7 @@ interface Style {
 export const styles = StyleSheet.create<Style>({
   container: {
     paddingTop: spacing.small/8,
-    paddingBottom: spacing.small,
+    paddingBottom: spacing.small/2,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

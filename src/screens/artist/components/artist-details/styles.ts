@@ -6,6 +6,7 @@ interface Style {
   fullName: TextStyle;
   categoryText: TextStyle;
   bio: TextStyle;
+  address: TextStyle;
   rowContainer: ViewStyle;
 }
 
@@ -27,6 +28,13 @@ export const styles = StyleSheet.create<Style>({
     color: color.textPrimary,
     marginTop: spacing.base,
     lineHeight: 18,
+  },
+  address: {
+    ...typography.subheadlineRegular,
+    color: color.textPrimary,
+    marginTop: spacing.base,
+    lineHeight: 18,
+    fontSize: 16,
   },
   rowContainer: {
     flexDirection: 'row',

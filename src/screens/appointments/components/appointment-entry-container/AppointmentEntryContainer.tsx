@@ -14,7 +14,7 @@ const AppointmentEntryContainer: React.FC<OwnProps> = ({
   appointmentId,
   showDivider,
 }) => {
-  const { artistPhoto, artistName, category, date, serviceName } = useSelector(
+  const { artistPhoto, artistName, category, date, serviceName, cancelled } = useSelector(
     selectAppointmentById(appointmentId),
   );
 
@@ -31,6 +31,7 @@ const AppointmentEntryContainer: React.FC<OwnProps> = ({
       date={date}
       serviceName={serviceName || ''}
       onPress={onPress}
+      isCancelled={cancelled}
     />
   );
 };

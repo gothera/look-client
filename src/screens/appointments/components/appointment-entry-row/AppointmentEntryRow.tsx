@@ -5,6 +5,7 @@ import LineDivider from '../../../../components/ui/LineDivider';
 import { color } from '../../../../theme';
 import { Category } from '../../../../types';
 import { categoryEnumToStr, datePrittier } from '../../../../utils/global';
+import { ChipCancelled } from '../../../../components/chip/chip-cancelled/ChipCancelled';
 import { styles } from './styles';
 
 interface OwnProps {
@@ -15,6 +16,7 @@ interface OwnProps {
   serviceName: string;
   onPress?: () => void;
   showDivider?: boolean;
+  isCancelled: boolean;
 }
 
 const AppointmentEntryRow: React.FC<OwnProps> = ({
@@ -25,6 +27,7 @@ const AppointmentEntryRow: React.FC<OwnProps> = ({
   serviceName,
   onPress,
   showDivider,
+  isCancelled
 }) => {
   const categoryName = categoryEnumToStr(category);
 
@@ -43,8 +46,10 @@ const AppointmentEntryRow: React.FC<OwnProps> = ({
               style={styles.description}
             >{`${categoryName}, ${serviceName}`}</Text>
             <Text style={styles.date}>{datePrittier(date)}</Text>
-          </View>
+          </View> 
+          {isCancelled && <ChipCancelled style={styles.chipCancelled} />}
         </View>
+   
         {showDivider && <LineDivider style={styles.divider} />}
       </>
     </TouchableHighlight>

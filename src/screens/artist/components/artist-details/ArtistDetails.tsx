@@ -11,6 +11,7 @@ interface OwnProps {
   category: Category;
   bio: string;
   artistId: number;
+  address: string;
 }
 
 const ArtistDetails: React.FC<OwnProps> = ({
@@ -19,6 +20,7 @@ const ArtistDetails: React.FC<OwnProps> = ({
   category,
   bio,
   artistId,
+  address
 }) => {
   const fullName = firstName + ' ' + lastName;
 
@@ -30,6 +32,7 @@ const ArtistDetails: React.FC<OwnProps> = ({
         <View>
           <Text style={styles.fullName}>{fullName}</Text>
           <Text style={styles.categoryText}>{categoryArtist}</Text>
+          <Text style={styles.address}>Address: {address}</Text>
         </View>
         <ArtistSaveButton artistId={artistId} />
       </View>

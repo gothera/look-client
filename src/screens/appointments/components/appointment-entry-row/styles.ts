@@ -8,6 +8,7 @@ interface Style {
   description: TextStyle;
   date: TextStyle;
   divider: ViewStyle;
+  chipCancelled: ViewStyle;
 }
 
 export const styles = StyleSheet.create<Style>({
@@ -37,4 +38,8 @@ export const styles = StyleSheet.create<Style>({
   divider: {
     marginHorizontal: spacing.base,
   },
+  chipCancelled: {
+    marginBottom: spacing.base,
+    marginLeft: spacing.base
+  }
 });
