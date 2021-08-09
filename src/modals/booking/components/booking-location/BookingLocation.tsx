@@ -48,7 +48,8 @@ const BookingLocation: React.FC<Props> = ({
           onSelect={selectArtistLocation}
           isSelected={selectedLocation === LocationType.Artist}
           latitude={artist.latitude}
-          longitude={artist.longitude}
+          longitude={artist.longitude}   
+          address={artist.address}
         />
 
 

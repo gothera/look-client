@@ -25,7 +25,6 @@ const AppointmentLocationEntry: React.FC<Props> = ({
   //       return 'Your address';
   //   }
   // };
-  console.log("LOCATIA E ", locationType);
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Location</Text>

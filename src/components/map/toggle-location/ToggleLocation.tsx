@@ -11,6 +11,7 @@ interface Props {
   longitude: string;
   onSelect: () => void;
   isSelected: boolean;
+  address: string
 }
 
 const ToggleLocation: React.FC<Props> = ({
@@ -19,6 +20,7 @@ const ToggleLocation: React.FC<Props> = ({
   longitude,
   onSelect,
   isSelected,
+  address,
 }) => {
   return (
     <View style={styles.container}>
@@ -29,14 +31,14 @@ const ToggleLocation: React.FC<Props> = ({
           onValueChange={onSelect}
         />
 
-        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.name}>{address}</Text>
       </View>
-      <MapContainer
+      {/* <MapContainer
         latitude={latitude}
         longitude={longitude}
         style={styles.mapContainer}
-      />
-      <LineDivider />
+      /> */}
+      {/* <LineDivider /> */}
     </View>
   );
 };
