@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Linking } from 'react-native';
 import TextEntry from '../../../../components/entry/text-entry/TextEntry';
-import { InstagramIcon, SmsIcon, WhatsappIcon } from '../../../../res/svg';
+import { InstagramIcon, WhatsappIcon, SmsIcon } from '../../../../res/svg';
 import { styles } from './styles';
 
 interface Props {
@@ -12,8 +12,8 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
   const { instagram, phone } = contact;
 
   const onSms = () => {
-    Linking.openURL(`sms:${phone}`).catch((err) => {
-      console.error('open sms', err);
+    Linking.openURL(`tel:${phone}`).catch((err) => {
+      console.error('open tel', err);
     });
   };
 
@@ -38,7 +38,7 @@ const AppointmentContactEntry: React.FC<Props> = ({ contact }) => {
     <View style={styles.container}>
       <Text style={styles.label}>Contact Artist</Text>
       {phone !== undefined && (
-        <TextEntry title={'Send SMS'} leftIcon={<SmsIcon />} onPress={onSms} />
+        <TextEntry title={'Call'} leftIcon={<SmsIcon />} onPress={onSms} />
       )}
 
       {phone !== undefined && (
