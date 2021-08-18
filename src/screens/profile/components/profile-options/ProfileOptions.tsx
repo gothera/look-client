@@ -6,6 +6,7 @@ import ProfileHeader from '../profile-header/ProfileHeader';
 import { styles } from './styles';
 import { logout } from '../../../../store/profile/profile.actions';
 import { connect, ConnectedProps } from 'react-redux';
+import { Linking } from 'react-native';
 
 interface OwnProps {
   componentId: string;
@@ -42,10 +43,10 @@ const ProfileOptions: React.FC<OwnProps & PropsFromRedux> = ({
         contentContainerStyle={styles.scrollContainer}
         onScroll={onScroll}
       >
-        <Text style={styles.label}>
+        {/* <Text style={styles.label}>
           {strings.screen.profile.loggedIn.account.label}
-        </Text>
-        <TextEntry
+        </Text> */}
+        {/* <TextEntry
           title={strings.screen.profile.loggedIn.account.settings}
           onPress={() => {}}
           titleStyle={styles.textEntryName}
@@ -56,19 +57,19 @@ const ProfileOptions: React.FC<OwnProps & PropsFromRedux> = ({
           onPress={() => {}}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
-        />
+        /> */}
         <Text style={styles.label}>
-          {strings.screen.profile.loggedIn.about.label}
+            {strings.screen.profile.loggedIn.about.label}
         </Text>
         <TextEntry
           title={strings.screen.profile.loggedIn.about.learnAboutLook}
-          onPress={() => {}}
+          onPress={() => Linking.openURL('https://lookapp.ro/despre-look-aplicatia-pentru-programari-beauty/')}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
         />
         <TextEntry
           title={strings.screen.profile.loggedIn.about.becomeAnArtist}
-          onPress={() => {}}
+          onPress={() => Linking.openURL('https://lookapp.ro/#lookartist')}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
         />
@@ -83,19 +84,19 @@ const ProfileOptions: React.FC<OwnProps & PropsFromRedux> = ({
         />
         <TextEntry
           title={strings.screen.profile.loggedIn.support.contactUs}
-          onPress={() => {}}
+          onPress={() => Linking.openURL('https://lookapp.ro/contacteaza-look-devino-stilist-in-aplicatie/')}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
         />
         <TextEntry
           title={strings.screen.profile.loggedIn.legal.termsOfService}
-          onPress={() => {}}
+          onPress={() => Linking.openURL('https://lookapp.ro/termeni-si-servicii-ultilizare-look/')}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
         />
         <TextEntry
           title={strings.screen.profile.loggedIn.legal.privacyPolicy}
-          onPress={() => {}}
+          onPress={() => Linking.openURL('https://lookapp.ro/politica-de-confidentialitate-look/')}
           titleStyle={styles.textEntryName}
           dividerStyle={styles.textEntryDivider}
         />

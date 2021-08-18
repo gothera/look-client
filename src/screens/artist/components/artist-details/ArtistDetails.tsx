@@ -32,11 +32,12 @@ const ArtistDetails: React.FC<OwnProps> = ({
         <View>
           <Text style={styles.fullName}>{fullName}</Text>
           <Text style={styles.categoryText}>{categoryArtist}</Text>
-          <Text style={styles.address}>Address: {address}</Text>
         </View>
         <ArtistSaveButton artistId={artistId} />
       </View>
       <Text style={styles.bio}>{bio}</Text>
+      <Text style={styles.address}>Address: {address}</Text>
+
     </View>
   );
 };

@@ -46,7 +46,7 @@ const OfflineProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
           containerStyle={styles.loginWithEmailBtn}
           onPress={onLoginWithEmailPress}
         />
-        <OrLineDivider containerStyle={styles.viewMarginTop} />
+        {/* <OrLineDivider containerStyle={styles.viewMarginTop} />
         <SocialSignupOptions
           onApple={() => {}}
           onFacebook={() => {}}
@@ -56,7 +56,7 @@ const OfflineProfileOptions: React.FC<OwnProps> = ({ componentId }) => {
               props: { suggestedFirstName: 'andrei test', isSocial: true },
             });
           }}
-        />
+        /> */}
       </Animated.ScrollView>
     </>
   );

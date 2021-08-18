@@ -34,7 +34,8 @@ export const styles = StyleSheet.create<Style>({
     color: color.textPrimary,
     marginTop: spacing.base,
     lineHeight: 18,
-    fontSize: 16,
+    fontSize: 13,
+    fontWeight: 'bold'
   },
   rowContainer: {
     flexDirection: 'row',

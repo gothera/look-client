@@ -84,12 +84,12 @@ const StartAuthModal: React.FC<OwnProps> = ({ componentId }) => {
               onPress={handleSubmit}
               containerStyle={styles.continueBtn}
             />
-            <OrLineDivider containerStyle={styles.orDivider} />
+            {/* <OrLineDivider containerStyle={styles.orDivider} />
             <SocialSignupOptions
               onApple={() => {}}
               onFacebook={() => {}}
               onGoogle={() => {}}
-            />
+            /> */}
           </ScrollView>
         </>
       )}
